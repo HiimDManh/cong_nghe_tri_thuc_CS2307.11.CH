@@ -33,17 +33,17 @@ Mỗi thành viên làm trên nhánh `feat/<module>`, merge qua PR, cần 1 ngư
 
 - [x] **Repo, `.gitignore`, `.env.example`, cấu trúc thư mục, `requirements.txt`, CLI/Makefile** — Khôi · – · PDF/PPT không bị track; `python -m src.cli data` chạy được.
 - [x] **Tải German Credit + EDA nhanh** — Mạnh · repo · `reports/eda/german_credit.md` sinh từ script.
-- [ ] **Tải Home Credit `application_train.csv`** — Mạnh · tải tay từ Kaggle hoặc token API (xem README) · file nằm ở `data/raw/`, không bị commit.
-- [ ] **Chốt dataset chính** — cả nhóm · 2 việc trên · ghi quyết định vào README.
+- [x] **Tải Home Credit `application_train.csv`** — Mạnh · tải tay từ Kaggle hoặc token API (xem README) · file nằm ở `data/raw/`, không bị commit.
+- [x] **Chốt dataset chính** — cả nhóm · 2 việc trên · ghi quyết định vào README. _→ Home Credit (chính), German Credit (phụ)_
 
 ## G2 – Tri thức & dữ liệu
 
-- [ ] **EDA Home Credit** (`src/data/eda_home_credit.py`) — Mạnh · Home Credit · phân phối, tỷ lệ thiếu, tỷ lệ vỡ nợ theo `OCCUPATION_TYPE`/`ORGANIZATION_TYPE`.
-- [ ] **Bảng mapping ngành nghề → 6–10 nhóm ngành** (`knowledge_base/occupation_mapping.csv` + giải thích) — Mạnh · EDA · mọi giá trị gốc được ánh xạ; có cột `rationale`; nhóm có ≥ 1% mẫu.
-- [ ] **Rời rạc hóa** (`src/data/discretize.py`, ngưỡng trong `configs/discretize.yaml`) — Mạnh + Nam · mapping · mỗi nút ≤ 5 trạng thái; mỗi ngưỡng có lý do (quantile hay nghiệp vụ); fit ngưỡng chỉ trên tập train.
-- [ ] **Knowledge base vĩ mô** (`knowledge_base/*.csv`: CPI/lạm phát, thất nghiệp – World Bank `wbgapi`; thu nhập theo ngành – GSO; rủi ro sức khỏe) — Mạnh · – · mỗi dòng có `source_url`, `year`; chỗ nào là giả định ghi rõ `assumption=true`.
-- [ ] **Baseline FICO rule-based** (`src/baselines/fico.py`) — Mạnh · rời rạc hóa · tái hiện 5 nhóm yếu tố (35/30/15/10/10) với bảng ánh xạ sang biến của dataset; **không còn mã đề tài cũ → cài lại tối giản**, luật ghi trong `configs/fico.yaml`, nhóm xác nhận luật.
-- [ ] **Thiết kế DAG BN-Expert** (`configs/bn_expert.yaml` + hình `reports/figures/bn_expert_dag.png`) — Nam · mapping, knowledge base · có tối thiểu các cạnh trong đề; mỗi cạnh có lý do/nguồn. ⏸ **Nhóm duyệt trước khi học tham số.**
+- [x] **EDA Home Credit** (`src/data/eda_home_credit.py`) — Mạnh · Home Credit · phân phối, tỷ lệ thiếu, tỷ lệ vỡ nợ theo `OCCUPATION_TYPE`/`ORGANIZATION_TYPE`. _→ reports/eda/home_credit.md_
+- [x] **Bảng mapping ngành nghề → 6–10 nhóm ngành** (`knowledge_base/occupation_mapping.csv` + giải thích) — Mạnh · EDA · mọi giá trị gốc được ánh xạ; có cột `rationale`; nhóm có ≥ 1% mẫu. _→ 10 nhóm ngành (ISIC) + 5 nhóm nghề (ISCO-08)_
+- [x] **Rời rạc hóa** (`src/data/discretize.py`, ngưỡng trong `configs/discretize.yaml`) — Mạnh + Nam · mapping · mỗi nút ≤ 5 trạng thái; mỗi ngưỡng có lý do (quantile hay nghiệp vụ); fit ngưỡng chỉ trên tập train.
+- [~] **Knowledge base vĩ mô** (`knowledge_base/*.csv`: CPI/lạm phát, thất nghiệp – World Bank `wbgapi`; thu nhập theo ngành – GSO; rủi ro sức khỏe) — Mạnh · – · mỗi dòng có `source_url`, `year`; chỗ nào là giả định ghi rõ `assumption=true`. _WB + WHO xong; còn GSO thu nhập theo ngành & ngũ phân vị thu nhập VN_
+- [~] **Baseline FICO rule-based** (`src/baselines/fico.py`) — Mạnh · rời rạc hóa · tái hiện 5 nhóm yếu tố (35/30/15/10/10) với bảng ánh xạ sang biến của dataset; **không còn mã đề tài cũ → cài lại tối giản**, luật ghi trong `configs/fico.yaml`, nhóm xác nhận luật. _đã cài; chờ nhóm xác nhận luật_
+- [~] **Thiết kế DAG BN-Expert** (`configs/bn_expert.yaml` + hình `reports/figures/bn_expert_dag.png`) — Nam · mapping, knowledge base · có tối thiểu các cạnh trong đề; mỗi cạnh có lý do/nguồn. ⏸ **Nhóm duyệt trước khi học tham số.** _đề xuất xong; ⏸ chờ duyệt_
 
 ## G3 – Mô hình
 

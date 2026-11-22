@@ -1,0 +1,67 @@
+# Rời rạc hóa đặc trưng Home Credit cho BN (và ML biến thể "rời rạc").
+# method: fixed  -> ngưỡng nghiệp vụ cố định (edges), có lý do + nguồn
+#         quantile -> ngưỡng học từ TẬP TRAIN của từng fold (tránh rò rỉ), n_bins
+#         categorical -> giữ nguyên nhóm (đã ánh xạ ở knowledge_base/)
+# Các khoảng là [a, b). Giá trị thiếu -> trạng thái `missing_state` nếu có, ngược lại để NaN
+# (BN coi là "không có bằng chứng" khi suy luận).
+# Ràng buộc: mỗi nút ≤ 5 trạng thái. Ngoại lệ: `sector` (10) là nút gốc, chỉ có ít con.
+
+features:
+  sector:
+    method: categorical
+    reason: "Ánh xạ ORGANIZATION_TYPE -> 10 nhóm ISIC Rev.4 (knowledge_base/sector_mapping.csv)"
+  occupation_group:
+    method: categorical
+    reason: "Ánh xạ OCCUPATION_TYPE -> 5 nhóm ISCO-08 (knowledge_base/occupation_mapping.csv)"
+  education:
+    method: categorical
+    reason: "Gộp 5 mức học vấn -> 3 (secondary_or_lower, incomplete_higher, higher)"
+
+  age_years:
+    method: fixed
+    edges: [30, 40, 50, 60]
+    labels: ["<30", "30-40", "40-50", "50-60", ">=60"]
+    reason: "Giai đoạn vòng đời tài chính theo thập niên; 60 ≈ tuổi nghỉ hưu"
+  years_employed:
+    method: fixed
+    edges: [1, 3, 7]
+    labels: ["<1", "1-3", "3-7", ">=7"]
+    missing_state: not_working
+    reason: "<1 năm ≈ thử việc/mới vào; ≥7 năm ổn định cao; thiếu = hưu trí/thất nghiệp (DAYS_EMPLOYED=365243)"
+  income:
+    method: quantile
+    n_bins: 5
+    labels: ["Q1", "Q2", "Q3", "Q4", "Q5"]
+    reason: "Đơn vị tiền tệ của Home Credit không công bố -> dùng ngũ phân vị (tương đối). Demo quy đổi thu nhập VND sang ngũ phân vị VN (GSO, VHLSS)"
+  annuity_to_income:
+    method: fixed
+    edges: [0.10, 0.20, 0.30, 0.40]
+    labels: ["<10%", "10-20%", "20-30%", "30-40%", ">=40%"]
+    reason: "DSTI (khoản trả góp/thu nhập). Mốc 30-40% hay được dùng làm trần DSTI trong chính sách an toàn vĩ mô – cần nhóm bổ sung nguồn cụ thể"
+  credit_to_income:
+    method: fixed
+    edges: [1.5, 3.0, 4.5, 7.0]
+    labels: ["<1.5x", "1.5-3x", "3-4.5x", "4.5-7x", ">=7x"]
+    reason: "LTI (dư nợ/thu nhập năm). 4.5x là mốc giới hạn LTI thường dùng cho vay mua nhà – cần nhóm bổ sung nguồn cụ thể"
+  ext_score_mean:
+    method: quantile
+    n_bins: 5
+    labels: ["very_poor", "poor", "fair", "good", "very_good"]
+    reason: "Điểm tín dụng nguồn ngoài (EXT_SOURCE, đã chuẩn hóa 0-1, không có thang chuẩn) -> ngũ phân vị. Proxy cho 'lịch sử thanh toán' của FICO"
+  n_children:
+    method: fixed
+    edges: [1, 2, 3]
+    labels: ["0", "1", "2", ">=3"]
+    reason: "Số người phụ thuộc (con) – chi phí sinh hoạt tăng theo số con"
+  bureau_inquiries_year:
+    method: fixed
+    edges: [1, 2, 4]
+    labels: ["0", "1", "2-3", ">=4"]
+    missing_state: unknown
+    reason: "Số lần tra cứu tín dụng trong năm ~ yếu tố 'tín dụng mới' của FICO; thiếu 13.5% -> trạng thái riêng"
+  assets:
+    method: derived
+    reason: "Tổ hợp FLAG_OWN_REALTY & FLAG_OWN_CAR -> none / car / realty / both"
+  region_rating:
+    method: categorical
+    reason: "Xếp hạng vùng 1-3 của Home Credit (1 = tốt nhất)"

@@ -7,7 +7,7 @@ Chuỗi nhân quả cốt lõi: `Ngành → Thu nhập → Biến cố → Khả
 suy luận xuôi (dự báo điểm 300–850), suy luận ngược (điều kiện cần để đạt mục tiêu),
 LLM diễn giải CPT thành lời khuyên; so sánh thực nghiệm với FICO rule-based và Black-box ML.
 
-> Trạng thái: **Giai đoạn 1 – Khởi tạo**. Xem tiến độ trong [docs/TASKS.md](docs/TASKS.md).
+> Trạng thái: **Giai đoạn 2 – Tri thức & dữ liệu** (chờ duyệt DAG). Xem tiến độ trong [docs/TASKS.md](docs/TASKS.md).
 
 ## Cài đặt
 
@@ -23,7 +23,7 @@ cp .env.example .env   # điền key LLM nếu dùng (không commit .env)
 | Dataset | Vai trò | Cách lấy |
 |---|---|---|
 | German Credit (OpenML `credit-g`) | phụ / thí nghiệm dữ liệu nhỏ | tự động |
-| Home Credit Default Risk – `application_train.csv` | chính (dự kiến) | xem bên dưới |
+| Home Credit Default Risk – `application_train.csv` | **chính** (đã chốt 22/11) | xem bên dưới |
 
 **Home Credit** (bắt buộc bấm *I understand and accept* luật cuộc thi trên
 [trang dữ liệu](https://www.kaggle.com/competitions/home-credit-default-risk/data) trước):
@@ -44,7 +44,9 @@ Không có `make` (Windows) thì dùng `python -m src.cli <bước>`:
 
 ```bash
 make data    # = python -m src.cli data   – tải dữ liệu
-make eda     # = python -m src.cli eda    – EDA nhanh -> reports/eda/
+make eda     # = python -m src.cli eda    – EDA German Credit + Home Credit -> reports/eda/
+make knowledge # = python -m src.cli knowledge – tri thức vĩ mô (World Bank, WHO) -> knowledge_base/
+make dag     # = python -m src.cli dag    – kiểm tra + vẽ DAG BN-Expert
 make train   # (giai đoạn 3)
 make eval    # (giai đoạn 4)
 make app     # (giai đoạn 5) Streamlit demo

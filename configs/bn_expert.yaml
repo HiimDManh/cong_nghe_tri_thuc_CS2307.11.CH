@@ -1,0 +1,84 @@
+# BN-Expert – ĐỀ XUẤT cấu trúc (⏸ chờ nhóm duyệt trước khi học tham số).
+# Hai lớp:
+#  - data:   nút quan sát được trong Home Credit -> CPT học từ dữ liệu (MLE + BDeu).
+#  - expert: nút tri thức (vĩ mô, biến cố) KHÔNG có trong dữ liệu -> CPT từ knowledge_base/ (có nguồn)
+#            hoặc giả định ghi rõ. Chỉ phục vụ what-if; khi không có bằng chứng, chúng được lấy biên
+#            và mô hình trở về đúng P(default | nút data) đã học (xem `default_link`).
+# Mỗi cạnh có lý do; `evidence` = bằng chứng từ EDA (reports/eda/home_credit.md) hoặc nguồn.
+
+nodes:
+  # ---- lớp data (tên = cột trong Discretizer) ----
+  sector:                {layer: data, label: "Ngành"}
+  occupation_group:      {layer: data, label: "Nhóm nghề"}
+  education:             {layer: data, label: "Học vấn"}
+  age_years:             {layer: data, label: "Tuổi"}
+  years_employed:        {layer: data, label: "Ổn định việc làm"}
+  income:                {layer: data, label: "Thu nhập"}
+  n_children:            {layer: data, label: "Người phụ thuộc"}
+  assets:                {layer: data, label: "Tài sản (nhà/xe)"}
+  annuity_to_income:     {layer: data, label: "Trả góp/Thu nhập (DSTI)"}
+  credit_to_income:      {layer: data, label: "Dư nợ/Thu nhập (LTI)", role: indicator}  # nút lá: chỉ làm bằng chứng, lan ngược về DSTI/Thu nhập
+  ext_score_mean:        {layer: data, label: "Lịch sử tín dụng"}
+  bureau_inquiries_year: {layer: data, label: "Tín dụng mới (tra cứu)"}
+  region_rating:         {layer: data, label: "Vùng"}
+  default:               {layer: data, label: "Vỡ nợ", target: true}
+  # ---- lớp expert ----
+  inflation:      {layer: expert, label: "Lạm phát", states: [low, moderate, high],
+                   cpt_source: "Tần suất năm VN 2000–2024 với ngưỡng <4% / 4–8% / ≥8% (knowledge_base/macro_vn_worldbank.csv, FP.CPI.TOTL.ZG)"}
+  econ_cycle:     {layer: expert, label: "Chu kỳ kinh tế", states: [normal, downturn],
+                   cpt_source: "Tần suất năm VN 2000–2024 có tăng trưởng GDP < 5% (NY.GDP.MKTP.KD.ZG) – ngưỡng 5% là giả định"}
+  job_loss:       {layer: expert, label: "Biến cố mất việc", states: ["no", "yes"],
+                   cpt_source: "Nền = tỷ lệ thất nghiệp VN (SL.UEM.TOTL.ZS) × hệ số ngành × hệ số chu kỳ × hệ số thâm niên – các hệ số là GIẢ ĐỊNH, ghi trong configs/bn_expert_cpt.yaml"}
+  health_shock:   {layer: expert, label: "Biến cố sức khỏe", states: ["no", "yes"],
+                   cpt_source: "WHO GHO SDG 3.8.2 VN 2018: chi y tế >10% chi tiêu hộ – 8.83% (<60 tuổi), 13.37% (≥60) (knowledge_base/health_catastrophic_vn_who.csv)"}
+  living_cost:    {layer: expert, label: "Chi phí sinh hoạt", states: [low, normal, high],
+                   cpt_source: "Tăng theo lạm phát và số người phụ thuộc – bảng GIẢ ĐỊNH đơn điệu"}
+  cashflow_shock: {layer: expert, label: "Hụt dòng tiền", states: ["no", "yes"],
+                   cpt_source: "Noisy-OR của job_loss, health_shock, living_cost=high; giảm theo thu nhập & tài sản (đệm tài chính) – tham số GIẢ ĐỊNH"}
+
+edges:
+  # parent -> child : lý do | bằng chứng
+  - [education, occupation_group, "Học vấn quyết định nhóm nghề tiếp cận được", "EDA: higher → tỷ lệ manager_professional cao (kiểm khi học)"]
+  - [sector, occupation_group, "Cơ cấu nghề khác nhau theo ngành", "Bảng chéo sector × occupation"]
+  - [sector, income, "Ngành → Thu nhập (chuỗi nhân quả của đề)", "Thu nhập trung vị 117k–166.5k theo ngành (liên hệ yếu)"]
+  - [occupation_group, income, "Trình độ nghề → mức lương", "Trung vị 135k (service) – 189k (manager)"]
+  - [education, income, "Lợi tức giáo dục", "Tri thức kinh tế lao động"]
+  - [sector, years_employed, "Ngành → Ổn định việc làm (khu vực nhà nước ổn định hơn)", "Thâm niên trung vị 3.2 năm (trade) – 7.0 năm (edu/health); XNA ≡ not_working"]
+  - [age_years, years_employed, "Thâm niên bị chặn bởi tuổi", "Hiển nhiên"]
+  - [age_years, n_children, "Vòng đời gia đình", "Tri thức nhân khẩu học"]
+  - [income, assets, "Khả năng tích lũy tài sản", "Tri thức"]
+  - [age_years, assets, "Thời gian tích lũy", "Tri thức"]
+  - [income, annuity_to_income, "Cùng khoản trả góp, thu nhập thấp → DSTI cao", "Định nghĩa tỷ số"]
+  - [income, credit_to_income, "Như trên với LTI", "Định nghĩa tỷ số"]
+  - [annuity_to_income, credit_to_income, "LTI = DSTI × kỳ hạn", "Định nghĩa tỷ số"]
+  - [age_years, ext_score_mean, "Lịch sử tín dụng dài hơn theo tuổi", "V(age, default)=0.077; ext_score tăng theo tuổi (kiểm khi học)"]
+  - [years_employed, ext_score_mean, "Việc làm ổn định → trả nợ đều trong quá khứ", "Tri thức"]
+  - [age_years, bureau_inquiries_year, "Người trẻ tìm tín dụng mới nhiều hơn", "Tri thức FICO 'new credit'"]
+  - [bureau_inquiries_year, ext_score_mean, "Tra cứu tín dụng nhiều làm giảm điểm tín dụng", "Tri thức FICO 'new credit' (10%)"]
+  - [region_rating, income, "Thu nhập theo vùng", "Home Credit xếp hạng vùng"]
+  # --- tới nút đích ---
+  - [ext_score_mean, default, "Lịch sử thanh toán (FICO 35%)", "V=0.213, đơn điệu 18.7% → 2.5%"]
+  - [years_employed, default, "Ổn định việc làm", "V=0.088, đơn điệu 11.2% → 5.2%"]
+  - [occupation_group, default, "Rủi ro nghề", "V=0.076; 5.9% (manager) – 10.9% (manual)"]
+  - [annuity_to_income, default, "Gánh nặng trả nợ (FICO amounts owed)", "V=0.019 – YẾU, không đơn điệu (thiên lệch chọn mẫu)"]
+  - [region_rating, default, "Rủi ro vùng", "V=0.061; 4.8% → 11.4%"]
+  - [cashflow_shock, default, "Biến cố → Khả năng vỡ nợ (chuỗi của đề)", "Nút expert, xem default_link"]
+  # --- lớp expert ---
+  - [econ_cycle, job_loss, "Suy thoái → mất việc", "WB GDP & thất nghiệp VN"]
+  - [sector, job_loss, "Rủi ro mất việc khác nhau theo ngành", "Giả định hệ số ngành"]
+  - [years_employed, job_loss, "Thâm niên thấp dễ bị cắt giảm trước", "Giả định"]
+  - [age_years, health_shock, "Rủi ro sức khỏe tăng theo tuổi", "WHO SDG 3.8.2 theo nhóm tuổi"]
+  - [inflation, living_cost, "Lạm phát → chi phí sinh hoạt", "WB CPI"]
+  - [n_children, living_cost, "Thêm người phụ thuộc → chi phí cao", "Giả định"]
+  - [job_loss, cashflow_shock, "Mất thu nhập", "Noisy-OR"]
+  - [health_shock, cashflow_shock, "Chi y tế đột xuất", "Noisy-OR"]
+  - [living_cost, cashflow_shock, "Chi phí sinh hoạt cao", "Noisy-OR"]
+  - [income, cashflow_shock, "Thu nhập cao = đệm lớn hơn", "Giả định"]
+  - [assets, cashflow_shock, "Tài sản = đệm thanh khoản", "Giả định"]
+
+# Cách nối lớp expert vào nút đích mà KHÔNG làm sai phần học từ dữ liệu:
+# P(D=1 | pa, shock=yes) = 1 − (1 − p0)(1 − λ);  P(D=1 | pa, shock=no) = p0,
+# với p0 giải từ P_data(D=1 | pa) = p0 + (1 − p0)·λ·π  (π = P(shock=yes) nền của quần thể).
+# => khi không có bằng chứng về biến cố, BN cho đúng xác suất đã học từ dữ liệu; khi bật biến cố
+#    (what-if), rủi ro tăng theo λ. λ là tham số GIẢ ĐỊNH, phân tích độ nhạy trong báo cáo.
+default_link: {method: calibrated_noisy_or, lambda: 0.3}

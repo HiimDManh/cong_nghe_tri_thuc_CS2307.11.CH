@@ -8,7 +8,11 @@ Nhóm: Mạnh (Tri thức & Dữ liệu), Nam (Mạng Bayes), Khôi (ML & thực
 2. `docs/TASKS.md` – checklist chi tiết theo người/giai đoạn/tiêu chí hoàn thành.
 3. Đề bài gốc: `docs/De tai mon Cong nghe tri thuc 2026.pdf` (trang 5–6, Project 6). Chỉ đọc khi cần.
 
-Cuối mỗi phiên: **cập nhật `Progress.md`** (đã làm gì, quyết định mới, bước tiếp) và tick `docs/TASKS.md`.
+## Quy tắc tự cập nhật tài liệu (Claude tự làm, không chờ nhắc)
+- **`Progress.md`** – cập nhật *trước mỗi commit* và *trước khi kết thúc lượt trả lời* nếu có thay đổi đáng kể: mục "Hiện tại", "Quyết định đã chốt" (kèm lý do), "Kết quả đã có" (số liệu chính + đường dẫn file), "Vấn đề tồn đọng", "Tiếp theo", và thêm 1 dòng "Nhật ký" (ngày, việc, commit). Giữ ngắn (< ~120 dòng); thông tin cũ đã hết giá trị thì gộp/xoá.
+- **`CLAUDE.md`** – chỉ sửa khi thay đổi thứ *bền vững*: lệnh chạy, cấu trúc thư mục, quy tắc, phân công, hạn, môi trường. Không ghi tiến độ vào đây.
+- **`docs/TASKS.md`** – tick `[x]`/`[~]` ngay khi xong/bắt đầu một việc.
+- Commit các file này cùng commit với thay đổi code liên quan.
 
 ## Yêu cầu cốt lõi của đề
 - BN mô hình hóa `Ngành → Thu nhập → Biến cố → Khả năng vỡ nợ`; suy luận xuôi → điểm 300–850.
@@ -19,7 +23,8 @@ Cuối mỗi phiên: **cập nhật `Progress.md`** (đã làm gì, quyết đ�
 
 ## Lệnh
 - Môi trường: `.venv` (Python 3.12). Gọi `.venv/Scripts/python` (Windows, không có `make`).
-- `python -m src.cli data|eda|train|eval|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
+- `python -m src.cli data|eda|knowledge|dag|train|eval|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
+- Dữ liệu chính: Home Credit (`src/data/home_credit.py` → đặc trưng; `src/data/discretize.py` → trạng thái BN, fit ngưỡng quantile chỉ trên train). Tải `application_train.csv` mất ~10 s.
 - Console Windows là cp1252: script in tiếng Việt phải gọi `src.common.utf8_stdout()`.
 
 ## Cấu trúc

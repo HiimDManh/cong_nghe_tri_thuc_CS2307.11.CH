@@ -1,0 +1,37 @@
+# Baseline FICO rule-based (tái hiện tối giản đề tài trước – không còn mã cũ). ⏸ CẦN NHÓM XÁC NHẬN.
+# Trọng số 5 nhóm theo công bố của FICO: https://www.myfico.com/credit-education/whats-in-your-credit-score
+# Home Credit application_train không có lịch sử tín dụng chi tiết -> mỗi nhóm dùng BIẾN ĐẠI DIỆN (proxy).
+# Điểm thành phần ∈ [0,1] theo trạng thái rời rạc (configs/discretize.yaml); 1 = tốt nhất.
+# Điểm = 300 + 550 × Σ w_k · s_k  (thang 300–850 như FICO).
+# Hướng điểm là TRI THỨC CHUYÊN GIA (luật), không học từ dữ liệu. Chỉ bước Platt (score -> xác suất)
+# được fit trên tập train, để so sánh Brier/Log-loss/ECE với các mô hình khác.
+
+score_range: [300, 850]
+
+factors:
+  payment_history:
+    weight: 0.35
+    proxy: "ext_score_mean – điểm tín dụng nguồn ngoài (EXT_SOURCE_1..3) phản ánh lịch sử trả nợ ở tổ chức khác"
+    components:
+      ext_score_mean: {weight: 1.0, points: {very_poor: 0.0, poor: 0.25, fair: 0.5, good: 0.75, very_good: 1.0}, missing: 0.5}
+  amounts_owed:
+    weight: 0.30
+    proxy: "Gánh nặng nợ của khoản vay đang xin: DSTI (trả góp/thu nhập) và LTI (dư nợ/thu nhập)"
+    components:
+      annuity_to_income: {weight: 0.6, points: {"<10%": 1.0, "10-20%": 0.8, "20-30%": 0.55, "30-40%": 0.3, ">=40%": 0.0}, missing: 0.5}
+      credit_to_income: {weight: 0.4, points: {"<1.5x": 1.0, "1.5-3x": 0.75, "3-4.5x": 0.5, "4.5-7x": 0.25, ">=7x": 0.0}, missing: 0.5}
+  length_of_history:
+    weight: 0.15
+    proxy: "Tuổi (dataset không có tuổi tài khoản tín dụng; tuổi càng cao, lịch sử tín dụng tiềm năng càng dài)"
+    components:
+      age_years: {weight: 1.0, points: {"<30": 0.2, "30-40": 0.5, "40-50": 0.75, "50-60": 0.9, ">=60": 1.0}, missing: 0.5}
+  new_credit:
+    weight: 0.10
+    proxy: "Số lần tra cứu tín dụng tại bureau trong năm (hard inquiries)"
+    components:
+      bureau_inquiries_year: {weight: 1.0, points: {"0": 1.0, "1": 0.8, "2-3": 0.5, ">=4": 0.2, unknown: 0.5}, missing: 0.5}
+  credit_mix:
+    weight: 0.10
+    proxy: "Sở hữu nhà/xe như dấu hiệu từng có tín dụng có tài sản đảm bảo (mortgage/auto) – proxy yếu"
+    components:
+      assets: {weight: 1.0, points: {both: 1.0, realty: 0.75, car: 0.6, none: 0.3}, missing: 0.5}

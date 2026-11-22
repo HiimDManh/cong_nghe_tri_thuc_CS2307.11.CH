@@ -1,0 +1,20 @@
+OCCUPATION_TYPE,group,group_vi,standard_code,rationale,source_url
+Managers,manager_professional,Quản lý & Chuyên gia,ISCO 1–2 (skill level 3–4),Công việc đòi hỏi trình độ đại học trở lên,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+High skill tech staff,manager_professional,Quản lý & Chuyên gia,ISCO 1–2 (skill level 3–4),Công việc đòi hỏi trình độ đại học trở lên,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Accountants,manager_professional,Quản lý & Chuyên gia,ISCO 1–2 (skill level 3–4),Công việc đòi hỏi trình độ đại học trở lên,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+IT staff,manager_professional,Quản lý & Chuyên gia,ISCO 1–2 (skill level 3–4),Công việc đòi hỏi trình độ đại học trở lên,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Core staff,technician_clerical,Kỹ thuật viên & Văn phòng,ISCO 3–4 (skill level 2–3),Medicine staff gồm cả bác sĩ (ISCO 2) lẫn điều dưỡng (ISCO 3) -> xếp mức trung gian – giả định,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Medicine staff,technician_clerical,Kỹ thuật viên & Văn phòng,ISCO 3–4 (skill level 2–3),Medicine staff gồm cả bác sĩ (ISCO 2) lẫn điều dưỡng (ISCO 3) -> xếp mức trung gian – giả định,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Secretaries,technician_clerical,Kỹ thuật viên & Văn phòng,ISCO 3–4 (skill level 2–3),Medicine staff gồm cả bác sĩ (ISCO 2) lẫn điều dưỡng (ISCO 3) -> xếp mức trung gian – giả định,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+HR staff,technician_clerical,Kỹ thuật viên & Văn phòng,ISCO 3–4 (skill level 2–3),Medicine staff gồm cả bác sĩ (ISCO 2) lẫn điều dưỡng (ISCO 3) -> xếp mức trung gian – giả định,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Realty agents,technician_clerical,Kỹ thuật viên & Văn phòng,ISCO 3–4 (skill level 2–3),Medicine staff gồm cả bác sĩ (ISCO 2) lẫn điều dưỡng (ISCO 3) -> xếp mức trung gian – giả định,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Sales staff,service_sales,Dịch vụ & Bán hàng,ISCO 5 (skill level 2),"Nhân viên dịch vụ cá nhân, bán hàng, bảo vệ (ISCO 5414)",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Cooking staff,service_sales,Dịch vụ & Bán hàng,ISCO 5 (skill level 2),"Nhân viên dịch vụ cá nhân, bán hàng, bảo vệ (ISCO 5414)",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Waiters/barmen staff,service_sales,Dịch vụ & Bán hàng,ISCO 5 (skill level 2),"Nhân viên dịch vụ cá nhân, bán hàng, bảo vệ (ISCO 5414)",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Private service staff,service_sales,Dịch vụ & Bán hàng,ISCO 5 (skill level 2),"Nhân viên dịch vụ cá nhân, bán hàng, bảo vệ (ISCO 5414)",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Security staff,service_sales,Dịch vụ & Bán hàng,ISCO 5 (skill level 2),"Nhân viên dịch vụ cá nhân, bán hàng, bảo vệ (ISCO 5414)",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Laborers,manual_elementary,Lao động phổ thông & Lái xe,ISCO 7–9 (skill level 1–2),Lao động chân tay; gộp ISCO 7–9 để nút có ≤ 5 trạng thái,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Low-skill Laborers,manual_elementary,Lao động phổ thông & Lái xe,ISCO 7–9 (skill level 1–2),Lao động chân tay; gộp ISCO 7–9 để nút có ≤ 5 trạng thái,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Drivers,manual_elementary,Lao động phổ thông & Lái xe,ISCO 7–9 (skill level 1–2),Lao động chân tay; gộp ISCO 7–9 để nút có ≤ 5 trạng thái,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+Cleaning staff,manual_elementary,Lao động phổ thông & Lái xe,ISCO 7–9 (skill level 1–2),Lao động chân tay; gộp ISCO 7–9 để nút có ≤ 5 trạng thái,https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+<NA>,unknown,Không khai báo,–,"OCCUPATION_TYPE bị thiếu (31%), phần lớn là người hưu trí – giữ thành trạng thái riêng, không impute",https://www.ilo.org/public/english/bureau/stat/isco/isco08/
