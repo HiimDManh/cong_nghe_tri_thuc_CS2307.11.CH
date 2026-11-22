@@ -1,0 +1,21 @@
+# Cấu hình dữ liệu – mọi script đọc từ đây, không hard-code đường dẫn.
+seed: 42
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+
+datasets:
+  german_credit:
+    # OpenML "credit-g" (Statlog German Credit, UCI). 1000 dòng, 20 thuộc tính, nhãn good/bad.
+    openml_name: credit-g
+    openml_version: 1
+    raw_file: german_credit.csv
+    target: class
+    positive_label: bad          # "bad" = vỡ nợ / rủi ro xấu → nhãn 1
+  home_credit:
+    # Kaggle competition "home-credit-default-risk". Chỉ dùng application_train.csv.
+    kaggle_competition: home-credit-default-risk
+    raw_file: application_train.csv
+    target: TARGET               # 1 = có khó khăn thanh toán

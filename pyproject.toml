@@ -1,0 +1,9 @@
+[project]
+name = "bn-credit-by-occupation"
+version = "0.1.0"
+description = "Dự báo khả năng tài chính cá nhân theo ngành nghề bằng Mạng Bayes (đồ án Công nghệ tri thức)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
