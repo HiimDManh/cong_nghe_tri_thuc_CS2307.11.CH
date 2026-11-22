@@ -1,47 +1,49 @@
 # Progress
 
-> File trạng thái cho mỗi phiên mới. Claude tự cập nhật trước mỗi commit (xem quy tắc trong CLAUDE.md). Chi tiết việc: `docs/TASKS.md`.
+> File trạng thái cho mỗi phiên mới. Claude tự cập nhật trước mỗi commit (quy tắc trong CLAUDE.md). Chi tiết việc: `docs/TASKS.md`.
 
 ## Hiện tại (cập nhật 22/11/2026)
-- **Giai đoạn:** G2 Tri thức & dữ liệu – gần xong · **⏸ ĐANG CHỜ NHÓM DUYỆT DAG BN-Expert + luật FICO** (hạn 24/11).
-- **Chạy được:** `python -m src.cli data|eda|knowledge|dag`, `pytest` (8 test pass).
-- **Dữ liệu trên máy:** `data/raw/application_train.csv` (307.511 × 122, 8.07% vỡ nợ, 0.34 GB RAM, đọc ~10 s), `data/raw/german_credit.csv`.
-- **Chưa cài:** train/eval/app.
+- **Giai đoạn:** G2 ✅ (DAG + FICO được duyệt 22/11) · G3: **phần BN xong**; còn pipeline CV + baseline ML (hạn 26/11).
+- **Chạy được:** `python -m src.cli data|eda|knowledge|dag|train`, `pytest` (**24 test pass**, gồm đối chiếu suy luận với pgmpy).
+- **Mô hình cho demo:** `models/bn_expert.json`, `models/bn_expert_mono.json`, `models/discretizer.json` (học trên toàn bộ 307.511 dòng, ~6 s).
+- **Phân công mới:** Mạnh (+Claude) làm toàn bộ code/số liệu; Nam/Khôi/Phúc làm việc không sinh code (xem TASKS.md).
 
 ## Quyết định đã chốt
 | Ngày | Quyết định | Lý do |
 |---|---|---|
-| 22/11 | Gốc repo = `...\CDNC_UngDungCongNgheTriThuc\src`, code ở `src/src/` | Thư mục mở trong VS Code |
-| 22/11 | **Home Credit = dataset chính**, German Credit = phụ (thí nghiệm dữ liệu ít) | German: `job` V≈0, không có thu nhập |
-| 22/11 | Hạn 02/12; G2 24/11 · G3 26/11 · G4 29/11 · G5 01/12; ưu tiên MUST/SHOULD/COULD | 10 ngày |
-| 22/11 | Vai trò: Mạnh=Tri thức&Dữ liệu, Nam=BN, Khôi=ML&thực nghiệm, Phúc=LLM&demo | Mặc định theo thứ tự tên |
-| 22/11 | Ngành: `ORGANIZATION_TYPE` → 10 nhóm theo ISIC Rev.4; Nghề: `OCCUPATION_TYPE` → 5 nhóm ISCO-08 (thiếu = `unknown`) | Chuẩn quốc tế có nguồn; `XNA` ≡ hưu trí/thất nghiệp ≡ `DAYS_EMPLOYED=365243` |
-| 22/11 | Không dùng giới tính/hôn nhân làm đặc trưng | Thuộc tính nhạy cảm |
-| 22/11 | Thu nhập & ext_score rời rạc theo ngũ phân vị (fit trên train); tuổi/thâm niên/DSTI/LTI/số con/tra cứu theo ngưỡng nghiệp vụ (`configs/discretize.yaml`) | Home Credit không công bố đơn vị tiền tệ |
-| 22/11 | Tri thức vĩ mô lấy của **Việt Nam** (World Bank, WHO) – chỉ cho nút expert/what-if, không vào so sánh định lượng | Demo cho người dùng VN; dữ liệu không có biến vĩ mô |
-| 22/11 | BN-Expert 2 lớp (data + expert); nối bằng **calibrated noisy-OR** (λ=0.3 giả định) để không làm sai phần học từ dữ liệu | Xem `configs/bn_expert.yaml` |
-| 22/11 | LTI là nút `indicator` (lá) | Tránh phình CPT của `default`; vẫn là bằng chứng |
+| 22/11 | Home Credit chính, German Credit phụ | German: `job` V≈0, không có thu nhập |
+| 22/11 | Ngành → 10 nhóm ISIC, nghề → 5 nhóm ISCO-08; không dùng giới tính/hôn nhân | Chuẩn có nguồn; thuộc tính nhạy cảm |
+| 22/11 | Thu nhập, ext_score: ngũ phân vị (fit train); còn lại ngưỡng nghiệp vụ | Không rõ đơn vị tiền tệ |
+| 22/11 | Tri thức vĩ mô VN (WB, WHO, GSO) chỉ cho nút expert/what-if | Dữ liệu không có biến vĩ mô |
+| 22/11 | BN-Expert 2 lớp; nối bằng calibrated noisy-OR, λ=0.3 (giả định, sẽ phân tích độ nhạy) | Nhóm chấp nhận |
+| 22/11 | Xây **cả** BN-Expert (học thuần) và **BN-Expert-Mono** (ràng buộc DSTI↑ rủi ro↑, ext_score↑ rủi ro↓); Mono là mô hình chính của demo | Nhóm chấp nhận; Mono tốt hơn & không cho lời khuyên ngược tri thức |
+| 22/11 | FICO: trọng số myFICO 35/30/15/10/10 với proxy trong `configs/fico.yaml` | Nhóm xác nhận |
+| 22/11 | Ước lượng CPT bằng **m-estimate (prior = phân phối biên), m=10** thay BDeu | BDeu cho P(vỡ nợ)=0.5 ở tổ hợp cha chưa gặp; m chọn trên validation tách từ train |
+| 22/11 | Tự cài suy luận chính xác theo lô (gather + einsum biến ẩn) thay VE từng dòng | VE quá chậm cho thí nghiệm; kiểm chứng khớp pgmpy 1e-8 |
+| 22/11 | Counterfactual dùng do() (graph surgery) trên 7 đòn bẩy: thu nhập, DSTI, LTI, chi phí sinh hoạt, tra cứu tín dụng + 2 đòn bẩy dài hạn (lịch sử tín dụng, thâm niên) | Chỉ thu nhập/chi tiêu không đủ đạt mục tiêu (xem Kết quả) |
+| 22/11 | Bằng chứng bất khả (vd. mất việc khi không đi làm) → NaN tường minh; demo phải chặn | Đúng ngữ nghĩa xác suất |
+| 22/11 | Phân công: Mạnh làm toàn bộ code/số liệu; các bạn khác việc không sinh code | Thành viên dùng AI khác nhau → tránh lệch |
 
 ## Kết quả đã có
-- EDA Home Credit: `reports/eda/home_credit.md`. Cramér's V với vỡ nợ: ext_score 0.213 ≫ years_employed 0.088 > age 0.077 > occupation 0.076 > sector 0.062 > region 0.061; income 0.025, DSTI 0.019, LTI 0.024.
-- Vỡ nợ theo ngành: 5.4% (not_working) … 6.2% (nhà nước) … 10.2% (tự kinh doanh).
-- **Phát hiện quan trọng:** thu nhập liên hệ yếu và không đơn điệu (chỉ Q5 thấp hơn); DSTI/LTI gần như không có tín hiệu, LTI ≥7x còn rủi ro thấp hơn → nghi **thiên lệch chọn mẫu** (chỉ có khoản vay đã duyệt). Mâu thuẫn tri thức chuyên gia ↔ dữ liệu → cần bàn trong báo cáo và thí nghiệm (7).
-- FICO (sơ bộ, 1 lần chia 80/20, seed 42): AUC 0.692 < chỉ payment_history 0.704; amounts_owed AUC 0.504. Chưa phải kết quả chính thức (G4 làm CV).
-- Tri thức: `knowledge_base/macro_vn_worldbank.csv` (CPI, thất nghiệp, GDP, chi y tế tự trả 2000–2024), `health_catastrophic_vn_who.csv` (SDG 3.8.2: 2018 – 8.83% <60 tuổi, 13.37% ≥60).
-- DAG đề xuất: `configs/bn_expert.yaml`, hình `reports/figures/bn_expert_dag.png` (20 nút, 35 cạnh), mức ủng hộ từng cạnh `reports/eda/bn_expert_edge_support.md`.
+- EDA: ext_score V=0.213 ≫ years_employed 0.088 > age 0.077 > occupation 0.076 > sector 0.062; income/DSTI/LTI ≈ 0.02 và không đơn điệu (nghi thiên lệch chọn mẫu).
+- **Sơ bộ, 1 lần chia 80/20 seed 42 (CHƯA phải kết quả chính thức):** AUC – TAN 0.730, BN-Expert-Mono 0.716, BN-Hybrid 0.714, BN-Expert 0.713, NB 0.708, BN-Learned 0.704, FICO 0.692. Log-loss tốt nhất TAN 0.2558, Mono 0.2580.
+- BN-Learned (HC+BIC) chỉ nối `ext_score → default` và đảo nhiều cạnh nhân quả (vd. income → sector) → minh họa giá trị của tri thức chuyên gia.
+- Counterfactual (hồ sơ mẫu 585 điểm): mục tiêu 620 đạt bằng "DSTI <10% + trả nợ đúng hạn (ext fair→good)" (chi phí 5); mục tiêu 700 không đạt, tối đa ~659 → thu nhập/chi tiêu tác động yếu, lịch sử tín dụng quyết định.
+- Tham số lớp tri thức + nguồn: `reports/bn/expert_params.md` (π(shock)=6.2%; thất nghiệp nền 1.75%; sức khỏe 8.8%/13.4%; đệm GSO Q1..Q5 = 1.0/0.77/0.64/0.57/0.42).
+- KB mới: `vn_income_spending_quintiles_2024.csv` (GSO KSMS 2024: thu nhập Q1 1.59 – Q5 11.81 triệu/người/tháng; chi tiêu/thu nhập 92% → 38.5%), `debt_threshold_sources.csv`.
 
 ## Vấn đề tồn đọng
-- ⏸ Nhóm duyệt: DAG BN-Expert, luật FICO (`configs/fico.yaml`), λ & hệ số giả định của nút expert.
-- CPT `default` có 5×5×5×5×3 = 1875 cấu hình cha (+ cashflow_shock) – có thể thưa ở đuôi; cân nhắc bớt `region_rating` nếu học kém.
-- Chưa có nguồn: ngưỡng DSTI/LTI cụ thể; GSO thu nhập theo ngành & ngũ phân vị thu nhập VN (cho demo quy đổi VND).
-- `import kaggle` tự in thông báo xác thực khi không có token – vô hại.
+- Nguồn ngưỡng nợ & mục tiêu lạm phát cần đối chiếu bản gốc (Nam).
+- Thu nhập theo ngành VN (GSO lao động 2024) chưa trích được (PDF nén) – COULD.
+- Demo: quy đổi thu nhập hộ VND → ngũ phân vị bằng trung điểm (giả định); chặn what-if "mất việc" khi không đi làm.
 
 ## Tiếp theo
-1. Sau khi nhóm duyệt DAG: `configs/bn_expert_cpt.yaml` (CPT nút expert có nguồn/giả định) + `src/bn/model.py` (học MLE/BDeu, calibrated noisy-OR, suy luận xuôi, điểm 300–850 bằng log-odds).
-2. Pipeline CV chung `src/evaluation/cv.py` (stratified 5-fold × 3 seed, lưu split) – Khôi.
-3. Baseline ML (LR, XGBoost trước; RF, MLP sau) trên đặc trưng liên tục và rời rạc.
-4. Phúc bắt đầu `LLMClient` + khung Streamlit song song.
+1. `src/evaluation/cv.py`: stratified 5-fold × 3 seed, lưu split `experiments/splits/`; mỗi fold fit Discretizer trên train.
+2. Baseline ML (LR, XGBoost trước) trên đặc trưng liên tục & rời rạc; cùng cách xử lý mất cân bằng (không resample, đánh giá bằng xác suất).
+3. Thí nghiệm (1)(2)(3)(4)(5)(7) → `experiments/`; độ nhạy λ.
+4. LLMClient + Streamlit (sau khi có số liệu thí nghiệm chính).
 
 ## Nhật ký
-- 22/11 – G1: khởi tạo repo, German Credit + EDA, TASKS.md, CLAUDE.md/Progress.md (`9d038ab`, `fc70414`, `d69f56a`).
-- 22/11 – G2: Home Credit EDA, mapping ngành/nghề, rời rạc hóa, KB vĩ mô (WB+WHO), FICO baseline, DAG BN-Expert đề xuất, test G2; quy tắc tự cập nhật tài liệu trong CLAUDE.md.
+- 22/11 – G1 khởi tạo (`9d038ab`, `fc70414`, `d69f56a`).
+- 22/11 – G2 tri thức & dữ liệu, DAG đề xuất (`3c08196`).
+- 22/11 – Nhóm duyệt DAG/FICO; GSO KSMS 2024 + nguồn ngưỡng nợ; G3-BN: core/expert/mono/backward/variants, 24 test, models/*.json; phân công lại.

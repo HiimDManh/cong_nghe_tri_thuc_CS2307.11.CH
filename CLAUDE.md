@@ -1,7 +1,8 @@
 # CLAUDE.md
 
 Đồ án cuối kỳ môn Công nghệ tri thức (UIT, cao học) – **Project 6: Dự báo khả năng tài chính cá nhân theo ngành nghề**, tiếp nối đề tài cũ "tính điểm tín dụng giả lập theo luật FICO" (không còn code cũ).
-Nhóm: Mạnh (Tri thức & Dữ liệu), Nam (Mạng Bayes), Khôi (ML & thực nghiệm), Phúc (LLM & demo). **Hạn nộp + báo cáo: 02/12/2026.**
+Nhóm: Mạnh, Nam, Khôi, Phúc. **Hạn nộp + báo cáo: 02/12/2026.**
+**Phân công:** người dùng Claude Code là **Mạnh** – chủ trì & làm *toàn bộ* code/dữ liệu/mô hình/thí nghiệm/số liệu. Nam, Khôi, Phúc dùng AI khác → chỉ làm việc không sinh code/số liệu (đối chiếu nguồn, QA demo, chấm LLM, viết văn/slide từ artefact). Không giao cho họ việc sửa `src/`, `configs/`, `knowledge_base/*.csv`.
 
 ## Đọc trước khi làm
 1. **`Progress.md`** – trạng thái hiện tại, quyết định đã chốt, việc tiếp theo. Đọc file này thay vì quét lại repo.
@@ -25,6 +26,7 @@ Nhóm: Mạnh (Tri thức & Dữ liệu), Nam (Mạng Bayes), Khôi (ML & thực
 - Môi trường: `.venv` (Python 3.12). Gọi `.venv/Scripts/python` (Windows, không có `make`).
 - `python -m src.cli data|eda|knowledge|dag|train|eval|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
 - Dữ liệu chính: Home Credit (`src/data/home_credit.py` → đặc trưng; `src/data/discretize.py` → trạng thái BN, fit ngưỡng quantile chỉ trên train). Tải `application_train.csv` mất ~10 s.
+- Mạng Bayes: `src/bn/core.py` (`DiscreteBN`: CPT m-estimate, suy luận chính xác theo lô = gather + einsum trên biến ẩn, khớp pgmpy), `model.py` (BN-Expert 2 lớp + Mono, điểm 300–850), `expert_cpt.py` (CPT nút tri thức sinh từ `knowledge_base/`), `backward.py` (posterior ngược, MAP, counterfactual do()), `variants.py` (NB, TAN, HC, Hybrid). Mô hình cho demo: `models/*.json` (commit được).
 - Console Windows là cp1252: script in tiếng Việt phải gọi `src.common.utf8_stdout()`.
 
 ## Cấu trúc

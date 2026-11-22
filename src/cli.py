@@ -4,7 +4,7 @@
     python -m src.cli eda      # EDA German Credit + Home Credit -> reports/eda/
     python -m src.cli knowledge  # tải tri thức vĩ mô (World Bank, WHO) -> knowledge_base/
     python -m src.cli dag      # kiểm tra + vẽ DAG BN-Expert, mức ủng hộ của dữ liệu cho từng cạnh
-    python -m src.cli train    # (giai đoạn 3)
+    python -m src.cli train    # học BN-Expert(+Mono) trên toàn bộ dữ liệu -> models/*.json (cho demo)
     python -m src.cli eval     # (giai đoạn 4)
     python -m src.cli app      # chạy Streamlit demo (giai đoạn 5)
 """
@@ -36,9 +36,15 @@ def main(argv: list[str] | None = None) -> None:
         if path("data", "raw", "application_train.csv").exists():
             run_hc()
     elif args.step == "knowledge":
+        from src.knowledge.fetch_gso import main as fetch_gso
         from src.knowledge.fetch_macro import main as fetch_macro
 
         fetch_macro()
+        fetch_gso()
+    elif args.step == "train":
+        from src.bn.train import main as train
+
+        train()
     elif args.step == "dag":
         from src.bn.structure import main as dag
 

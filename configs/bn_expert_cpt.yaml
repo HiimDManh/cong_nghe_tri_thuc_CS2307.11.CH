@@ -1,0 +1,76 @@
+# Tham số CPT cho lớp tri thức (expert) của BN-Expert. Mỗi tham số: nguồn hoặc "GIẢ ĐỊNH".
+# Các CPT được SINH từ knowledge_base/*.csv + tham số dưới đây bởi src/bn/expert_cpt.py
+# (không gõ tay xác suất), nên thay nguồn/tham số là CPT cập nhật theo.
+
+inflation:
+  # Tần suất năm VN 2000–2024 rơi vào từng mức (World Bank FP.CPI.TOTL.ZG)
+  indicator: FP.CPI.TOTL.ZG
+  years: [2000, 2024]
+  edges: [4.0, 8.0]          # <4% low (mục tiêu lạm phát ~4% của Quốc hội/NHNN – cần nguồn), 4–8 moderate, >=8 high
+  states: [low, moderate, high]
+
+econ_cycle:
+  indicator: NY.GDP.MKTP.KD.ZG
+  years: [2000, 2024]
+  downturn_below: 5.0        # GIẢ ĐỊNH: tăng trưởng GDP < 5%/năm là "suy giảm" với VN
+  states: [normal, downturn]
+
+job_loss:
+  # P(mất việc trong kỳ vay) = base × m_cycle × m_sector × m_tenure, cắt ở 0.95
+  base_indicator: SL.UEM.TOTL.ZS     # tỷ lệ thất nghiệp VN trung bình các năm 'normal' (World Bank)
+  cycle_multiplier: from_data        # = TB thất nghiệp năm downturn / năm normal (tính từ cùng file WB)
+  sector_multiplier: from_data       # PROXY: tỷ lệ lao động thâm niên < 1 năm của ngành / toàn bộ (Home Credit, tập train)
+  tenure_multiplier:                 # GIẢ ĐỊNH (người mới vào dễ bị cắt giảm trước – "last in, first out")
+    "<1": 2.0
+    "1-3": 1.3
+    "3-7": 1.0
+    ">=7": 0.6
+    not_working: 0.0                 # không có việc để mất
+  horizon_multiplier: 2.0            # GIẢ ĐỊNH: kỳ vay trung vị ~20 tháng ≈ 2 năm (EDA: credit_term_months trung vị 20)
+
+health_shock:
+  # WHO GHO SDG 3.8.2 – % dân số có chi y tế tự trả > 10% tổng chi tiêu/thu nhập hộ, VN
+  indicator: FINPROTECTION_CATA_TOT_10_POP
+  year: 2018                         # năm gần nhất có phân tách theo tuổi
+  age_lt60: AGEGROUP_AGELT60
+  age_ge60: AGEGROUP_AGE60+
+
+living_cost:
+  # GIẢ ĐỊNH (bảng đơn điệu): chi phí sinh hoạt tăng theo lạm phát và số con.
+  # Thang điểm s = lạm phát (low 0, moderate 1, high 2) + số con (0:0, 1:1, 2:2, >=3:3)
+  # P(state | s) = softmax(theta_k * s + b_k) – theta, b chọn để với s = 0: [0.35, 0.50, 0.15]
+  states: [low, normal, high]
+  base_probs: [0.35, 0.50, 0.15]
+  shift_per_unit: 0.45               # GIẢ ĐỊNH: mỗi đơn vị s dịch log-odds về phía 'high'
+
+cashflow_shock:
+  # Noisy-OR có leak, rồi nhân hệ số đệm tài chính.
+  leak: 0.01                         # GIẢ ĐỊNH
+  inhibitors:                        # P(cú sốc | chỉ một nguyên nhân bật) – GIẢ ĐỊNH
+    job_loss: {"yes": 0.60}
+    health_shock: {"yes": 0.35}
+    living_cost: {high: 0.15, normal: 0.03}
+  income_buffer: from_gso            # hệ số = (chi tiêu/thu nhập của nhóm Qk) / (của Q1), GSO KSMS 2024 Biểu 4 & 11
+  asset_buffer:                      # GIẢ ĐỊNH: tài sản là đệm thanh khoản
+    none: 1.0
+    car: 0.9
+    realty: 0.8
+    both: 0.7
+
+default_link:
+  method: calibrated_noisy_or
+  lambda: 0.3                        # GIẢ ĐỊNH: P(vỡ nợ do cú sốc dòng tiền | cú sốc) – phân tích độ nhạy 0.1–0.5
+  min_p0: 1.0e-4
+
+scoring:
+  # Điểm = A + B·ln((1-p)/p), cắt về [300, 850]. Neo: p = 50% -> 400; p = 0.5% -> 800.
+  # => B = 400 / ln(199) ≈ 75.6 (≈ 52 điểm cho mỗi lần odds tốt gấp đôi – PDO), A = 400.
+  anchor_low: {p: 0.5, score: 400}
+  anchor_high: {p: 0.005, score: 800}
+  clip: [300, 850]
+  risk_bands:                        # mức rủi ro hiển thị trong demo
+    - {min: 740, label: "Rất tốt"}
+    - {min: 670, label: "Tốt"}
+    - {min: 580, label: "Trung bình"}
+    - {min: 500, label: "Kém"}
+    - {min: 300, label: "Rất kém"}
