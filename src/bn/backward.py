@@ -60,8 +60,10 @@ class Plan:
     score: float
 
     def describe(self) -> list[str]:
+        from src.app.labels import state_vi
+
         lv = _levers()
-        return [f"{lv[k]['label']}: {a or 'chưa rõ'} → {b}" for k, (a, b) in self.changes.items()]
+        return [f"{lv[k]['label']}: {state_vi(k, a)} → {state_vi(k, b)}" for k, (a, b) in self.changes.items()]
 
 
 def counterfactual_search(bn: DiscreteBN, profile: dict[str, str], target_score: float | None = None,

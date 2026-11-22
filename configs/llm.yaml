@@ -1,0 +1,13 @@
+# LLM diễn giải kết quả BN. Key đọc từ biến môi trường / .env (KHÔNG ghi key vào file này).
+# Thứ tự ưu tiên khi LLM_PROVIDER trống: gemini (nếu có GEMINI_API_KEY) -> groq (GROQ_API_KEY) -> ollama (OLLAMA_HOST) -> template.
+temperature: 0.2
+max_tokens: 900
+timeout_s: 60
+cache_dir: .cache/llm          # đã nằm trong .gitignore
+providers:
+  gemini: {model: gemini-2.5-flash, url: "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"}
+  groq: {model: llama-3.3-70b-versatile, url: "https://api.groq.com/openai/v1/chat/completions"}
+  ollama: {model: "qwen2.5:7b", url: "{host}/api/chat"}
+evaluation:
+  n_profiles: 50
+  seed: 42
