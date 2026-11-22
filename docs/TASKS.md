@@ -55,26 +55,28 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] Naive Bayes, TAN, BN-Learned (HC+BIC), BN-Hybrid (HC + cạnh bắt buộc + thứ tự tầng) — Mạnh · `src/bn/variants.py`
 - [x] Unit test BN (24 test, gồm đối chiếu pgmpy) — Mạnh
 - [x] `python -m src.cli train` → `models/*.json` — Mạnh
-- [ ] Pipeline CV chung (stratified 5-fold × 3 seed, lưu split) — Mạnh
-- [ ] Baseline ML: LR, XGBoost/LightGBM (MUST), RF, MLP (SHOULD) trên đặc trưng (a) liên tục, (b) rời rạc — Mạnh
+- [x] Pipeline CV chung (stratified 5-fold × 3 seed, lưu split `experiments/splits/`) — Mạnh · `src/evaluation/cv.py`
+- [x] Baseline ML: LR, XGBoost (Optuna 25 trial), XGBoost-Mono, LightGBM, RF, MLP; LR-disc, XGBoost-disc — Mạnh · `src/baselines/ml.py`
 
 ## G4 – Thực nghiệm (Mạnh chạy; mỗi thí nghiệm → `experiments/<tên>/results.csv` + hình)
-- [ ] (1) Phân biệt: ROC-AUC, PR-AUC, Gini, KS
-- [ ] (2) Hiệu chỉnh: Brier, Log-loss, ECE + reliability diagram
-- [ ] (3) Ý nghĩa thống kê: DeLong / paired bootstrap 1.000 lần, CI 95%
-- [ ] (4) Thiếu thông tin: ẩn 10–50% đặc trưng lúc suy luận
-- [ ] (5) Dữ liệu ít: learning curve 1/5/10/25/100% (+ German Credit)
-- [ ] (6) Dịch chuyển theo ngành
-- [ ] (7) Nhất quán tri thức: vi phạm đơn điệu/hướng tác động, BN vs SHAP XGBoost
-- [ ] (8) Ổn định giải thích giữa các fold, BN vs SHAP
-- [ ] (9) Chi phí: thời gian, bộ nhớ
-- [ ] Độ nhạy λ (0.1–0.5) của nút expert
-- [ ] Bảng tổng hợp + thảo luận trung thực ⏸ **gửi nhóm tối 29/11**
+- [x] (1) Phân biệt: ROC-AUC, PR-AUC, Gini, KS
+- [x] (2) Hiệu chỉnh: Brier, Log-loss, ECE + reliability diagram
+- [x] (3) Ý nghĩa thống kê: DeLong + Holm, paired bootstrap 1.000 lần, t-test Nadeau–Bengio
+- [x] (4) Thiếu thông tin: MCAR 10–50% + 3 kịch bản có cấu trúc
+- [x] (5) Dữ liệu ít: learning curve 1/5/10/25/100% · German Credit ✅
+- [x] (6) Dịch chuyển theo ngành (leave-one-sector-out)
+- [x] (7) Nhất quán tri thức: ICE vi phạm hướng tác động (6 biến)
+- [x] (8) Ổn định giải thích giữa các fold, BN vs TreeSHAP/linear SHAP
+- [x] (9) Chi phí: thời gian học/dự báo, số tham số, kích thước mô hình
+- [x] Độ nhạy λ (0–0.5) + what-if
+- [x] Bảng tổng hợp (`reports/results_summary.md`, Chương 4 phần kết quả) ⏸ **nhóm duyệt tối 29/11**
 - [ ] **Đọc bảng sơ bộ, đặt câu hỏi phản biện** (như hội đồng sẽ hỏi) — **Khôi, Nam** · bảng sơ bộ · danh sách câu hỏi gửi Mạnh trước 30/11.
 
 ## G5 – LLM, demo, báo cáo
-- [ ] `LLMClient` (Gemini/Groq/Ollama/template, cache) + prompt diễn giải + faithfulness tự động — Mạnh
-- [ ] Streamlit demo (form, điểm, so sánh FICO/XGBoost, đồ thị nhân quả, suy luận ngược, what-if, LLM) — Mạnh
+- [x] Bộ tài liệu hướng dẫn dự án `docs/guide/` + bàn giao `docs/HANDOFF.md`, `docs/handoff/` — Mạnh
+- [x] Khung báo cáo `reports/chapters/` + ghép tự động `python -m src.cli report` — Mạnh
+- [x] `LLMClient` (Gemini/Groq/Ollama/template, cache) + prompt diễn giải + faithfulness tự động + đối chứng âm — Mạnh · `src/llm/` (chờ key để chạy LLM thật)
+- [x] Streamlit demo 6 tab (form VND, điểm, so sánh FICO/XGBoost, đồ thị nhân quả, suy luận ngược, what-if, LLM, CPT) — Mạnh · `src/app/`
 - [ ] **Bộ ~50 hồ sơ mẫu đa dạng** (ngành, tuổi, thu nhập VND, chi tiêu, nợ…) dạng bảng CSV theo mẫu Mạnh gửi — **Phúc** · – · trước 27/11.
 - [ ] **Tạo API key Gemini (free) / Groq (free)** để test; **tài khoản Streamlit Community Cloud hoặc HF Spaces** — **Phúc** · – · key chỉ gửi riêng cho Mạnh, KHÔNG dán vào repo/chat nhóm.
 - [ ] **Chấm thủ công lời khuyên LLM** (mỗi người 10–15 mẫu, rubric 1–5: đúng, dễ hiểu, hữu ích) — **Nam, Khôi, Phúc** · demo + LLM · bảng điểm CSV gửi Mạnh trước 30/11.

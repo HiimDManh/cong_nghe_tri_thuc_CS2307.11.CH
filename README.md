@@ -7,7 +7,7 @@ Chuỗi nhân quả cốt lõi: `Ngành → Thu nhập → Biến cố → Khả
 suy luận xuôi (dự báo điểm 300–850), suy luận ngược (điều kiện cần để đạt mục tiêu),
 LLM diễn giải CPT thành lời khuyên; so sánh thực nghiệm với FICO rule-based và Black-box ML.
 
-> Trạng thái: **Giai đoạn 2 – Tri thức & dữ liệu** (chờ duyệt DAG). Xem tiến độ trong [docs/TASKS.md](docs/TASKS.md).
+> Trạng thái: xem [Progress.md](Progress.md). Bàn giao cho nhóm: [docs/HANDOFF.md](docs/HANDOFF.md). Kết quả thực nghiệm: [reports/results_summary.md](reports/results_summary.md).
 
 ## Cài đặt
 
@@ -47,9 +47,13 @@ make data    # = python -m src.cli data   – tải dữ liệu
 make eda     # = python -m src.cli eda    – EDA German Credit + Home Credit -> reports/eda/
 make knowledge # = python -m src.cli knowledge – tri thức vĩ mô (World Bank, WHO) -> knowledge_base/
 make dag     # = python -m src.cli dag    – kiểm tra + vẽ DAG BN-Expert
-make train   # (giai đoạn 3)
-make eval    # (giai đoạn 4)
-make app     # (giai đoạn 5) Streamlit demo
+make train   # = python -m src.cli train  – học BN-Expert(+Mono), XGBoost demo -> models/*.json
+python -m src.cli tune           # Optuna XGBoost (25 trial, ~3 phút) -> experiments/tuning/
+make eval    # = python -m src.cli eval   – toàn bộ thực nghiệm (~1 giờ CPU) -> experiments/, reports/results/
+python -m src.cli eval missing   # chỉ một thí nghiệm (main_cv phải chạy trước)
+python -m src.cli llm            # độ trung thành lời khuyên LLM -> experiments/llm_faithfulness/
+python -m src.cli report         # ghép reports/chapters/*.md + bảng số liệu -> reports/report.md
+make app     # = python -m src.cli app    – Streamlit demo
 make test    # = python -m pytest -q
 ```
 
@@ -68,4 +72,6 @@ tests/          pytest
 
 ## Demo
 
-_Link sẽ cập nhật sau khi deploy._
+Chạy local: `python -m src.cli app` (chỉ cần `models/*.json` đã commit, không cần dữ liệu Home Credit;
+cài tối thiểu: `pip install -r src/app/requirements.txt`). Triển khai: [docs/DEPLOY.md](docs/DEPLOY.md).
+_Link deploy: (cập nhật sau)._

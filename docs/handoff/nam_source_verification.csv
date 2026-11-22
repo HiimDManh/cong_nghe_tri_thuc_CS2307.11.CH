@@ -1,0 +1,6 @@
+id,threshold_or_fact,value_in_repo,claimed_source,file_in_repo,verified_yes_no,official_document_title,document_number_or_date,page_or_article,exact_quote_or_number,url_checked,note
+1,LTI limit (UK),4.5x; tối đa 15% khoản vay mới,FCA FG14/8 & FG17/2 (FPC recommendation 2014),knowledge_base/debt_threshold_sources.csv,,,,,,,
+2,DSTI cap (France),35%,HCSF decision (2021) – trích qua ECB Macroprudential Bulletin 2023,knowledge_base/debt_threshold_sources.csv,,,,,,,
+3,DSTI cap (Estonia),50% (ngoại lệ 15%/quý),Eesti Pank 2015 – nguồn thứ cấp Bank of Finland,knowledge_base/debt_threshold_sources.csv,,,,,,,
+4,Mục tiêu lạm phát VN,~4%/năm,Nghị quyết Quốc hội về kế hoạch phát triển KT-XH hằng năm / NHNN,configs/bn_expert_cpt.yaml (inflation.edges),,,,,,,
+5,(COULD) Thu nhập bình quân theo ngành kinh tế VN 2024,chưa có,GSO – Báo cáo điều tra lao động việc làm 2024,(chưa có),,,,,,,

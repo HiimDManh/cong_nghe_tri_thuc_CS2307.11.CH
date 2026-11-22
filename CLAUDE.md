@@ -24,7 +24,10 @@ Nhóm: Mạnh, Nam, Khôi, Phúc. **Hạn nộp + báo cáo: 02/12/2026.**
 
 ## Lệnh
 - Môi trường: `.venv` (Python 3.12). Gọi `.venv/Scripts/python` (Windows, không có `make`).
-- `python -m src.cli data|eda|knowledge|dag|train|eval|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
+- `python -m src.cli data|eda|knowledge|dag|train|tune|eval [thí nghiệm…]|llm|report|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
+- Thực nghiệm: `src/evaluation/run.py` (main_cv trước – lưu OOF + mô hình seed 42 vào `data/interim/` – rồi các thí nghiệm khác; ~1 giờ tổng), `metrics.py` (DeLong, bootstrap, Nadeau–Bengio), `models.py` (mọi mô hình cùng giao diện `fit(Xf, Xd, y)`), `explain.py`, `tables.py` → `reports/results/*.md` + `key_numbers.json`, `figures.py`.
+- Báo cáo: văn bản ở `reports/chapters/*.md` với placeholder `{{num:…}}`/`{{table:…}}`/`{{fig:…}}`; `python -m src.cli report` ghép → `reports/report.md` (không sửa tay file này).
+- Demo: `src/app/streamlit_app.py` (+ `convert.py` VND→trạng thái, `labels.py`); LLM: `src/llm/` (facts → prompt → client → faithfulness). Bàn giao nhóm: `docs/HANDOFF.md`, `docs/handoff/`.
 - Dữ liệu chính: Home Credit (`src/data/home_credit.py` → đặc trưng; `src/data/discretize.py` → trạng thái BN, fit ngưỡng quantile chỉ trên train). Tải `application_train.csv` mất ~10 s.
 - Mạng Bayes: `src/bn/core.py` (`DiscreteBN`: CPT m-estimate, suy luận chính xác theo lô = gather + einsum trên biến ẩn, khớp pgmpy), `model.py` (BN-Expert 2 lớp + Mono, điểm 300–850), `expert_cpt.py` (CPT nút tri thức sinh từ `knowledge_base/`), `backward.py` (posterior ngược, MAP, counterfactual do()), `variants.py` (NB, TAN, HC, Hybrid). Mô hình cho demo: `models/*.json` (commit được).
 - Console Windows là cp1252: script in tiếng Việt phải gọi `src.common.utf8_stdout()`.
