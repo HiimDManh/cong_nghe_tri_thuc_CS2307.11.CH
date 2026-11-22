@@ -23,9 +23,20 @@ cp .env.example .env   # điền key LLM nếu dùng (không commit .env)
 | Dataset | Vai trò | Cách lấy |
 |---|---|---|
 | German Credit (OpenML `credit-g`) | phụ / thí nghiệm dữ liệu nhỏ | tự động |
-| Home Credit Default Risk – `application_train.csv` | chính (dự kiến) | Kaggle API: đặt `kaggle.json` vào `~/.kaggle/` và chấp nhận luật cuộc thi, hoặc tải tay vào `data/raw/` |
+| Home Credit Default Risk – `application_train.csv` | chính (dự kiến) | xem bên dưới |
+
+**Home Credit** (bắt buộc bấm *I understand and accept* luật cuộc thi trên
+[trang dữ liệu](https://www.kaggle.com/competitions/home-credit-default-risk/data) trước):
+- *Cách 1 – tải tay, không cần token:* tải `application_train.csv`, giải nén vào `data/raw/`.
+- *Cách 2 – API:* Kaggle › Settings › API › **Generate New Token**, lưu chuỗi token vào
+  `~/.kaggle/access_token` (hoặc biến môi trường `KAGGLE_API_TOKEN`), rồi `python -m src.cli data`.
+  Token chỉ cấp quyền vào tài khoản Kaggle, không bao giờ được commit; có thể thu hồi trong Settings.
 
 Dữ liệu thô nằm trong `data/raw/` và **không** được commit.
+
+## Nhóm
+
+Mạnh · Nam · Khôi · Phúc — hạn nộp & báo cáo **02/12/2026**. Phân công: [docs/TASKS.md](docs/TASKS.md).
 
 ## Chạy
 

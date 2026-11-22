@@ -23,6 +23,8 @@ __pycache__/
 .pytest_cache/
 .streamlit/secrets.toml
 kaggle.json
+access_token
+access_token.txt
 
 # Cache LLM (có thể chứa nội dung phản hồi dài, sinh lại được)
 .cache/

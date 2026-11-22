@@ -1,12 +1,12 @@
 """Tải dữ liệu thô vào `data/raw/`.
 
 - German Credit (OpenML `credit-g`): tải tự động, không cần tài khoản.
-- Home Credit Default Risk (Kaggle): cần `~/.kaggle/kaggle.json` (người dùng tự cung cấp,
-  KHÔNG commit) và đã bấm "I understand and accept" luật cuộc thi trên Kaggle.
-  Nếu không có token, hàm in hướng dẫn đặt file thủ công rồi bỏ qua (không lỗi).
-"""
+- Home Credit Default Risk (Kaggle): tải tay vào data/raw/, hoặc qua API nếu có token
+  (`~/.kaggle/access_token`, biến `KAGGLE_API_TOKEN`, hoặc `kaggle.json` kiểu cũ – KHÔNG commit).
+  Phải bấm "I understand and accept" luật cuộc thi trên Kaggle. Thiếu token -> in hướng dẫn, không lỗi.\n"""
 from __future__ import annotations
 
+import os
 import zipfile
 from pathlib import Path
 
@@ -32,6 +32,16 @@ def download_german_credit(force: bool = False) -> Path:
     return out
 
 
+def _kaggle_credentials_present() -> bool:
+    """Có thông tin xác thực Kaggle ở bất kỳ dạng nào mà thư viện `kaggle` 2.x hỗ trợ không."""
+    kdir = Path.home() / ".kaggle"
+    return bool(
+        os.environ.get("KAGGLE_API_TOKEN")
+        or (os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY"))
+        or any((kdir / n).exists() for n in ("access_token", "access_token.txt", "kaggle.json"))
+    )
+
+
 def download_home_credit(force: bool = False) -> Path | None:
     """Tải application_train.csv của Home Credit qua Kaggle API. Trả về None nếu không tải được."""
     cfg = load_config("data")["datasets"]["home_credit"]
@@ -40,24 +50,27 @@ def download_home_credit(force: bool = False) -> Path | None:
     if out.exists() and not force:
         print(f"[home_credit] đã có: {out}")
         return out
-    kaggle_json = Path.home() / ".kaggle" / "kaggle.json"
-    if not kaggle_json.exists():
-        print(
-            "[home_credit] CHƯA có Kaggle token -> bỏ qua.\n"
-            "  Cách 1: tải kaggle.json (Kaggle > Settings > API > Create New Token), đặt vào\n"
-            f"          {kaggle_json}  rồi chạy lại `python -m src.cli data`.\n"
-            "  Cách 2: tải tay application_train.csv tại\n"
-            "          https://www.kaggle.com/competitions/home-credit-default-risk/data\n"
-            f"          và đặt vào {out}\n"
-            "  Lưu ý: phải bấm 'I understand and accept' luật cuộc thi trên Kaggle trước."
-        )
+    guide = (
+        "  Cách 1 (không cần token): tải tay application_train.csv tại\n"
+        "          https://www.kaggle.com/competitions/home-credit-default-risk/data\n"
+        f"          và đặt vào {out}\n"
+        "  Cách 2: Kaggle > Settings > API > Generate New Token, lưu token vào\n"
+        f"          {Path.home() / '.kaggle' / 'access_token'}  rồi chạy lại `python -m src.cli data`.\n"
+        "  Cả hai cách đều phải bấm 'I understand and accept' luật cuộc thi trên Kaggle trước."
+    )
+    if not _kaggle_credentials_present():
+        print("[home_credit] CHƯA có Kaggle token -> bỏ qua.\n" + guide)
         return None
-    from kaggle.api.kaggle_api_extended import KaggleApi
+    try:
+        from kaggle.api.kaggle_api_extended import KaggleApi
 
-    api = KaggleApi()
-    api.authenticate()
-    raw_dir.mkdir(parents=True, exist_ok=True)
-    api.competition_download_file(cfg["kaggle_competition"], cfg["raw_file"], path=str(raw_dir), force=force)
+        api = KaggleApi()
+        api.authenticate()
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        api.competition_download_file(cfg["kaggle_competition"], cfg["raw_file"], path=str(raw_dir), force=force)
+    except (Exception, SystemExit) as e:  # thư viện kaggle có thể gọi sys.exit khi lỗi xác thực
+        print(f"[home_credit] tải thất bại ({type(e).__name__}: {e}).\n" + guide)
+        return None
     zipped = raw_dir / f"{cfg['raw_file']}.zip"
     if zipped.exists():
         with zipfile.ZipFile(zipped) as z:
