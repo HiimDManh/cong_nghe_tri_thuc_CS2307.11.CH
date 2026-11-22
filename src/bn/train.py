@@ -34,6 +34,14 @@ def main() -> None:
         bn.to_json(out / f"{name}.json")
         print(f"[train] {bn.meta['name']}: π(shock)={bn.meta['pi_shock']:.4f}, ô p0 bị cắt={bn.meta['n_p0_clipped']} -> models/{name}.json")
 
+    # XGBoost trên đúng trạng thái BN (one-hot) để demo so sánh hộp đen – lưu JSON gốc của XGBoost (không pickle)
+    from src.baselines.ml import MLModel
+
+    xgb = MLModel("XGBoost-disc", "xgboost", "disc").fit(feat, X.drop(columns="default"), feat["default"].to_numpy())
+    xgb.est.get_booster().save_model(out / "xgb_disc.json")
+    (out / "xgb_disc_features.json").write_text(json.dumps(xgb.feature_names(), ensure_ascii=False), encoding="utf-8")
+    print(f"[train] XGBoost-disc: {xgb.best_iter + 1} cây -> models/xgb_disc.json")
+
     prov = expert_cpt.provenance(feat)
     rep = path("reports", "bn")
     rep.mkdir(parents=True, exist_ok=True)

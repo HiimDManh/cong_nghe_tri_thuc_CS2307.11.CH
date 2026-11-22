@@ -1,0 +1,920 @@
+﻿profile,provider,diem_bn,muc,facts_json,loi_khuyen,nguoi_cham,dung_du_kien_1_5,de_hieu_1_5,huu_ich_1_5,ghi_chu
+0,template,517,Kém,"{""diem"": 517, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 17.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Doanh nghiệp (không rõ ngành)"", ""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Dưới 30"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""Dưới 10%"", ""Dư nợ/Thu nhập (LTI)"": ""Dưới 1,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -81}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -19}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": -7}], ""yeu_to_giup_diem"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""Dưới 10%"", ""points"": 5}], ""rui_ro_nhom_sector"": {""nhom"": ""Doanh nghiệp (không rõ ngành)"", ""xac_suat_vo_no_pct"": 8.6}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 472, ""thay_doi"": -44}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 490, ""thay_doi"": -26}, ""Kinh tế suy giảm"": {""diem_moi"": 516, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 593, ""chi_phi"": 5.5}, {""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 605, ""chi_phi"": 8.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 625, ""chi_phi"": 9.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 517 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 17.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 81 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 19 điểm.
+- Vùng (Vùng 2) kéo điểm xuống 7 điểm.
+- Trả góp/Thu nhập (DSTI) (Dưới 10%) giúp tăng 5 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 593).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 472 (-44 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 490 (-26 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 516 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+1,template,514,Kém,"{""diem"": 514, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 18.2, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Doanh nghiệp (không rõ ngành)"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 3"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""Dưới 10%"", ""Dư nợ/Thu nhập (LTI)"": ""Dưới 1,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -109}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -38}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -23}], ""yeu_to_giup_diem"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""Dưới 10%"", ""points"": 10}], ""rui_ro_nhom_sector"": {""nhom"": ""Doanh nghiệp (không rõ ngành)"", ""xac_suat_vo_no_pct"": 8.6}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 483, ""thay_doi"": -31}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 496, ""thay_doi"": -18}, ""Kinh tế suy giảm"": {""diem_moi"": 513, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 609, ""chi_phi"": 4.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 618, ""chi_phi"": 5.5}, {""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Trung bình""], ""diem_dat_duoc"": 657, ""chi_phi"": 8.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 514 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 18.2%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 109 điểm.
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 38 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 23 điểm.
+- Trả góp/Thu nhập (DSTI) (Dưới 10%) giúp tăng 10 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 609).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 483 (-31 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 496 (-18 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 513 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+2,template,569,Kém,"{""diem"": 569, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 9.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Doanh nghiệp (không rõ ngành)"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""30–40%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""Không rõ"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -4}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Không có nhà/xe"", ""points"": -4}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""30–40%"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 14}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Doanh nghiệp (không rõ ngành)"", ""xac_suat_vo_no_pct"": 8.6}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 501, ""thay_doi"": -68}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 526, ""thay_doi"": -43}, ""Kinh tế suy giảm"": {""diem_moi"": 569, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → Dưới 10%""], ""diem_dat_duoc"": 591, ""chi_phi"": 3.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 603, ""chi_phi"": 4.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 611, ""chi_phi"": 7.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 569 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 9.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 4 điểm.
+- Tài sản (nhà/xe) (Không có nhà/xe) kéo điểm xuống 4 điểm.
+- Trả góp/Thu nhập (DSTI) (30–40%) kéo điểm xuống 4 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 14 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → Dưới 10% (điểm dự kiến 591).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 501 (-68 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 526 (-43 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 569 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+3,template,623,Trung bình,"{""diem"": 623, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 4.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Doanh nghiệp (không rõ ngành)"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""Dưới 10%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -13}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -11}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Doanh nghiệp (không rõ ngành)"", ""points"": -1}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 41}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""Dưới 10%"", ""points"": 27}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 6}], ""rui_ro_nhom_sector"": {""nhom"": ""Doanh nghiệp (không rõ ngành)"", ""xac_suat_vo_no_pct"": 8.6}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 527, ""thay_doi"": -96}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 558, ""thay_doi"": -65}, ""Kinh tế suy giảm"": {""diem_moi"": 622, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 677, ""chi_phi"": 5.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 688, ""chi_phi"": 8.5}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 691, ""chi_phi"": 9.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 623 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 4.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 13 điểm.
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 11 điểm.
+- Ngành (Doanh nghiệp (không rõ ngành)) kéo điểm xuống 1 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 41 điểm.
+- Trả góp/Thu nhập (DSTI) (Dưới 10%) giúp tăng 27 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 6 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt (điểm dự kiến 677).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 527 (-96 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 558 (-65 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 622 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+4,template,650,Trung bình,"{""diem"": 650, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 3.5, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Doanh nghiệp (không rõ ngành)"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Lịch sử tín dụng"": ""Tốt"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Dư nợ/Thu nhập (LTI)"", ""Tín dụng mới (tra cứu)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -21}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Doanh nghiệp (không rõ ngành)"", ""points"": -1}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": -1}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 35}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 12}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 4}], ""rui_ro_nhom_sector"": {""nhom"": ""Doanh nghiệp (không rõ ngành)"", ""xac_suat_vo_no_pct"": 8.6}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 524, ""thay_doi"": -125}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 561, ""thay_doi"": -88}, ""Kinh tế suy giảm"": {""diem_moi"": 649, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 678, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 698, ""chi_phi"": 2.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: Không rõ → 1 lần""], ""diem_dat_duoc"": 698, ""chi_phi"": 3.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 650 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 3.5%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 21 điểm.
+- Ngành (Doanh nghiệp (không rõ ngành)) kéo điểm xuống 1 điểm.
+- Vùng (Vùng 2) kéo điểm xuống 1 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 35 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 12 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 4 điểm.
+- Chưa có thông tin: Dư nợ/Thu nhập (LTI), Tín dụng mới (tra cứu) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 678).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 524 (-125 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 561 (-88 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 649 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+5,template,588,Trung bình,"{""diem"": 588, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 7.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Giáo dục & Y tế"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -16}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -11}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -9}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 39}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Giáo dục & Y tế"", ""points"": 4}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Giáo dục & Y tế"", ""xac_suat_vo_no_pct"": 7.0}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 507, ""thay_doi"": -81}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 536, ""thay_doi"": -53}, ""Kinh tế suy giảm"": {""diem_moi"": 587, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [], ""khong_dat_muc_tieu"": {""diem_toi_da"": 664, ""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 3"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""]}}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 588 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 7.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 16 điểm.
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 11 điểm.
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 9 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 39 điểm.
+- Ngành (Giáo dục & Y tế) giúp tăng 4 điểm.
+- Tài sản (nhà/xe) (Có nhà) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Chưa thể đạt 670 điểm chỉ bằng các thay đổi trong tầm tay; tốt nhất đạt 664 điểm khi: Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 3; Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp.
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 507 (-81 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 536 (-53 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 587 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+6,template,523,Kém,"{""diem"": 523, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 16.5, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Giáo dục & Y tế"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần""}, ""bien_chua_biet"": [""Ổn định việc làm"", ""Người phụ thuộc"", ""Vùng""], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -84}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -8}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 5}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 4}, {""node"": ""age_years"", ""label"": ""Tuổi"", ""state"": ""40–50"", ""points"": 3}], ""rui_ro_nhom_sector"": {""nhom"": ""Giáo dục & Y tế"", ""xac_suat_vo_no_pct"": 7.0}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 476, ""thay_doi"": -47}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 497, ""thay_doi"": -26}, ""Kinh tế suy giảm"": {""diem_moi"": 522, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 580, ""chi_phi"": 4.0}, {""thay_doi"": [""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 580, ""chi_phi"": 4.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 586, ""chi_phi"": 5.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 523 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 16.5%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 84 điểm.
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 8 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 5 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 4 điểm.
+- Tuổi (40–50) giúp tăng 3 điểm.
+- Chưa có thông tin: Ổn định việc làm, Người phụ thuộc, Vùng (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 580).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 476 (-47 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 497 (-26 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 522 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+7,template,518,Kém,"{""diem"": 518, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 17.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Giáo dục & Y tế"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -98}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -18}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 2}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 1}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Giáo dục & Y tế"", ""xac_suat_vo_no_pct"": 7.0}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 499, ""thay_doi"": -19}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 507, ""thay_doi"": -11}, ""Kinh tế suy giảm"": {""diem_moi"": 518, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 586, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 619, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Giảm tổng dư nợ/thu nhập: 1,5–3 lần → Dưới 1,5 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 619, ""chi_phi"": 6.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 518 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 17.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 98 điểm.
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 18 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) kéo điểm xuống 4 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 2 điểm.
+- Vùng (Vùng 2) giúp tăng 1 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 586).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 499 (-19 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 507 (-11 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 518 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+8,template,641,Trung bình,"{""diem"": 641, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 4.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Giáo dục & Y tế"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""30–40%"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""Không rõ"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""30–40%"", ""points"": -31}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Không có nhà/xe"", ""points"": -8}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 2"", ""points"": -6}], ""yeu_to_giup_diem"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 33}, {""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 30}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 6}], ""rui_ro_nhom_sector"": {""nhom"": ""Giáo dục & Y tế"", ""xac_suat_vo_no_pct"": 7.0}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 524, ""thay_doi"": -117}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 560, ""thay_doi"": -81}, ""Kinh tế suy giảm"": {""diem_moi"": 640, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30%""], ""diem_dat_duoc"": 672, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30%"", ""Hạn chế mở tín dụng mới: Không rõ → 0 lần""], ""diem_dat_duoc"": 672, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 711, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 641 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 4.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Trả góp/Thu nhập (DSTI) (30–40%) kéo điểm xuống 31 điểm.
+- Tài sản (nhà/xe) (Không có nhà/xe) kéo điểm xuống 8 điểm.
+- Thu nhập (Nhóm 2) kéo điểm xuống 6 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 33 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 30 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 6 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30% (điểm dự kiến 672).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 524 (-117 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 560 (-81 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 640 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+9,template,520,Kém,"{""diem"": 520, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 16.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Giáo dục & Y tế"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Dưới 30"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""2 con"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -83}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -15}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""2 con"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 11}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 2}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Giáo dục & Y tế"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Giáo dục & Y tế"", ""xac_suat_vo_no_pct"": 7.0}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 475, ""thay_doi"": -46}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 493, ""thay_doi"": -27}, ""Kinh tế suy giảm"": {""diem_moi"": 520, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 587, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 590, ""chi_phi"": 5.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 607, ""chi_phi"": 5.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 520 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 16.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 83 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 15 điểm.
+- Người phụ thuộc (2 con) kéo điểm xuống 3 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 11 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 2 điểm.
+- Ngành (Giáo dục & Y tế) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 587).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 475 (-46 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 493 (-27 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 520 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+10,template,608,Trung bình,"{""diem"": 608, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 4"", ""Người phụ thuộc"": ""Không"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Tài sản (nhà/xe)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 9}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 8}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 4"", ""points"": 4}], ""rui_ro_nhom_sector"": {""nhom"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""xac_suat_vo_no_pct"": 7.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 544, ""thay_doi"": -64}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 567, ""thay_doi"": -41}, ""Kinh tế suy giảm"": {""diem_moi"": 607, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 678, ""chi_phi"": 6.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Giảm tổng dư nợ/thu nhập: 4,5–7 lần → 3–4,5 lần"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 678, ""chi_phi"": 8.0}, {""thay_doi"": [""Tăng thu nhập: Nhóm 4 → Nhóm 5 (cao nhất)"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 686, ""chi_phi"": 9.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 608 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 6.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Ngành (Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn) kéo điểm xuống 2 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 9 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 8 điểm.
+- Thu nhập (Nhóm 4) giúp tăng 4 điểm.
+- Chưa có thông tin: Tài sản (nhà/xe) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt (điểm dự kiến 678).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 544 (-64 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 567 (-41 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 607 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+11,template,578,Kém,"{""diem"": 578, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 8.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 4"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""1 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Tuổi"", ""Trả góp/Thu nhập (DSTI)"", ""Dư nợ/Thu nhập (LTI)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -29}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -11}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Không có nhà/xe"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 17}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 4"", ""points"": 4}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""xac_suat_vo_no_pct"": 7.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 521, ""thay_doi"": -57}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 542, ""thay_doi"": -36}, ""Kinh tế suy giảm"": {""diem_moi"": 578, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%""], ""diem_dat_duoc"": 605, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Hạn chế mở tín dụng mới: 1 lần → 0 lần""], ""diem_dat_duoc"": 605, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 615, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 578 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 8.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 29 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 11 điểm.
+- Tài sản (nhà/xe) (Không có nhà/xe) kéo điểm xuống 3 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 17 điểm.
+- Thu nhập (Nhóm 4) giúp tăng 4 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+- Chưa có thông tin: Tuổi, Trả góp/Thu nhập (DSTI), Dư nợ/Thu nhập (LTI) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10% (điểm dự kiến 605).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 521 (-57 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 542 (-36 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 578 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+12,template,726,Tốt,"{""diem"": 726, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 1.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Không có nhà/xe"", ""points"": -15}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 79}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 35}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 33}], ""rui_ro_nhom_sector"": {""nhom"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""xac_suat_vo_no_pct"": 7.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Mất việc"": {""diem_moi"": 585, ""thay_doi"": -141}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 622, ""thay_doi"": -104}, ""Kinh tế suy giảm"": {""diem_moi"": 725, ""thay_doi"": -2}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 770, ""chi_phi"": 1.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 726 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 1.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Tài sản (nhà/xe) (Không có nhà/xe) kéo điểm xuống 15 điểm.
+- Ngành (Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn) kéo điểm xuống 4 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 79 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 35 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 33 điểm.
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 770).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 585 (-141 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 622 (-104 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 725 (-2 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+13,template,656,Trung bình,"{""diem"": 656, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 3.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""2 con"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 1 (thuận lợi nhất)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -45}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": -27}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 1 (thuận lợi nhất)"", ""points"": -12}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 35}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 16}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 5}], ""rui_ro_nhom_sector"": {""nhom"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""xac_suat_vo_no_pct"": 7.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Mất việc"": {""diem_moi"": 590, ""thay_doi"": -66}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 612, ""thay_doi"": -43}, ""Kinh tế suy giảm"": {""diem_moi"": 655, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 673, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 683, ""chi_phi"": 2.5}, {""thay_doi"": [""Gắn bó công việc hiện tại lâu hơn: 1–3 năm → 3–7 năm""], ""diem_dat_duoc"": 708, ""chi_phi"": 4.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 656 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 3.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 45 điểm.
+- Nhóm nghề (Không khai báo) kéo điểm xuống 27 điểm.
+- Vùng (Vùng 1 (thuận lợi nhất)) kéo điểm xuống 12 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 35 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 16 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 5 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 673).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 590 (-66 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 612 (-43 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 655 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+14,template,496,Rất kém,"{""diem"": 496, ""muc_rui_ro"": ""Rất kém"", ""xac_suat_vo_no_pct"": 22.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Dưới 30"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""1 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -73}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -20}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 9}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": 6}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Tài chính, BĐS, Thông tin & Dịch vụ chuyên môn"", ""xac_suat_vo_no_pct"": 7.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 459, ""thay_doi"": -37}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 474, ""thay_doi"": -22}, ""Kinh tế suy giảm"": {""diem_moi"": 495, ""thay_doi"": 0}}, ""muc_tieu_diem"": 500, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 559, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 565, ""chi_phi"": 5.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 567, ""chi_phi"": 5.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 496 (thang 300–850), mức ""Rất kém"". Xác suất vỡ nợ ước tính 22.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 73 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 20 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 4 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 9 điểm.
+- Nhóm nghề (Dịch vụ & Bán hàng) giúp tăng 6 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 500 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 559).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 459 (-37 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 474 (-22 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 495 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+15,template,614,Trung bình,"{""diem"": 614, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 5.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Công nghiệp, Năng lượng & Xây dựng"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 4"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""1 lần"", ""Vùng"": ""Vùng 1 (thuận lợi nhất)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -10}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -10}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Công nghiệp, Năng lượng & Xây dựng"", ""points"": -1}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 34}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 1 (thuận lợi nhất)"", ""points"": 19}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 4"", ""points"": 4}], ""rui_ro_nhom_sector"": {""nhom"": ""Công nghiệp, Năng lượng & Xây dựng"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 548, ""thay_doi"": -66}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 571, ""thay_doi"": -42}, ""Kinh tế suy giảm"": {""diem_moi"": 613, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 694, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Giảm tổng dư nợ/thu nhập: 4,5–7 lần → 3–4,5 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 694, ""chi_phi"": 6.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 722, ""chi_phi"": 6.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 614 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 5.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 10 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 10 điểm.
+- Ngành (Công nghiệp, Năng lượng & Xây dựng) kéo điểm xuống 1 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 34 điểm.
+- Vùng (Vùng 1 (thuận lợi nhất)) giúp tăng 19 điểm.
+- Thu nhập (Nhóm 4) giúp tăng 4 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt (điểm dự kiến 694).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 548 (-66 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 571 (-42 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 613 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+16,template,560,Kém,"{""diem"": 560, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 10.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Công nghiệp, Năng lượng & Xây dựng"", ""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Thu nhập"", ""Người phụ thuộc""], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -27}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -24}, {""node"": ""age_years"", ""label"": ""Tuổi"", ""state"": ""30–40"", ""points"": -1}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Quản lý & Chuyên gia"", ""points"": 9}, {""node"": ""education"", ""label"": ""Học vấn"", ""state"": ""Đại học trở lên"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Công nghiệp, Năng lượng & Xây dựng"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 517, ""thay_doi"": -43}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 534, ""thay_doi"": -27}, ""Kinh tế suy giảm"": {""diem_moi"": 560, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 590, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 591, ""chi_phi"": 5.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 600, ""chi_phi"": 5.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 560 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 10.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 27 điểm.
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 24 điểm.
+- Tuổi (30–40) kéo điểm xuống 1 điểm.
+- Nhóm nghề (Quản lý & Chuyên gia) giúp tăng 9 điểm.
+- Học vấn (Đại học trở lên) giúp tăng 2 điểm.
+- Chưa có thông tin: Thu nhập, Người phụ thuộc (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình (điểm dự kiến 590).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 517 (-43 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 534 (-27 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 560 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+17,template,578,Kém,"{""diem"": 578, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 8.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Công nghiệp, Năng lượng & Xây dựng"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Đại học chưa xong"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""1 con"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Lịch sử tín dụng"": ""Trung bình"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Tài sản (nhà/xe)"", ""Dư nợ/Thu nhập (LTI)"", ""Tín dụng mới (tra cứu)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -8}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -8}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 2"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 16}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 13}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Công nghiệp, Năng lượng & Xây dựng"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 517, ""thay_doi"": -61}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 539, ""thay_doi"": -39}, ""Kinh tế suy giảm"": {""diem_moi"": 577, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 589, ""chi_phi"": 1.5}, {""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 590, ""chi_phi"": 4.0}, {""thay_doi"": [""Tăng thu nhập: Nhóm 2 → Nhóm 3"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 592, ""chi_phi"": 4.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 578 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 8.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 8 điểm.
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 8 điểm.
+- Thu nhập (Nhóm 2) kéo điểm xuống 4 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 16 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 13 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+- Chưa có thông tin: Tài sản (nhà/xe), Dư nợ/Thu nhập (LTI), Tín dụng mới (tra cứu) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 589).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 517 (-61 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 539 (-39 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 577 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+18,template,549,Kém,"{""diem"": 549, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 12.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Công nghiệp, Năng lượng & Xây dựng"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -25}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": -23}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -22}], ""yeu_to_giup_diem"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 2}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Công nghiệp, Năng lượng & Xây dựng"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 500, ""thay_doi"": -49}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 519, ""thay_doi"": -30}, ""Kinh tế suy giảm"": {""diem_moi"": 548, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%""], ""diem_dat_duoc"": 581, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%""], ""diem_dat_duoc"": 605, ""chi_phi"": 2.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 616, ""chi_phi"": 3.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 549 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 12.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 25 điểm.
+- Trả góp/Thu nhập (DSTI) (20–30%) kéo điểm xuống 23 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 22 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 2 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20% (điểm dự kiến 581).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 500 (-49 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 519 (-30 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 548 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+19,template,487,Rất kém,"{""diem"": 487, ""muc_rui_ro"": ""Rất kém"", ""xac_suat_vo_no_pct"": 23.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Công nghiệp, Năng lượng & Xây dựng"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""2 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -56}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -21}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Công nghiệp, Năng lượng & Xây dựng"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 453, ""thay_doi"": -34}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 467, ""thay_doi"": -20}, ""Kinh tế suy giảm"": {""diem_moi"": 487, ""thay_doi"": 0}}, ""muc_tieu_diem"": 500, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 505, ""chi_phi"": 3.5}, {""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 523, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 539, ""chi_phi"": 5.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 487 (thang 300–850), mức ""Rất kém"". Xác suất vỡ nợ ước tính 23.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 56 điểm.
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 21 điểm.
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 4 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+
+**Nên làm gì**
+Để đạt 500 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 505).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 453 (-34 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 467 (-20 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 487 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+20,template,640,Trung bình,"{""diem"": 640, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 4.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Không đi làm (hưu trí/thất nghiệp)"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Không đi làm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""30–40%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""30–40%"", ""points"": -81}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -65}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 32}, {""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 26}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Không đi làm"", ""points"": 10}], ""rui_ro_nhom_sector"": {""nhom"": ""Không đi làm (hưu trí/thất nghiệp)"", ""xac_suat_vo_no_pct"": 6.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 596, ""thay_doi"": -44}, ""Kinh tế suy giảm"": {""diem_moi"": 640, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30%""], ""diem_dat_duoc"": 714, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 10–20%""], ""diem_dat_duoc"": 736, ""chi_phi"": 2.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 742, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 640 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 4.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Trả góp/Thu nhập (DSTI) (30–40%) kéo điểm xuống 81 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 65 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 32 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 26 điểm.
+- Ổn định việc làm (Không đi làm) giúp tăng 10 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 20–30% (điểm dự kiến 714).
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 596 (-44 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 640 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+21,template,672,Tốt,"{""diem"": 672, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 2.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Không đi làm (hưu trí/thất nghiệp)"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Từ 60"", ""Ổn định việc làm"": ""Không đi làm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Nhóm nghề"", ""Trả góp/Thu nhập (DSTI)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -34}, {""node"": ""age_years"", ""label"": ""Tuổi"", ""state"": ""Từ 60"", ""points"": -10}], ""yeu_to_giup_diem"": [{""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Không đi làm (hưu trí/thất nghiệp)"", ""points"": 67}, {""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 60}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Không đi làm"", ""points"": 24}], ""rui_ro_nhom_sector"": {""nhom"": ""Không đi làm (hưu trí/thất nghiệp)"", ""xac_suat_vo_no_pct"": 6.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 570, ""thay_doi"": -102}, ""Kinh tế suy giảm"": {""diem_moi"": 672, ""thay_doi"": 0}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 741, ""chi_phi"": 5.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần""], ""diem_dat_duoc"": 741, ""chi_phi"": 6.0}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 3"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 745, ""chi_phi"": 7.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 672 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 2.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 34 điểm.
+- Tuổi (Từ 60) kéo điểm xuống 10 điểm.
+- Ngành (Không đi làm (hưu trí/thất nghiệp)) giúp tăng 67 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 60 điểm.
+- Ổn định việc làm (Không đi làm) giúp tăng 24 điểm.
+- Chưa có thông tin: Nhóm nghề, Trả góp/Thu nhập (DSTI) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2; Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp (điểm dự kiến 741).
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 570 (-102 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 672 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+22,template,654,Trung bình,"{""diem"": 654, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 3.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Không đi làm (hưu trí/thất nghiệp)"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Từ 60"", ""Ổn định việc làm"": ""Không đi làm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần""}, ""bien_chua_biet"": [""Trả góp/Thu nhập (DSTI)"", ""Vùng""], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -34}, {""node"": ""credit_to_income"", ""label"": ""Dư nợ/Thu nhập (LTI)"", ""state"": ""Từ 7 lần"", ""points"": -14}, {""node"": ""age_years"", ""label"": ""Tuổi"", ""state"": ""Từ 60"", ""points"": -8}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 53}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 52}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Không đi làm"", ""points"": 24}], ""rui_ro_nhom_sector"": {""nhom"": ""Không đi làm (hưu trí/thất nghiệp)"", ""xac_suat_vo_no_pct"": 6.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 565, ""thay_doi"": -89}, ""Kinh tế suy giảm"": {""diem_moi"": 654, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → 10–20%""], ""diem_dat_duoc"": 676, ""chi_phi"": 1.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 685, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 719, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 654 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 3.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 34 điểm.
+- Dư nợ/Thu nhập (LTI) (Từ 7 lần) kéo điểm xuống 14 điểm.
+- Tuổi (Từ 60) kéo điểm xuống 8 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 53 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 52 điểm.
+- Ổn định việc làm (Không đi làm) giúp tăng 24 điểm.
+- Chưa có thông tin: Trả góp/Thu nhập (DSTI), Vùng (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → 10–20% (điểm dự kiến 676).
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 565 (-89 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 654 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+23,template,544,Kém,"{""diem"": 544, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 13.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Không đi làm (hưu trí/thất nghiệp)"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""Từ 60"", ""Ổn định việc làm"": ""Không đi làm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""Không rõ"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -72}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": -26}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Không đi làm"", ""points"": 33}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 2}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Không đi làm (hưu trí/thất nghiệp)"", ""xac_suat_vo_no_pct"": 6.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 513, ""thay_doi"": -31}, ""Kinh tế suy giảm"": {""diem_moi"": 544, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 590, ""chi_phi"": 4.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 601, ""chi_phi"": 5.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 607, ""chi_phi"": 7.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 544 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 13.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 72 điểm.
+- Nhóm nghề (Không khai báo) kéo điểm xuống 26 điểm.
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 4 điểm.
+- Ổn định việc làm (Không đi làm) giúp tăng 33 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 2 điểm.
+- Trả góp/Thu nhập (DSTI) (20–30%) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 590).
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 513 (-31 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 544 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+24,template,671,Tốt,"{""diem"": 671, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 2.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Không đi làm (hưu trí/thất nghiệp)"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Không đi làm"", ""Thu nhập"": ""Nhóm 4"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 55}, {""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 30}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Không đi làm"", ""points"": 9}], ""rui_ro_nhom_sector"": {""nhom"": ""Không đi làm (hưu trí/thất nghiệp)"", ""xac_suat_vo_no_pct"": 6.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 598, ""thay_doi"": -72}, ""Kinh tế suy giảm"": {""diem_moi"": 671, ""thay_doi"": 0}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 786, ""chi_phi"": 5.5}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: Từ 4 lần → 2–3 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 786, ""chi_phi"": 6.0}, {""thay_doi"": [""Tăng thu nhập: Nhóm 4 → Nhóm 5 (cao nhất)"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 808, ""chi_phi"": 8.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 671 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 2.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Không khai báo) giúp tăng 55 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 30 điểm.
+- Ổn định việc làm (Không đi làm) giúp tăng 9 điểm.
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt (điểm dự kiến 786).
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 598 (-72 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 671 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+25,template,461,Rất kém,"{""diem"": 461, ""muc_rui_ro"": ""Rất kém"", ""xac_suat_vo_no_pct"": 30.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Nông nghiệp & Dịch vụ khác"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""Dưới 30"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có xe"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -68}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -36}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -22}], ""yeu_to_giup_diem"": [], ""rui_ro_nhom_sector"": {""nhom"": ""Nông nghiệp & Dịch vụ khác"", ""xac_suat_vo_no_pct"": 8.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 435, ""thay_doi"": -25}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 446, ""thay_doi"": -14}, ""Kinh tế suy giảm"": {""diem_moi"": 461, ""thay_doi"": 0}}, ""muc_tieu_diem"": 500, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 520, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 534, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 539, ""chi_phi"": 6.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 461 (thang 300–850), mức ""Rất kém"". Xác suất vỡ nợ ước tính 30.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 68 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 36 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 22 điểm.
+
+**Nên làm gì**
+Để đạt 500 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 520).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 435 (-25 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 446 (-14 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 461 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+26,template,507,Kém,"{""diem"": 507, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 19.5, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Nông nghiệp & Dịch vụ khác"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""2 con"", ""Tài sản (nhà/xe)"": ""Có xe"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -70}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -11}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -5}], ""yeu_to_giup_diem"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Nông nghiệp & Dịch vụ khác"", ""xac_suat_vo_no_pct"": 8.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 460, ""thay_doi"": -47}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 479, ""thay_doi"": -28}, ""Kinh tế suy giảm"": {""diem_moi"": 507, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 580, ""chi_phi"": 5.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 587, ""chi_phi"": 6.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 610, ""chi_phi"": 7.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 507 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 19.5%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 70 điểm.
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 11 điểm.
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 5 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 580).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 460 (-47 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 479 (-28 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 507 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+27,template,706,Tốt,"{""diem"": 706, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 1.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Nông nghiệp & Dịch vụ khác"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 1 (thuận lợi nhất)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -17}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 82}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 23}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": 23}], ""rui_ro_nhom_sector"": {""nhom"": ""Nông nghiệp & Dịch vụ khác"", ""xac_suat_vo_no_pct"": 8.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Mất việc"": {""diem_moi"": 596, ""thay_doi"": -110}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 628, ""thay_doi"": -77}, ""Kinh tế suy giảm"": {""diem_moi"": 705, ""thay_doi"": -1}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 781, ""chi_phi"": 5.5}, {""thay_doi"": [""Giảm tổng dư nợ/thu nhập: 4,5–7 lần → 3–4,5 lần"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 781, ""chi_phi"": 7.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 706 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 1.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 17 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 82 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 23 điểm.
+- Ổn định việc làm (3–7 năm) giúp tăng 23 điểm.
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm (điểm dự kiến 781).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 596 (-110 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 628 (-77 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 705 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+28,template,607,Trung bình,"{""diem"": 607, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.1, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Nông nghiệp & Dịch vụ khác"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Thu nhập"": ""Nhóm 3"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""Dưới 10%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -31}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -30}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 12}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà"", ""points"": 1}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 3"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Nông nghiệp & Dịch vụ khác"", ""xac_suat_vo_no_pct"": 8.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 540, ""thay_doi"": -66}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 564, ""thay_doi"": -43}, ""Kinh tế suy giảm"": {""diem_moi"": 606, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt"", ""Gắn bó công việc hiện tại lâu hơn: Dưới 1 năm → 1–3 năm""], ""diem_dat_duoc"": 687, ""chi_phi"": 9.5}, {""thay_doi"": [""Giảm tổng dư nợ/thu nhập: 1,5–3 lần → Dưới 1,5 lần"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt"", ""Gắn bó công việc hiện tại lâu hơn: Dưới 1 năm → 1–3 năm""], ""diem_dat_duoc"": 687, ""chi_phi"": 10.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 3 → Nhóm 4"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt"", ""Gắn bó công việc hiện tại lâu hơn: Dưới 1 năm → 1–3 năm""], ""diem_dat_duoc"": 691, ""chi_phi"": 12.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 607 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 6.1%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 31 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 30 điểm.
+- Nhóm nghề (Không khai báo) kéo điểm xuống 2 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 12 điểm.
+- Tài sản (nhà/xe) (Có nhà) giúp tăng 1 điểm.
+- Thu nhập (Nhóm 3) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt; Gắn bó công việc hiện tại lâu hơn: Dưới 1 năm → 1–3 năm (điểm dự kiến 687).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 540 (-66 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 564 (-43 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 606 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+29,template,555,Kém,"{""diem"": 555, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 11.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Nông nghiệp & Dịch vụ khác"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [""Trả góp/Thu nhập (DSTI)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -18}, {""node"": ""credit_to_income"", ""label"": ""Dư nợ/Thu nhập (LTI)"", ""state"": ""Từ 7 lần"", ""points"": -16}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -11}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 17}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Nông nghiệp & Dịch vụ khác"", ""xac_suat_vo_no_pct"": 8.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 510, ""thay_doi"": -45}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 528, ""thay_doi"": -27}, ""Kinh tế suy giảm"": {""diem_moi"": 555, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%""], ""diem_dat_duoc"": 608, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 621, ""chi_phi"": 2.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần""], ""diem_dat_duoc"": 621, ""chi_phi"": 3.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 555 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 11.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 18 điểm.
+- Dư nợ/Thu nhập (LTI) (Từ 7 lần) kéo điểm xuống 16 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 11 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 17 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 2 điểm.
+- Chưa có thông tin: Trả góp/Thu nhập (DSTI) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): Không rõ → Dưới 10% (điểm dự kiến 608).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 510 (-45 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 528 (-27 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 555 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+30,template,597,Trung bình,"{""diem"": 597, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [""Ngành"", ""Học vấn"", ""Dư nợ/Thu nhập (LTI)""], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -9}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": -5}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 25}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 19}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 2}], ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 509, ""thay_doi"": -88}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 539, ""thay_doi"": -58}, ""Kinh tế suy giảm"": {""diem_moi"": 596, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 687, ""chi_phi"": 11.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 698, ""chi_phi"": 14.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Giảm tổng dư nợ/thu nhập: Không rõ → Dưới 1,5 lần"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: Từ 4 lần → 2–3 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 698, ""chi_phi"": 16.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 597 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 6.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 9 điểm.
+- Trả góp/Thu nhập (DSTI) (20–30%) kéo điểm xuống 5 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 3 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 25 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 19 điểm.
+- Người phụ thuộc (Không) giúp tăng 2 điểm.
+- Chưa có thông tin: Ngành, Học vấn, Dư nợ/Thu nhập (LTI) (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt (điểm dự kiến 687).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 509 (-88 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 539 (-58 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 596 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+31,template,534,Kém,"{""diem"": 534, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 14.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Hành chính công & An ninh–Quốc phòng"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""Dưới 1,5 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -71}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -5}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 18}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 8}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 8}], ""rui_ro_nhom_sector"": {""nhom"": ""Hành chính công & An ninh–Quốc phòng"", ""xac_suat_vo_no_pct"": 7.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 468, ""thay_doi"": -65}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 494, ""thay_doi"": -40}, ""Kinh tế suy giảm"": {""diem_moi"": 533, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 583, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 597, ""chi_phi"": 5.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 598, ""chi_phi"": 5.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 534 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 14.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 71 điểm.
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 5 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 4 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 18 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 8 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 8 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 583).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 468 (-65 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 494 (-40 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 533 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+32,template,586,Trung bình,"{""diem"": 586, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 7.8, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Hành chính công & An ninh–Quốc phòng"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -23}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -18}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -12}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 17}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 6}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 6}], ""rui_ro_nhom_sector"": {""nhom"": ""Hành chính công & An ninh–Quốc phòng"", ""xac_suat_vo_no_pct"": 7.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 545, ""thay_doi"": -42}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 561, ""thay_doi"": -25}, ""Kinh tế suy giảm"": {""diem_moi"": 586, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 677, ""chi_phi"": 8.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 677, ""chi_phi"": 9.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 692, ""chi_phi"": 9.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 586 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 7.8%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 23 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 18 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 12 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 17 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 6 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 6 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình; Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm (điểm dự kiến 677).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 545 (-42 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 561 (-25 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 586 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+33,template,666,Trung bình,"{""diem"": 666, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 2.9, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Hành chính công & An ninh–Quốc phòng"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 4"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 1 (thuận lợi nhất)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có xe"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 1 (thuận lợi nhất)"", ""points"": 21}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 19}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Không khai báo"", ""points"": 13}], ""rui_ro_nhom_sector"": {""nhom"": ""Hành chính công & An ninh–Quốc phòng"", ""xac_suat_vo_no_pct"": 7.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 558, ""thay_doi"": -109}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 591, ""thay_doi"": -75}, ""Kinh tế suy giảm"": {""diem_moi"": 666, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%""], ""diem_dat_duoc"": 690, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 721, ""chi_phi"": 2.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần""], ""diem_dat_duoc"": 721, ""chi_phi"": 3.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 666 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 2.9%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Tài sản (nhà/xe) (Có xe) kéo điểm xuống 3 điểm.
+- Vùng (Vùng 1 (thuận lợi nhất)) giúp tăng 21 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 19 điểm.
+- Nhóm nghề (Không khai báo) giúp tăng 13 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10% (điểm dự kiến 690).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 558 (-109 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 591 (-75 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 666 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+34,template,607,Trung bình,"{""diem"": 607, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.1, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Hành chính công & An ninh–Quốc phòng"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -9}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -5}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 7}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 1}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Hành chính công & An ninh–Quốc phòng"", ""xac_suat_vo_no_pct"": 7.2}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 557, ""thay_doi"": -50}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 576, ""thay_doi"": -31}, ""Kinh tế suy giảm"": {""diem_moi"": 607, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 672, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 687, ""chi_phi"": 6.5}, {""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 702, ""chi_phi"": 8.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 607 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 6.1%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 9 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 5 điểm.
+- Vùng (Vùng 2) kéo điểm xuống 2 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 7 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 1 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%; Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm (điểm dự kiến 672).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 557 (-50 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 576 (-31 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 607 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+35,template,679,Tốt,"{""diem"": 679, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 2.4, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tự kinh doanh"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""Dưới 10%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""Không rõ"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -35}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": -22}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""1 con"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 58}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 19}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""Dưới 10%"", ""points"": 17}], ""rui_ro_nhom_sector"": {""nhom"": ""Tự kinh doanh"", ""xac_suat_vo_no_pct"": 8.4}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Mất việc"": {""diem_moi"": 589, ""thay_doi"": -90}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 618, ""thay_doi"": -61}, ""Kinh tế suy giảm"": {""diem_moi"": 678, ""thay_doi"": -1}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm""], ""diem_dat_duoc"": 797, ""chi_phi"": 5.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 679 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 2.4%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 35 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) kéo điểm xuống 22 điểm.
+- Người phụ thuộc (1 con) kéo điểm xuống 3 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 58 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 19 điểm.
+- Trả góp/Thu nhập (DSTI) (Dưới 10%) giúp tăng 17 điểm.
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Gắn bó công việc hiện tại lâu hơn: 3–7 năm → Từ 7 năm (điểm dự kiến 797).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 589 (-90 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 618 (-61 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 678 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+36,template,492,Rất kém,"{""diem"": 492, ""muc_rui_ro"": ""Rất kém"", ""xac_suat_vo_no_pct"": 22.8, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tự kinh doanh"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""Dưới 1 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Không có nhà/xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [""Nhóm nghề""], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -86}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Dưới 1 năm"", ""points"": -28}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -15}], ""yeu_to_giup_diem"": [{""node"": ""education"", ""label"": ""Học vấn"", ""state"": ""Đại học trở lên"", ""points"": 5}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Tự kinh doanh"", ""xac_suat_vo_no_pct"": 8.4}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 456, ""thay_doi"": -36}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 471, ""thay_doi"": -21}, ""Kinh tế suy giảm"": {""diem_moi"": 492, ""thay_doi"": 0}}, ""muc_tieu_diem"": 500, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%""], ""diem_dat_duoc"": 513, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần""], ""diem_dat_duoc"": 513, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Giảm tổng dư nợ/thu nhập: 4,5–7 lần → 3–4,5 lần""], ""diem_dat_duoc"": 513, ""chi_phi"": 2.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 492 (thang 300–850), mức ""Rất kém"". Xác suất vỡ nợ ước tính 22.8%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 86 điểm.
+- Ổn định việc làm (Dưới 1 năm) kéo điểm xuống 28 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 15 điểm.
+- Học vấn (Đại học trở lên) giúp tăng 5 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 1 điểm.
+- Chưa có thông tin: Nhóm nghề (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 500 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10% (điểm dự kiến 513).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 456 (-36 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 471 (-21 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 492 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+37,template,640,Trung bình,"{""diem"": 640, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 4.0, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tự kinh doanh"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""30–40%"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""1 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -7}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 2"", ""points"": -4}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""30–40%"", ""points"": -3}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 31}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 24}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 6}], ""rui_ro_nhom_sector"": {""nhom"": ""Tự kinh doanh"", ""xac_suat_vo_no_pct"": 8.4}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 547, ""thay_doi"": -93}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 578, ""thay_doi"": -62}, ""Kinh tế suy giảm"": {""diem_moi"": 639, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 688, ""chi_phi"": 4.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 720, ""chi_phi"": 5.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 30–40% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt""], ""diem_dat_duoc"": 721, ""chi_phi"": 7.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 640 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 4.0%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 7 điểm.
+- Thu nhập (Nhóm 2) kéo điểm xuống 4 điểm.
+- Trả góp/Thu nhập (DSTI) (30–40%) kéo điểm xuống 3 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 31 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 24 điểm.
+- Vùng (Vùng 2) giúp tăng 6 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt (điểm dự kiến 688).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 547 (-93 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 578 (-62 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 639 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+38,template,561,Kém,"{""diem"": 561, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 10.6, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tự kinh doanh"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""Dưới 1,5 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""Không rõ"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -26}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -22}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -11}], ""yeu_to_giup_diem"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 4}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà"", ""points"": 1}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Tự kinh doanh"", ""xac_suat_vo_no_pct"": 8.4}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 495, ""thay_doi"": -66}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 519, ""thay_doi"": -42}, ""Kinh tế suy giảm"": {""diem_moi"": 561, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 618, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 649, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt""], ""diem_dat_duoc"": 676, ""chi_phi"": 6.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 561 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 10.6%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 26 điểm.
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 22 điểm.
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 11 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 4 điểm.
+- Tài sản (nhà/xe) (Có nhà) giúp tăng 1 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Tốt (điểm dự kiến 618).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 495 (-66 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 519 (-42 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 561 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+39,template,724,Tốt,"{""diem"": 724, ""muc_rui_ro"": ""Tốt"", ""xac_suat_vo_no_pct"": 1.4, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Tự kinh doanh"", ""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 64}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 50}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Quản lý & Chuyên gia"", ""points"": 40}], ""rui_ro_nhom_sector"": {""nhom"": ""Tự kinh doanh"", ""xac_suat_vo_no_pct"": 8.4}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 599, ""thay_doi"": -126}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 634, ""thay_doi"": -90}, ""Kinh tế suy giảm"": {""diem_moi"": 723, ""thay_doi"": -1}}, ""muc_tieu_diem"": 740, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%""], ""diem_dat_duoc"": 749, ""chi_phi"": 1.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 756, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 797, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 724 (thang 300–850), mức ""Tốt"". Xác suất vỡ nợ ước tính 1.4%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Tốt) giúp tăng 64 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 50 điểm.
+- Nhóm nghề (Quản lý & Chuyên gia) giúp tăng 40 điểm.
+
+**Nên làm gì**
+Để đạt 740 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10% (điểm dự kiến 749).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 599 (-126 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 634 (-90 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 723 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+40,template,668,Trung bình,"{""diem"": 668, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 2.8, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Thương mại, Lưu trú & Ăn uống"", ""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 3"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 3 (kém thuận lợi)""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 3 (kém thuận lợi)"", ""points"": -29}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": -7}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Thương mại, Lưu trú & Ăn uống"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 35}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 34}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 7}], ""rui_ro_nhom_sector"": {""nhom"": ""Thương mại, Lưu trú & Ăn uống"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 567, ""thay_doi"": -101}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 599, ""thay_doi"": -69}, ""Kinh tế suy giảm"": {""diem_moi"": 667, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%""], ""diem_dat_duoc"": 710, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Hạn chế mở tín dụng mới: 2–3 lần → 1 lần""], ""diem_dat_duoc"": 710, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 747, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 668 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 2.8%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Vùng (Vùng 3 (kém thuận lợi)) kéo điểm xuống 29 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) kéo điểm xuống 7 điểm.
+- Ngành (Thương mại, Lưu trú & Ăn uống) kéo điểm xuống 2 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 35 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 34 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 7 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10% (điểm dự kiến 710).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 567 (-101 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 599 (-69 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 667 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+41,template,511,Kém,"{""diem"": 511, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 18.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Thương mại, Lưu trú & Ăn uống"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có xe"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""Từ 7 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -83}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -25}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": -9}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 11}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""Không"", ""points"": 1}], ""rui_ro_nhom_sector"": {""nhom"": ""Thương mại, Lưu trú & Ăn uống"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 473, ""thay_doi"": -38}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 488, ""thay_doi"": -23}, ""Kinh tế suy giảm"": {""diem_moi"": 511, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 593, ""chi_phi"": 4.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 604, ""chi_phi"": 5.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém""], ""diem_dat_duoc"": 608, ""chi_phi"": 7.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 511 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 18.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 83 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 25 điểm.
+- Trả góp/Thu nhập (DSTI) (20–30%) kéo điểm xuống 9 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 11 điểm.
+- Người phụ thuộc (Không) giúp tăng 1 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Kém (điểm dự kiến 593).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 473 (-38 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 488 (-23 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 511 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+42,template,514,Kém,"{""diem"": 514, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 18.1, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Thương mại, Lưu trú & Ăn uống"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 3"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Rất kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất kém"", ""points"": -80}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": -16}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Thương mại, Lưu trú & Ăn uống"", ""points"": -1}], ""yeu_to_giup_diem"": [{""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 3}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 3}], ""rui_ro_nhom_sector"": {""nhom"": ""Thương mại, Lưu trú & Ăn uống"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất kém"", ""xac_suat_vo_no_pct"": 17.3}, ""what_if"": {""Mất việc"": {""diem_moi"": 484, ""thay_doi"": -30}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 496, ""thay_doi"": -18}, ""Kinh tế suy giảm"": {""diem_moi"": 514, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Trung bình""], ""diem_dat_duoc"": 597, ""chi_phi"": 8.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Trung bình""], ""diem_dat_duoc"": 606, ""chi_phi"": 9.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Trung bình""], ""diem_dat_duoc"": 606, ""chi_phi"": 10.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 514 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 18.1%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Rất kém) kéo điểm xuống 80 điểm.
+- Ổn định việc làm (3–7 năm) kéo điểm xuống 16 điểm.
+- Ngành (Thương mại, Lưu trú & Ăn uống) kéo điểm xuống 1 điểm.
+- Vùng (Vùng 2) giúp tăng 3 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 3 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Rất kém → Trung bình (điểm dự kiến 597).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 484 (-30 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 496 (-18 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 514 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+43,template,534,Kém,"{""diem"": 534, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 14.5, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Thương mại, Lưu trú & Ăn uống"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -22}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -20}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -16}], ""yeu_to_giup_diem"": [{""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 3}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Thương mại, Lưu trú & Ăn uống"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 488, ""thay_doi"": -46}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 506, ""thay_doi"": -28}, ""Kinh tế suy giảm"": {""diem_moi"": 534, ""thay_doi"": -1}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 588, ""chi_phi"": 6.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 602, ""chi_phi"": 7.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Tốt""], ""diem_dat_duoc"": 608, ""chi_phi"": 10.0}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 534 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 14.5%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 22 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 20 điểm.
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 16 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 3 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → Dưới 10%; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình (điểm dự kiến 588).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 488 (-46 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 506 (-28 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 534 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+44,template,658,Trung bình,"{""diem"": 658, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 3.2, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Thương mại, Lưu trú & Ăn uống"", ""Nhóm nghề"": ""Dịch vụ & Bán hàng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""3–7 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Rất tốt"", ""Tín dụng mới (tra cứu)"": ""1 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": -21}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Dịch vụ & Bán hàng"", ""points"": -14}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Thương mại, Lưu trú & Ăn uống"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Rất tốt"", ""points"": 67}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 16}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""3–7 năm"", ""points"": 4}], ""rui_ro_nhom_sector"": {""nhom"": ""Thương mại, Lưu trú & Ăn uống"", ""xac_suat_vo_no_pct"": 8.7}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Rất tốt"", ""xac_suat_vo_no_pct"": 2.9}, ""what_if"": {""Mất việc"": {""diem_moi"": 582, ""thay_doi"": -75}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 608, ""thay_doi"": -50}, ""Kinh tế suy giảm"": {""diem_moi"": 657, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%""], ""diem_dat_duoc"": 690, ""chi_phi"": 1.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Giảm tổng dư nợ/thu nhập: 3–4,5 lần → 1,5–3 lần""], ""diem_dat_duoc"": 690, ""chi_phi"": 2.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 715, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 658 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 3.2%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Trả góp/Thu nhập (DSTI) (20–30%) kéo điểm xuống 21 điểm.
+- Nhóm nghề (Dịch vụ & Bán hàng) kéo điểm xuống 14 điểm.
+- Ngành (Thương mại, Lưu trú & Ăn uống) kéo điểm xuống 2 điểm.
+- Lịch sử tín dụng (Rất tốt) giúp tăng 67 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 16 điểm.
+- Ổn định việc làm (3–7 năm) giúp tăng 4 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20% (điểm dự kiến 690).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 582 (-75 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 608 (-50 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 657 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+45,template,661,Trung bình,"{""diem"": 661, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 3.1, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Vận tải & Bưu chính"", ""Nhóm nghề"": ""Kỹ thuật viên & Văn phòng"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Người phụ thuộc"": ""1 con"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""20–30%"", ""Dư nợ/Thu nhập (LTI)"": ""4,5–7 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""1 lần""}, ""bien_chua_biet"": [""Thu nhập"", ""Vùng""], ""yeu_to_keo_diem_xuong"": [{""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""20–30%"", ""points"": -9}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""1 con"", ""points"": -5}, {""node"": ""sector"", ""label"": ""Ngành"", ""state"": ""Vận tải & Bưu chính"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 43}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 38}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Kỹ thuật viên & Văn phòng"", ""points"": 16}], ""rui_ro_nhom_sector"": {""nhom"": ""Vận tải & Bưu chính"", ""xac_suat_vo_no_pct"": 8.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 543, ""thay_doi"": -118}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 579, ""thay_doi"": -83}, ""Kinh tế suy giảm"": {""diem_moi"": 661, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%""], ""diem_dat_duoc"": 676, ""chi_phi"": 1.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 698, ""chi_phi"": 1.5}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp""], ""diem_dat_duoc"": 716, ""chi_phi"": 2.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 661 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 3.1%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Trả góp/Thu nhập (DSTI) (20–30%) kéo điểm xuống 9 điểm.
+- Người phụ thuộc (1 con) kéo điểm xuống 5 điểm.
+- Ngành (Vận tải & Bưu chính) kéo điểm xuống 4 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 43 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 38 điểm.
+- Nhóm nghề (Kỹ thuật viên & Văn phòng) giúp tăng 16 điểm.
+- Chưa có thông tin: Thu nhập, Vùng (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 20–30% → 10–20% (điểm dự kiến 676).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 543 (-118 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 579 (-83 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 661 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+46,template,607,Trung bình,"{""diem"": 607, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.1, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Vận tải & Bưu chính"", ""Nhóm nghề"": ""Lao động phổ thông & Lái xe"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""40–50"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Tốt"", ""Tín dụng mới (tra cứu)"": ""Từ 4 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Lao động phổ thông & Lái xe"", ""points"": -17}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -10}, {""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 2"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Tốt"", ""points"": 39}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 5}, {""node"": ""annuity_to_income"", ""label"": ""Trả góp/Thu nhập (DSTI)"", ""state"": ""10–20%"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Vận tải & Bưu chính"", ""xac_suat_vo_no_pct"": 8.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Tốt"", ""xac_suat_vo_no_pct"": 4.2}, ""what_if"": {""Mất việc"": {""diem_moi"": 529, ""thay_doi"": -78}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 556, ""thay_doi"": -51}, ""Kinh tế suy giảm"": {""diem_moi"": 606, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [], ""khong_dat_muc_tieu"": {""diem_toi_da"": 667, ""thay_doi"": [""Tăng thu nhập: Nhóm 2 → Nhóm 4"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Hạn chế mở tín dụng mới: Từ 4 lần → 2–3 lần"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt"", ""Gắn bó công việc hiện tại lâu hơn: 1–3 năm → 3–7 năm""]}}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 607 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 6.1%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Nhóm nghề (Lao động phổ thông & Lái xe) kéo điểm xuống 17 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 10 điểm.
+- Thu nhập (Nhóm 2) kéo điểm xuống 4 điểm.
+- Lịch sử tín dụng (Tốt) giúp tăng 39 điểm.
+- Vùng (Vùng 2) giúp tăng 5 điểm.
+- Trả góp/Thu nhập (DSTI) (10–20%) giúp tăng 2 điểm.
+
+**Nên làm gì**
+Chưa thể đạt 670 điểm chỉ bằng các thay đổi trong tầm tay; tốt nhất đạt 667 điểm khi: Tăng thu nhập: Nhóm 2 → Nhóm 4; Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%; Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Hạn chế mở tín dụng mới: Từ 4 lần → 2–3 lần; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Tốt → Rất tốt; Gắn bó công việc hiện tại lâu hơn: 1–3 năm → 3–7 năm.
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 529 (-78 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 556 (-51 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 606 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+47,template,617,Trung bình,"{""diem"": 617, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 5.4, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Vận tải & Bưu chính"", ""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Phổ thông trở xuống"", ""Tuổi"": ""50–60"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 1 (thấp nhất)"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""Dưới 1,5 lần"", ""Lịch sử tín dụng"": ""Trung bình"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 1 (thấp nhất)"", ""points"": -12}], ""yeu_to_giup_diem"": [{""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Quản lý & Chuyên gia"", ""points"": 25}, {""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Trung bình"", ""points"": 16}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 6}], ""rui_ro_nhom_sector"": {""nhom"": ""Vận tải & Bưu chính"", ""xac_suat_vo_no_pct"": 8.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Trung bình"", ""xac_suat_vo_no_pct"": 6.0}, ""what_if"": {""Mất việc"": {""diem_moi"": 525, ""thay_doi"": -92}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 555, ""thay_doi"": -61}, ""Kinh tế suy giảm"": {""diem_moi"": 616, ""thay_doi"": -1}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 696, ""chi_phi"": 9.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 709, ""chi_phi"": 12.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 1 (thấp nhất) → Nhóm 2"", ""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt""], ""diem_dat_duoc"": 709, ""chi_phi"": 13.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 617 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 5.4%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 1 (thấp nhất)) kéo điểm xuống 12 điểm.
+- Nhóm nghề (Quản lý & Chuyên gia) giúp tăng 25 điểm.
+- Lịch sử tín dụng (Trung bình) giúp tăng 16 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 6 điểm.
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp; Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Trung bình → Rất tốt (điểm dự kiến 696).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 525 (-92 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 555 (-61 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 616 (-1 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+48,template,634,Trung bình,"{""diem"": 634, ""muc_rui_ro"": ""Trung bình"", ""xac_suat_vo_no_pct"": 4.3, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Nhóm nghề"": ""Quản lý & Chuyên gia"", ""Học vấn"": ""Đại học trở lên"", ""Ổn định việc làm"": ""Từ 7 năm"", ""Thu nhập"": ""Nhóm 2"", ""Người phụ thuộc"": ""Không"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""1,5–3 lần"", ""Tín dụng mới (tra cứu)"": ""2–3 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [""Ngành"", ""Tuổi"", ""Lịch sử tín dụng""], ""yeu_to_keo_diem_xuong"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 2"", ""points"": -4}], ""yeu_to_giup_diem"": [{""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""Từ 7 năm"", ""points"": 33}, {""node"": ""occupation_group"", ""label"": ""Nhóm nghề"", ""state"": ""Quản lý & Chuyên gia"", ""points"": 15}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 4}], ""what_if"": {""Mất việc"": {""diem_moi"": 545, ""thay_doi"": -88}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 576, ""thay_doi"": -58}, ""Kinh tế suy giảm"": {""diem_moi"": 633, ""thay_doi"": 0}}, ""muc_tieu_diem"": 670, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Không rõ → Rất tốt""], ""diem_dat_duoc"": 709, ""chi_phi"": 4.0}, {""thay_doi"": [""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Không rõ → Rất tốt""], ""diem_dat_duoc"": 755, ""chi_phi"": 5.5}, {""thay_doi"": [""Tăng thu nhập: Nhóm 2 → Nhóm 3"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Không rõ → Rất tốt""], ""diem_dat_duoc"": 769, ""chi_phi"": 8.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 634 (thang 300–850), mức ""Trung bình"". Xác suất vỡ nợ ước tính 4.3%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Thu nhập (Nhóm 2) kéo điểm xuống 4 điểm.
+- Ổn định việc làm (Từ 7 năm) giúp tăng 33 điểm.
+- Nhóm nghề (Quản lý & Chuyên gia) giúp tăng 15 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 4 điểm.
+- Chưa có thông tin: Ngành, Tuổi, Lịch sử tín dụng (mô hình đã tính trung bình theo xác suất).
+
+**Nên làm gì**
+Để đạt 670 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Không rõ → Rất tốt (điểm dự kiến 709).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 545 (-88 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 576 (-58 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 633 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,
+49,template,568,Kém,"{""diem"": 568, ""muc_rui_ro"": ""Kém"", ""xac_suat_vo_no_pct"": 9.7, ""xac_suat_vo_no_trung_binh_quan_the_pct"": 7.9, ""thang_diem"": ""300–850"", ""ho_so"": {""Ngành"": ""Vận tải & Bưu chính"", ""Nhóm nghề"": ""Không khai báo"", ""Học vấn"": ""Đại học trở lên"", ""Tuổi"": ""30–40"", ""Ổn định việc làm"": ""1–3 năm"", ""Thu nhập"": ""Nhóm 5 (cao nhất)"", ""Người phụ thuộc"": ""2 con"", ""Tài sản (nhà/xe)"": ""Có nhà và xe"", ""Trả góp/Thu nhập (DSTI)"": ""10–20%"", ""Dư nợ/Thu nhập (LTI)"": ""3–4,5 lần"", ""Lịch sử tín dụng"": ""Kém"", ""Tín dụng mới (tra cứu)"": ""0 lần"", ""Vùng"": ""Vùng 2""}, ""bien_chua_biet"": [], ""yeu_to_keo_diem_xuong"": [{""node"": ""ext_score_mean"", ""label"": ""Lịch sử tín dụng"", ""state"": ""Kém"", ""points"": -30}, {""node"": ""years_employed"", ""label"": ""Ổn định việc làm"", ""state"": ""1–3 năm"", ""points"": -21}, {""node"": ""n_children"", ""label"": ""Người phụ thuộc"", ""state"": ""2 con"", ""points"": -2}], ""yeu_to_giup_diem"": [{""node"": ""income"", ""label"": ""Thu nhập"", ""state"": ""Nhóm 5 (cao nhất)"", ""points"": 6}, {""node"": ""region_rating"", ""label"": ""Vùng"", ""state"": ""Vùng 2"", ""points"": 2}, {""node"": ""assets"", ""label"": ""Tài sản (nhà/xe)"", ""state"": ""Có nhà và xe"", ""points"": 2}], ""rui_ro_nhom_sector"": {""nhom"": ""Vận tải & Bưu chính"", ""xac_suat_vo_no_pct"": 8.3}, ""rui_ro_nhom_ext_score_mean"": {""nhom"": ""Kém"", ""xac_suat_vo_no_pct"": 9.1}, ""what_if"": {""Mất việc"": {""diem_moi"": 538, ""thay_doi"": -30}, ""Biến cố sức khỏe (chi y tế lớn)"": {""diem_moi"": 551, ""thay_doi"": -18}, ""Kinh tế suy giảm"": {""diem_moi"": 568, ""thay_doi"": 0}}, ""muc_tieu_diem"": 580, ""ke_hoach"": [{""thay_doi"": [""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 602, ""chi_phi"": 4.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 676, ""chi_phi"": 5.0}, {""thay_doi"": [""Giảm trả góp/thu nhập (vay ít hơn hoặc kỳ hạn dài hơn): 10–20% → Dưới 10%"", ""Thắt chặt chi tiêu sinh hoạt: Không rõ → Thấp"", ""Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình""], ""diem_dat_duoc"": 700, ""chi_phi"": 6.5}]}","**Tóm tắt**
+Điểm tín dụng ước tính của bạn là 568 (thang 300–850), mức ""Kém"". Xác suất vỡ nợ ước tính 9.7%, so với trung bình quần thể 7.9%.
+
+**Yếu tố chính**
+- Lịch sử tín dụng (Kém) kéo điểm xuống 30 điểm.
+- Ổn định việc làm (1–3 năm) kéo điểm xuống 21 điểm.
+- Người phụ thuộc (2 con) kéo điểm xuống 2 điểm.
+- Thu nhập (Nhóm 5 (cao nhất)) giúp tăng 6 điểm.
+- Vùng (Vùng 2) giúp tăng 2 điểm.
+- Tài sản (nhà/xe) (Có nhà và xe) giúp tăng 2 điểm.
+
+**Nên làm gì**
+Để đạt 580 điểm, phương án ít thay đổi nhất: Trả nợ đúng hạn liên tục ≥ 12 tháng để cải thiện lịch sử tín dụng: Kém → Trung bình (điểm dự kiến 602).
+- Nếu gặp ""Mất việc"", điểm có thể giảm còn 538 (-30 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Biến cố sức khỏe (chi y tế lớn)"", điểm có thể giảm còn 551 (-18 điểm): nên có quỹ dự phòng.
+- Nếu gặp ""Kinh tế suy giảm"", điểm có thể giảm còn 568 (0 điểm): nên có quỹ dự phòng.
+
+**Lưu ý**
+Đây là mô hình minh họa học từ dữ liệu công khai (Home Credit) và tri thức vĩ mô Việt Nam, không phải quyết định cho vay hay tư vấn tài chính chính thức.",,,,,

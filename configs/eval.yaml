@@ -1,0 +1,84 @@
+# Cấu hình thực nghiệm (G4). Mọi script đọc từ đây; seed cố định.
+cv:
+  n_folds: 5
+  seeds: [42, 43, 44]          # 5-fold × 3 seed = 15 lần đánh giá
+  splits_file: experiments/splits/home_credit_folds.npz
+
+# Mô hình trong thí nghiệm chính (all_seeds: false -> chỉ chạy seed đầu; đo thời gian cho thấy mọi mô hình đủ nhanh để chạy 3 seed).
+models:
+  FICO:            {family: rule, input: disc, all_seeds: true}
+  BN-Expert:       {family: bn,   input: disc, all_seeds: true}
+  BN-Expert-Mono:  {family: bn,   input: disc, all_seeds: true}
+  Naive Bayes:     {family: bn,   input: disc, all_seeds: true}
+  TAN:             {family: bn,   input: disc, all_seeds: true}
+  BN-Learned:      {family: bn,   input: disc, all_seeds: true}
+  BN-Hybrid:       {family: bn,   input: disc, all_seeds: true}
+  LR:              {family: ml,   input: cont, all_seeds: true}
+  LR-disc:         {family: ml,   input: disc, all_seeds: true}
+  XGBoost:         {family: ml,   input: cont, all_seeds: true}
+  XGBoost-disc:    {family: ml,   input: disc, all_seeds: true}
+  XGBoost-Mono:    {family: ml,   input: cont, all_seeds: true}
+  LightGBM:        {family: ml,   input: cont, all_seeds: true}
+  RF:              {family: ml,   input: cont, all_seeds: true}
+  MLP:             {family: ml,   input: cont, all_seeds: true}
+
+ml:
+  inner_val_frac: 0.1          # tách từ TRAIN của fold để early stopping (không chạm test)
+  xgboost:
+    n_estimators: 2000
+    learning_rate: 0.05
+    max_depth: 5
+    min_child_weight: 10
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    early_stopping_rounds: 100
+    tuned_params_file: experiments/tuning/xgboost.json   # nếu có -> ghi đè các tham số trên
+  lightgbm:
+    n_estimators: 2000
+    learning_rate: 0.05
+    num_leaves: 31
+    min_child_samples: 100
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    early_stopping_rounds: 100
+  rf: {n_estimators: 200, min_samples_leaf: 100, max_features: sqrt}
+  mlp: {hidden_layer_sizes: [64, 32], alpha: 0.001, max_iter: 60, early_stopping: true}
+  # Ràng buộc đơn điệu cho XGBoost-Mono = CÙNG tri thức như BN-Expert-Mono (+1 tăng rủi ro, -1 giảm)
+  monotone: {annuity_to_income: 1, ext_score_mean: -1}
+
+tuning:
+  n_trials: 25
+  timeout_s: 600
+  model: xgboost
+
+# Hướng tác động kỳ vọng theo tri thức (FICO + kinh tế học) – dùng cho thí nghiệm (7)
+expected_direction:
+  annuity_to_income: increasing
+  credit_to_income: increasing
+  ext_score_mean: decreasing
+  years_employed: decreasing
+  bureau_inquiries_year: increasing
+  # age_years: KHÔNG đưa vào – tri thức mâu thuẫn (FICO: lịch sử dài hơn tốt hơn; WHO: rủi ro sức khỏe tăng theo tuổi)
+  income: decreasing
+
+experiments:
+  missing:
+    rates: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+    models: [FICO, BN-Expert, BN-Expert-Mono, Naive Bayes, TAN, LR, LR-disc, XGBoost, XGBoost-disc, LightGBM, RF, MLP]
+  learning_curve:
+    fractions: [0.01, 0.05, 0.10, 0.25]
+    models: [FICO, BN-Expert, BN-Expert-Mono, Naive Bayes, TAN, LR, LR-disc, XGBoost, XGBoost-disc, LightGBM]
+  sector_shift:
+    models: [FICO, BN-Expert, BN-Expert-Mono, Naive Bayes, TAN, LR, XGBoost, XGBoost-Mono, LightGBM]
+  consistency:
+    n_rows: 5000
+    tol: 0.001                 # bước ngược hướng > 0.1 điểm phần trăm mới tính là vi phạm
+    models: [FICO, BN-Expert, BN-Expert-Mono, Naive Bayes, TAN, BN-Hybrid, LR, LR-disc, XGBoost, XGBoost-disc, XGBoost-Mono, LightGBM, RF, MLP]
+  stability:
+    n_probe: 2000
+    models: [FICO, BN-Expert, BN-Expert-Mono, Naive Bayes, TAN, LR, XGBoost, XGBoost-Mono, LightGBM]
+  lambda: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+  bootstrap: {n: 1000, reference: BN-Expert-Mono}
+  ece_bins: 15                 # ECE dùng bin cùng số mẫu (equal-mass) vì tỷ lệ vỡ nợ thấp (8%)

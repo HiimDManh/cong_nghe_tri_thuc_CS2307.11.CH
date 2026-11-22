@@ -1,0 +1,24 @@
+# BN chuyên gia nhỏ cho German Credit (thí nghiệm (5) – dữ liệu ít, bộ dữ liệu thứ hai).
+# Rời rạc hóa: duration/credit_amount/age theo ngưỡng cố định (nghiệp vụ), các biến khác giữ nhóm gốc.
+discretize:
+  duration: {edges: [12, 24, 36], labels: ["<12m", "12-24m", "24-36m", ">=36m"]}
+  credit_amount: {edges: [1500, 4000, 8000], labels: ["<1.5k", "1.5-4k", "4-8k", ">=8k"]}
+  age: {edges: [25, 35, 50], labels: ["<25", "25-35", "35-50", ">=50"]}
+  installment_commitment: {edges: [2, 3, 4], labels: ["1", "2", "3", "4"]}   # % thu nhập khả dụng dành trả góp (1 thấp – 4 cao) ~ DSTI
+categorical: [checking_status, credit_history, savings_status, employment, job, housing, property_magnitude]
+edges:
+  # parent -> child : lý do
+  - [age, employment, "Thâm niên bị chặn bởi tuổi"]
+  - [job, employment, "Nhóm nghề → ổn định việc làm (chuỗi Ngành/Nghề → ... của đề)"]
+  - [employment, savings_status, "Việc làm ổn định → tích lũy tiết kiệm"]
+  - [job, savings_status, "Nghề → thu nhập → tiết kiệm"]
+  - [savings_status, checking_status, "Có tiết kiệm → số dư tài khoản cao hơn"]
+  - [age, property_magnitude, "Thời gian tích lũy tài sản"]
+  - [property_magnitude, housing, "Sở hữu bất động sản → nhà ở"]
+  - [credit_amount, duration, "Khoản vay lớn → kỳ hạn dài"]
+  - [credit_amount, installment_commitment, "Khoản vay lớn → gánh nặng trả góp"]
+  - [checking_status, default, "Thanh khoản hiện tại (V=0.35)"]
+  - [credit_history, default, "Lịch sử thanh toán (FICO 35%)"]
+  - [duration, default, "Kỳ hạn dài → rủi ro cao"]
+  - [savings_status, default, "Đệm tài chính"]
+cv: {n_folds: 5, repeats: 10, fractions: [0.25, 0.5, 1.0]}
