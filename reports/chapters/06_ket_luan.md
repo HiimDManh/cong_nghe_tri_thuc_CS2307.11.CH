@@ -40,7 +40,9 @@
 - **Cấu trúc thưa.** Khi thiếu điểm tín dụng ngoài, BN kém ML vì các biến khác chỉ tác động gián tiếp.
 - **Ràng buộc đơn điệu chưa đủ.** Chỉ áp cho DSTI và lịch sử tín dụng; thâm niên vẫn còn vi phạm. Một số biến không có
   tác động trong BN do d-separation (LTI, tra cứu tín dụng).
-- **LLM.** Bộ kiểm tra hướng tác động là heuristic. Kết quả với LLM thật và chấm tay đang chờ API key.
+- **LLM.** Bộ kiểm tra hướng tác động là heuristic. LLM thật vẫn tự tính thêm số dù bị cấm (gpt-oss-120b trung thành
+  {{num:llm_faithful.groq:gpt-oss-120b}}). Hướng cải tiến: tự động chuyển về template, hoặc yêu cầu LLM viết lại, khi
+  bộ kiểm tra không đạt. Chỉ thử hai model trên một nhà cung cấp; chấm tay còn ít người.
 - **Công bằng.** Không dùng giới tính hay hôn nhân, nhưng ngành, nghề và vùng có thể tương quan với thuộc tính nhạy
   cảm. Nhóm chưa đo các chỉ số công bằng.
 

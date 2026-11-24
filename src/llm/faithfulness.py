@@ -12,6 +12,8 @@ import re
 
 NUM = re.compile(r"(?<![\w.])\d{1,3}(?:[.\s]\d{3})+(?:,\d+)?|\d+(?:[.,]\d+)?")
 LIST_MARK = re.compile(r"^\s*(?:\d+[.)]|[-*•])\s+", re.M)
+# số thứ tự kế hoạch/phương án ("kế hoạch 2") là nhãn, không phải số liệu (sửa 24/11 sau khi đọc lỗi bắt nhầm)
+ORDINAL = re.compile(r"\b(kế hoạch|phương án|bước|lựa chọn)\s+\d+\b", re.I)
 POS = ("giúp tăng", "điểm mạnh", "tích cực", "cộng điểm", "lợi thế", "giúp điểm")
 NEG = ("kéo điểm xuống", "kéo xuống", "làm giảm", "tiêu cực", "bất lợi", "rủi ro cao", "trừ điểm")
 
@@ -27,6 +29,7 @@ def _to_float(s: str) -> float:
 
 def numbers(text: str) -> list[float]:
     text = LIST_MARK.sub("", text)
+    text = ORDINAL.sub(r"\1", text)
     text = re.sub(r"\*\*", "", text)
     return [_to_float(m.group()) for m in NUM.finditer(text)]
 

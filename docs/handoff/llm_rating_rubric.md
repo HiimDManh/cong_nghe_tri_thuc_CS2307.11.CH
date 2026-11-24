@@ -1,7 +1,7 @@
 # Rubric chấm tay lời khuyên LLM – Nam, Khôi, Phúc
 
 File chấm: `experiments/llm_faithfulness/samples_for_rating.csv` (mở bằng Excel/Google Sheets, UTF-8).
-Mạnh sẽ gửi bản có lời khuyên của **Gemini/Groq** sau khi có API key (dự kiến 27/11); bản hiện tại chỉ có `template`.
+Bản 24/11 có 3 nguồn cho mỗi hồ sơ: `template`, `groq:gpt-oss-120b`, `groq:qwen3.8-27b` (150 dòng). Chấm theo nội dung; đừng để tên nguồn ảnh hưởng điểm.
 
 **Phân công:** Nam chấm `profile` 0–14 · Khôi 15–29 · Phúc 30–44 · **cả ba cùng chấm 45–49** (để đo độ đồng
 thuận; mỗi người thêm dòng riêng với `nguoi_cham` của mình). Mỗi người chấm mọi `provider` của các hồ sơ được giao.

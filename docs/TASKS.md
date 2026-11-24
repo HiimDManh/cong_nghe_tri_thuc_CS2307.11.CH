@@ -75,7 +75,7 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 ## G5 – LLM, demo, báo cáo
 - [x] Bộ tài liệu hướng dẫn dự án `docs/guide/` + bàn giao `docs/HANDOFF.md`, `docs/handoff/` — Mạnh
 - [x] Khung báo cáo `reports/chapters/` + ghép tự động `python -m src.cli report` — Mạnh
-- [x] `LLMClient` (Gemini/Groq/Ollama/template, cache) + prompt diễn giải + faithfulness tự động + đối chứng âm — Mạnh · `src/llm/` (chờ key để chạy LLM thật)
+- [x] `LLMClient` (Gemini/Groq/Ollama/template, cache) + prompt diễn giải + faithfulness tự động + đối chứng âm — Mạnh · `src/llm/` · Groq gpt-oss-120b + qwen3.8-27b chạy thật 24/11
 - [x] Streamlit demo 6 tab (form VND, điểm, so sánh FICO/XGBoost, đồ thị nhân quả, suy luận ngược, what-if, LLM, CPT) — Mạnh · `src/app/`
 - [ ] **Bộ ~50 hồ sơ mẫu đa dạng** (ngành, tuổi, thu nhập VND, chi tiêu, nợ…) dạng bảng CSV theo mẫu Mạnh gửi — **Phúc** · – · trước 27/11.
 - [ ] **Tạo API key Gemini (free) / Groq (free)** để test; **tài khoản Streamlit Community Cloud hoặc HF Spaces** — **Phúc** · – · key chỉ gửi riêng cho Mạnh, KHÔNG dán vào repo/chat nhóm.

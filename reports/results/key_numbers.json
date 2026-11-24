@@ -360,6 +360,20 @@
  "whatif_job": "-72",
  "whatif_health": "-48",
  "whatif_cash": "-153",
+ "llm_faithful.groq:gpt-oss-120b": "72%",
+ "llm_n_unfaithful.groq:gpt-oss-120b": "14",
+ "llm_n_bad_numbers.groq:gpt-oss-120b": "12",
+ "llm_n_wrong_dir.groq:gpt-oss-120b": "1",
+ "llm_faithful.groq:qwen3.8-27b": "94%",
+ "llm_n_unfaithful.groq:qwen3.8-27b": "3",
+ "llm_n_bad_numbers.groq:qwen3.8-27b": "0",
+ "llm_n_wrong_dir.groq:qwen3.8-27b": "2",
  "llm_faithful.template": "100%",
- "llm_faithful.template_corrupted": "0%"
+ "llm_n_unfaithful.template": "0",
+ "llm_n_bad_numbers.template": "0",
+ "llm_n_wrong_dir.template": "0",
+ "llm_faithful.template_corrupted": "0%",
+ "llm_n_unfaithful.template_corrupted": "50",
+ "llm_n_bad_numbers.template_corrupted": "48",
+ "llm_n_wrong_dir.template_corrupted": "48"
 }

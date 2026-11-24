@@ -57,16 +57,24 @@ def available_providers() -> list[str]:
 
 
 class LLMClient:
-    def __init__(self, provider: str | None = None) -> None:
+    def __init__(self, provider: str | None = None, model: str | None = None, extra: dict | None = None) -> None:
+        """`model`/`extra` ghi đè model và tham số request mặc định của provider (dùng để so sánh model)."""
         self.cfg = load_config("llm")
         avail = available_providers()
         want = provider or _env("LLM_PROVIDER") or avail[0]
         self.provider = want if want in avail else "template"
-        self.model = self.cfg["providers"].get(self.provider, {}).get("model", "template")
+        pc = self.cfg["providers"].get(self.provider, {})
+        self.model = model or pc.get("model", "template")
+        self.extra = dict(pc.get("extra") or {}) if model is None else dict(extra or {})
+
+    @property
+    def label(self) -> str:
+        """Nhãn ngắn `provider:model` cho bảng kết quả."""
+        return self.provider if self.provider == "template" else f"{self.provider}:{self.model.split('/')[-1]}"
 
     # ------------------------------------------------------------------ cache
     def _cache_file(self, system: str, user: str):
-        h = hashlib.sha256(json.dumps([self.provider, self.model, self.cfg["temperature"], system, user],
+        h = hashlib.sha256(json.dumps([self.provider, self.model, self.extra, self.cfg["temperature"], self.cfg["max_tokens"], system, user],
                                       ensure_ascii=False).encode()).hexdigest()[:24]
         d = path(self.cfg["cache_dir"])
         d.mkdir(parents=True, exist_ok=True)
@@ -74,6 +82,22 @@ class LLMClient:
 
     # ------------------------------------------------------------------ gọi API
     def _call(self, system: str, user: str) -> str:
+        """Gọi API; lỗi 429 thì chờ (theo header retry-after, tối đa 60 s) rồi thử lại."""
+        for attempt in range(self.cfg.get("max_retries", 0) + 1):
+            try:
+                return self._call_once(system, user)
+            except requests.HTTPError as e:
+                r = e.response
+                if r is None or r.status_code != 429 or attempt == self.cfg.get("max_retries", 0):
+                    raise
+                try:
+                    wait = float(r.headers.get("retry-after", "")) + 1
+                except ValueError:
+                    wait = 5 * 2 ** attempt
+                time.sleep(min(wait, 60))
+        raise RuntimeError("unreachable")
+
+    def _call_once(self, system: str, user: str) -> str:
         c, p = self.cfg, self.cfg["providers"][self.provider]
         if self.provider == "gemini":
             r = requests.post(p["url"].format(model=self.model), timeout=c["timeout_s"],
@@ -89,7 +113,7 @@ class LLMClient:
             r = requests.post(p["url"], timeout=c["timeout_s"],
                               headers={"Authorization": f"Bearer {_env('GROQ_API_KEY')}"},
                               json={"model": self.model, "temperature": c["temperature"], "max_tokens": c["max_tokens"],
-                                    "messages": [{"role": "system", "content": system},
+                                    **self.extra, "messages": [{"role": "system", "content": system},
                                                  {"role": "user", "content": user}]})
             r.raise_for_status()
             return r.json()["choices"][0]["message"]["content"].strip()

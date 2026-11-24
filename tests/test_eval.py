@@ -94,6 +94,9 @@ def test_faithfulness_detects_fabrication():
           "yeu_to_giup_diem": [{"label": "Trả góp/Thu nhập (DSTI)", "points": 4}]}
     txt = "Điểm 612, mức Trung bình, 6,4%. Thu nhập kéo điểm xuống 5 điểm. Trả góp/Thu nhập (DSTI) giúp tăng 4 điểm."
     assert check(txt, f2)["direction_ok"]
+    # số thứ tự "kế hoạch 2" là nhãn; còn số tự tính (612 → 670 "thiếu 58 điểm") vẫn bị bắt
+    assert numbers("Đạt 612 điểm (kế hoạch 2), Phương án 3") == [612.0]
+    assert not check(good + " Còn thiếu 58 điểm.", facts)["faithful"]
 
 
 def test_report_placeholders_never_invent_numbers():

@@ -63,7 +63,7 @@ Xem mục "Kết quả chính" trong `reports/chapters/04_thuc_nghiem.md` (số 
 | Chấm tay LLM (hồ sơ 30–44 + 45–49) | rubric | 30/11 |
 
 ### Mạnh (+ Claude) – giữ phần kỹ thuật
-- Khi có key (24/11): chạy `python -m src.cli llm` với Gemini/Groq → gửi file chấm tay cho cả nhóm.
+- ✅ 24/11: đã chạy `python -m src.cli llm` với Groq (gpt-oss-120b, qwen3.8-27b) → gửi `experiments/llm_faithfulness/samples_for_rating.csv` cho cả nhóm chấm.
 - Nhận hồ sơ mẫu, lỗi QA, kết quả đối chiếu nguồn → sửa code/tri thức, chạy lại thí nghiệm liên quan.
 - Viết Chương 1, 3, 6, phần "Kết quả chính" của Chương 4; ghép báo cáo; đóng băng code trưa 01/12.
 

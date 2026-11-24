@@ -186,7 +186,19 @@ hình boosting và RF lớn hơn 1–2 bậc độ lớn.
 
 - Lời khuyên template trung thành 100% theo bộ kiểm tra.
 - Đối chứng âm (lời khuyên bị cố ý sửa số và đảo hướng) bị phát hiện 100%, nên bộ kiểm tra có tác dụng.
-- Kết quả với LLM thật (Gemini/Groq) và chấm tay của nhóm sẽ được bổ sung khi có API key.
+- LLM thật (Groq, gói miễn phí, chạy 24/11/2026, temperature 0.2, cùng prompt và 50 hồ sơ):
+  - `qwen3.8-27b` trung thành {{num:llm_faithful.groq:qwen3.8-27b}}: không có số nào ngoài dữ kiện; có
+    {{num:llm_n_wrong_dir.groq:qwen3.8-27b}} lời khuyên bị bộ kiểm tra đánh dấu sai hướng.
+  - `gpt-oss-120b` (mô hình lớn hơn) chỉ trung thành {{num:llm_faithful.groq:gpt-oss-120b}}. Lý do chính:
+    {{num:llm_n_bad_numbers.groq:gpt-oss-120b}}/50 lời khuyên có con số **tự tính** (ví dụ "còn thiếu … điểm để đạt
+    mục tiêu", cộng gộp đóng góp của nhiều yếu tố), dù prompt đã cấm. Phép tính có thể đúng, nhưng vi phạm nguyên
+    tắc "mọi con số do BN tính" và không kiểm chứng được tự động. Có trường hợp mô hình gọi `chi_phi` của kế hoạch là
+    "%", trong khi đây là đơn vị nỗ lực tương đối.
+  - Hệ quả thiết kế: mô hình lớn hơn không đồng nghĩa trung thành hơn. Cần bộ kiểm tra tự động đứng sau LLM, và dự
+    phòng bằng template khi lời khuyên không đạt.
+  - Hạn chế: bộ kiểm tra hướng là heuristic. Ngoài ra, sau khi đọc lỗi, nhóm sửa một lỗi bắt nhầm: số thứ tự
+    "kế hoạch 2" không còn bị tính là số bịa. Sửa này áp dụng cho mọi nguồn lời khuyên; chấm tay của nhóm sẽ bổ sung
+    đánh giá chất lượng.
 
 ### 4.12. Tổng hợp
 | Tiêu chí | Tốt hơn | Ghi chú |

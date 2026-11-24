@@ -281,12 +281,20 @@ def llm() -> str | None:
         return None
     g = d.groupby("provider")[["number_precision", "fact_coverage", "direction_ok", "faithful", "latency_s"]].mean()
     g["n"] = d.groupby("provider").size()
+    g["n_so_ngoai_du_kien"] = d.assign(b=d["number_precision"] < 1).groupby("provider")["b"].sum()
+    g["n_sai_huong"] = d.assign(b=~d["direction_ok"].astype(bool)).groupby("provider")["b"].sum()
     for p in g.index:
         KEY[f"llm_faithful.{p}"] = f"{g.loc[p, 'faithful']:.0%}"
+        KEY[f"llm_n_unfaithful.{p}"] = f"{int(g.loc[p, 'n'] - d[d.provider == p]['faithful'].astype(bool).sum())}"
+        KEY[f"llm_n_bad_numbers.{p}"] = f"{int(g.loc[p, 'n_so_ngoai_du_kien'])}"
+        KEY[f"llm_n_wrong_dir.{p}"] = f"{int(g.loc[p, 'n_sai_huong'])}"
     return _write("llm", "Bảng 10 – Độ trung thành của lời khuyên LLM (kiểm tra tự động)",
                   g.round(3).reset_index().to_markdown(index=False) +
                   "\n\n_number_precision: tỷ lệ con số trong lời khuyên có trong dữ kiện BN cung cấp; fact_coverage: tỷ lệ "
-                  "dữ kiện bắt buộc được nhắc; direction_ok: không nói sai hướng tác động; faithful: đạt cả ba._")
+                  "dữ kiện bắt buộc được nhắc; direction_ok: không nói sai hướng tác động; faithful: đạt cả ba. "
+                  "n_so_ngoai_du_kien / n_sai_huong: số lời khuyên có ≥ 1 con số không có trong dữ kiện / nói sai hướng. "
+                  "template_corrupted: đối chứng âm (cố ý sửa sai). latency_s (giây) gồm cả thời gian chờ khi bị giới "
+                  "hạn tốc độ (HTTP 429) của gói miễn phí → không dùng để so tốc độ model._")
 
 
 def main() -> None:

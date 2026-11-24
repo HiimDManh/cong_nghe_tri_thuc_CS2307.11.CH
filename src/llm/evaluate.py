@@ -56,16 +56,20 @@ def main() -> None:
     bn = DiscreteBN.from_json(path("models", "bn_expert_mono.json"))
     profiles = sample_profiles(cfg["n_profiles"], cfg["seed"])
     providers = [p for p in available_providers() if p != "template"]
-    print(f"[llm] {len(profiles)} hồ sơ; provider có key: {providers or 'không có'} (+ template, đối chứng âm)")
+    clients = []
+    for p in providers:
+        clients.append(LLMClient(p))
+        clients += [LLMClient(p, m["model"], m.get("extra")) for m in cfg.get("compare_models", {}).get(p, [])]
+    print(f"[llm] {len(profiles)} hồ sơ; model: {[c.label for c in clients] or 'không có'} (+ template, đối chứng âm)")
     rows, rating = [], []
     for k, prof in enumerate(profiles):
         pid = prof.pop("id")
         facts = build_facts(bn, prof)
         base = template_advice(facts)
         outputs = [("template", "template", base, 0.0, None), ("template_corrupted", "template", corrupt(base, facts), 0.0, None)]
-        for p in providers:
-            a = LLMClient(p).advise(facts)
-            outputs.append((p if a.error is None else f"{p}_failed", a.model, a.text, a.latency_s, a.error))
+        for c in clients:
+            a = c.advise(facts)
+            outputs.append((c.label if a.error is None else f"{c.label}_failed", c.model, a.text, a.latency_s, a.error))
         for prov, model, text, lat, err in outputs:
             rows.append({"profile": k, "sk_id": pid, "provider": prov, "model": model, "latency_s": lat,
                          "error": err, "n_words": len(text.split()), **check(text, facts)})
