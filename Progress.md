@@ -60,3 +60,4 @@
 - 22/11 – G4: CV, 15 mô hình, 9 thí nghiệm + λ + German (~100 phút CPU); G5: LLM, demo Streamlit, khung báo cáo, tài liệu `docs/guide/`, bàn giao `docs/HANDOFF.md`.
 - 24/11 – Rà soát đầu ngày: test 32/32 pass, repo đã push, chưa có đầu vào từ nhóm; nhắc Phúc key hôm nay.
 - 24/11 – LLM thật Groq (gpt-oss-120b 72%, qwen3.8-27b 94% faithful), retry 429, sửa bắt nhầm "kế hoạch N", cập nhật Ch.4/6.
+- 24/11 – Rà soát TASKS.md: tick key Groq, báo cáo [~], thêm việc Mạnh (XGBoost-disc, gửi/tổng hợp chấm tay, chọn model demo).

@@ -1,5 +1,7 @@
 # TASKS – Project 6: Dự báo khả năng tài chính cá nhân theo ngành nghề
 
+> Rà soát lần cuối: **24/11/2026**. Còn 8 ngày tới hạn nộp (02/12).
+
 Quy ước: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong. Mỗi việc ghi **Người phụ trách · Phụ thuộc · Tiêu chí hoàn thành (DoD)**.
 
 ## Nguyên tắc phân công (cập nhật 22/11)
@@ -20,9 +22,9 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 |---|---|---|---|
 | G1 | Khởi tạo | 22/11 ✅ | – |
 | G2 | Tri thức & dữ liệu | 22/11 ✅ | DAG đã duyệt 22/11 |
-| G3 | Mô hình | 26/11 (BN xong 22/11) | – |
-| G4 | Thực nghiệm | 29/11 | Bảng kết quả sơ bộ (tối 29/11) |
-| G5 | LLM + demo + báo cáo | 01/12 | Đóng băng code trưa 01/12; slide + tập dượt tối 01/12 |
+| G3 | Mô hình | 26/11 → ✅ 22/11 | – |
+| G4 | Thực nghiệm | 29/11 (chạy xong 22/11) | Bảng kết quả sơ bộ (tối 29/11) ⏸ |
+| G5 | LLM + demo + báo cáo | 01/12 (đang làm: LLM thật ✅ 24/11, còn chấm tay/QA/deploy/chương 2, 5/slide) | Đóng băng code trưa 01/12; slide + tập dượt tối 01/12 |
 
 ### Ưu tiên khi thiếu thời gian
 - **MUST:** FICO, BN-Expert(+Mono), Naive Bayes, LR, XGBoost; suy luận xuôi + ngược; thí nghiệm (1)(2)(3)(4)(5)(7); demo Streamlit chạy local + LLM (template + ≥1 provider); báo cáo.
@@ -70,6 +72,7 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] (9) Chi phí: thời gian học/dự báo, số tham số, kích thước mô hình
 - [x] Độ nhạy λ (0–0.5) + what-if
 - [x] Bảng tổng hợp (`reports/results_summary.md`, Chương 4 phần kết quả) ⏸ **nhóm duyệt tối 29/11**
+- [ ] (Mạnh) Chẩn đoán XGBoost-disc @1% AUC≈0.5 (giả thuyết early stopping) – chỉ giải thích + ghi chú báo cáo, không chỉnh để BN "thắng" · trước 29/11.
 - [ ] **Đọc bảng sơ bộ, đặt câu hỏi phản biện** (như hội đồng sẽ hỏi) — **Khôi, Nam** · bảng sơ bộ · danh sách câu hỏi gửi Mạnh trước 30/11.
 
 ## G5 – LLM, demo, báo cáo
@@ -77,10 +80,12 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] Khung báo cáo `reports/chapters/` + ghép tự động `python -m src.cli report` — Mạnh
 - [x] `LLMClient` (Gemini/Groq/Ollama/template, cache) + prompt diễn giải + faithfulness tự động + đối chứng âm — Mạnh · `src/llm/` · Groq gpt-oss-120b + qwen3.8-27b chạy thật 24/11
 - [x] Streamlit demo 6 tab (form VND, điểm, so sánh FICO/XGBoost, đồ thị nhân quả, suy luận ngược, what-if, LLM, CPT) — Mạnh · `src/app/`
-- [ ] **Bộ ~50 hồ sơ mẫu đa dạng** (ngành, tuổi, thu nhập VND, chi tiêu, nợ…) dạng bảng CSV theo mẫu Mạnh gửi — **Phúc** · – · trước 27/11.
-- [ ] **Tạo API key Gemini (free) / Groq (free)** để test; **tài khoản Streamlit Community Cloud hoặc HF Spaces** — **Phúc** · – · key chỉ gửi riêng cho Mạnh, KHÔNG dán vào repo/chat nhóm.
-- [ ] **Chấm thủ công lời khuyên LLM** (mỗi người 10–15 mẫu, rubric 1–5: đúng, dễ hiểu, hữu ích) — **Nam, Khôi, Phúc** · demo + LLM · bảng điểm CSV gửi Mạnh trước 30/11.
+- [ ] **Bộ ~50 hồ sơ mẫu đa dạng** (ngành, tuổi, thu nhập VND, chi tiêu, nợ…) dạng bảng CSV theo mẫu Mạnh gửi — **Phúc** · – · trước 27/11. _(24/11: `data/samples/profiles.csv` mới có 6 mẫu Mạnh tạo; chờ ~45 mẫu của Phúc theo `docs/handoff/phuc_profiles_spec.md`.)_
+- [x] **Tạo API key Gemini (free) / Groq (free)** để test; **tài khoản Streamlit Community Cloud hoặc HF Spaces** — **Phúc** · – · key chỉ gửi riêng cho Mạnh, KHÔNG dán vào repo/chat nhóm. _(24/11: Groq ✅ trong `.env`; Gemini chưa có – không bắt buộc.)_
+- [ ] **Chấm thủ công lời khuyên LLM** (rubric 1–5: đúng, dễ hiểu, hữu ích; mỗi người 15 hồ sơ riêng + 5 hồ sơ chung × 3 nguồn) — **Nam, Khôi, Phúc** · file sẵn 24/11: `experiments/llm_faithfulness/samples_for_rating.csv` (150 dòng: template, gpt-oss-120b, qwen3.8-27b) + `docs/handoff/llm_rating_rubric.md` · gửi Mạnh trước 30/11.
+- [ ] (Mạnh) Gửi file chấm cho nhóm (24/11); nhận lại → tính điểm TB mỗi nguồn + độ đồng thuận → bảng trong Chương 4 · 30/11.
+- [ ] (Mạnh) Chọn model LLM mặc định cho demo (đề xuất qwen3.8-27b: faithful 94% so với gpt-oss-120b 72%) — chờ Mạnh quyết.
 - [ ] **Kiểm thử demo (QA)** theo checklist: nhập liệu biên, thông báo lỗi, tốc độ, hiển thị tiếng Việt — **Khôi** · demo · danh sách lỗi gửi Mạnh trước 30/11.
-- [ ] Deploy (Streamlit Cloud / HF Spaces) — Mạnh (+ Phúc hỗ trợ tài khoản)
-- [ ] Báo cáo `reports/report.md`: Mạnh soạn khung + mọi bảng/số/hình; chương văn bản: **Nam** (Thu thập & biểu diễn tri thức), **Khôi** (Thực nghiệm & thảo luận), **Phúc** (Hệ thống & demo), Mạnh (Giới thiệu, thuật giải, kết luận). Văn bản chỉ trích số từ `reports/`/`experiments/`, không tự tính lại.
+- [ ] Deploy (Streamlit Cloud / HF Spaces) — Mạnh (+ Phúc hỗ trợ tài khoản) · repo đã push GitHub; cần tài khoản + đặt `GROQ_API_KEY` trong Secrets (`docs/DEPLOY.md`) · 28/11.
+- [~] Báo cáo `reports/report.md`: Mạnh soạn khung + mọi bảng/số/hình; chương văn bản: **Nam** (Thu thập & biểu diễn tri thức), **Khôi** (Thực nghiệm & thảo luận), **Phúc** (Hệ thống & demo), Mạnh (Giới thiệu, thuật giải, kết luận). Văn bản chỉ trích số từ `reports/`/`experiments/`, không tự tính lại. _(24/11: Ch.1, 3, 4-kết quả (kể cả 4.11 LLM thật), 6, 7 xong; Ch.2 (Nam), Ch.5 + ảnh demo `reports/figures/demo_*.png` (Phúc), thảo luận Ch.4 (Khôi) còn khung gợi ý; ghép tự động 0 placeholder thiếu.)_
 - [ ] Slide + tập dượt — cả nhóm (Khôi, Phúc dựng slide từ hình đã sinh) · mỗi người trình bày phần mình.
