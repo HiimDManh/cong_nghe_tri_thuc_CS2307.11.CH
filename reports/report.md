@@ -72,8 +72,9 @@ Kết quả so sánh định lượng với FICO nằm ở Chương 4 (BN-Expert
 
 ## 2. Thu thập và biểu diễn tri thức
 
-
 ### 2.1. Nguồn tri thức
+
+Mạng Bayes của nhóm dùng hai loại tri thức. Loại thứ nhất học được từ dữ liệu Home Credit. Loại thứ hai là tri thức vĩ mô và các biến cố (lạm phát, suy thoái, mất việc, ốm đau) mà bộ dữ liệu không có, nên phải lấy từ bên ngoài và đặt vào lớp chuyên gia. Mọi nguồn của lớp này đều công khai, và mỗi file trong `knowledge_base/` ghi kèm URL và năm truy xuất.
 
 | Tri thức | Nguồn | File | Dùng cho |
 |---|---|---|---|
@@ -81,17 +82,29 @@ Kết quả so sánh định lượng với FICO nằm ở Chương 4 (BN-Expert
 | Nghề → 5 nhóm | ISCO-08 (ILO) | `knowledge_base/occupation_mapping.csv` | nút Nhóm nghề |
 | Lạm phát, thất nghiệp, GDP VN 2000–2024 | World Bank WDI API | `knowledge_base/macro_vn_worldbank.csv` | CPT Lạm phát, Chu kỳ KT, Mất việc |
 | Chi y tế thảm họa theo tuổi | WHO GHO (SDG 3.8.2) | `knowledge_base/health_catastrophic_vn_who.csv` | CPT Biến cố sức khỏe |
-| Thu nhập & chi tiêu theo ngũ phân vị 2024 | GSO – KSMS 2024 (Biểu 4, 11) | `knowledge_base/vn_income_spending_quintiles_2024.csv` | đệm tài chính; quy đổi VND trong demo |
-| Ngưỡng DSTI/LTI | FCA (UK), HCSF (Pháp), Eesti Pank | `knowledge_base/debt_threshold_sources.csv` | ngưỡng rời rạc hóa |
+| Thu nhập và chi tiêu theo ngũ phân vị 2024 | GSO, KSMS 2024 (Biểu 4, 11) | `knowledge_base/vn_income_spending_quintiles_2024.csv` | đệm tài chính; quy đổi VND trong demo |
+| Ngưỡng DSTI/LTI | FCA (UK), HCSF (Pháp), Eesti Pank (Estonia) | `knowledge_base/debt_threshold_sources.csv` | ngưỡng rời rạc hóa |
+| Thu nhập từ việc làm theo ngành, 2024 (COULD) | GSO, Báo cáo điều tra lao động việc làm 2024, Biểu 3.4 | chưa đưa vào `knowledge_base/` | chưa dùng trong mô hình |
 | Trọng số FICO | myFICO | `configs/fico.yaml` | baseline FICO |
 
+Ban đầu một số ngưỡng nợ mới chỉ được đọc qua kết quả tìm kiếm hoặc nguồn thứ cấp, nên chúng tôi mở lại văn bản gốc để đối chiếu. Kết quả nằm trong `docs/handoff/nam_source_verification.csv`.
+
+- UK: mức LTI 4,5 lần, tối đa 15% số khoản vay mới, khớp với FCA FG17/2 (sửa đổi tháng 02/2017), trang 1, đoạn 1.2, và định nghĩa LTI ở trang 5. FCA đưa ra mức 4,5 lần từ FG14/8, có hiệu lực ngày 01/10/2014. Giới hạn 15% tính theo số hợp đồng vay chứ không theo giá trị vay.
+- Pháp: DSTI 35% khớp với Quyết định D-HCSF-2021-7 ngày 29/09/2021, hiệu lực từ 01/01/2022, Điều 1(i). Thu nhập tính là thu nhập ròng trước thuế (Điều 4), và quyết định cho phép 20% số khoản vay mới mỗi quý vượt ngưỡng. ECB (2023) chỉ nhắc lại con số này, vì vậy báo cáo dẫn thẳng quyết định của HCSF.
+- Estonia: DSTI 50%, ngoại lệ 15% mỗi quý, khớp với Decree No. 17 của Eesti Pank, §4(2) và §6, bản hiện hành có hiệu lực từ 16/06/2025. Đây là văn bản gốc nên không cần dùng nguồn thứ cấp của Bank of Finland nữa.
+- Việt Nam: Nghị quyết số 244/2025/QH15 (13/11/2025), Điều 2 khoản 4, đặt CPI bình quân năm 2026 ở mức khoảng 4,5%. Repo đang dùng ngưỡng 4% trong `configs/bn_expert_cpt.yaml`, chi tiết ở mục 2.4.
+
 ### 2.2. Biểu diễn tri thức trong mô hình
+
+Tri thức đi vào mô hình theo bốn cách, và mỗi cách có nguồn riêng.
+
+Trước hết là cấu trúc. Các cạnh của DAG nói lên quan hệ nhân quả, chẳng hạn Ngành → Nhóm nghề hay Biến cố → Khả năng vỡ nợ. Trong `configs/bn_expert.yaml`, mỗi cạnh đều có lý do và bằng chứng đi kèm, hoặc được ghi thẳng là giả định. DAG có 14 nút dữ liệu và 6 nút chuyên gia (hình dưới).
 
 ![DAG BN-Expert: 14 nút dữ liệu (xanh) và 6 nút tri thức (cam)](figures/bn_expert_dag.png)
 
 *Hình: DAG BN-Expert: 14 nút dữ liệu (xanh) và 6 nút tri thức (cam)*
 
-Tham số lớp tri thức (sinh tự động từ nguồn):
+Thứ hai là các con số. Bảng xác suất có điều kiện (CPT) của nút chuyên gia được sinh tự động từ dữ liệu nguồn. Chẳng hạn, xác suất lạm phát thấp, vừa, cao tính từ tần suất các năm 2000–2024 với ngưỡng 4% và 8%. Tỷ lệ thất nghiệp nền, xác suất biến cố sức khỏe theo tuổi và hệ số đệm tài chính theo ngũ phân vị cũng lấy từ nguồn ở mục 2.1. Hệ số ngành của biến cố mất việc là một proxy tính từ chính Home Credit (tỷ lệ người có thâm niên dưới một năm theo ngành), chứ không phải số liệu của Việt Nam. Bảng dưới liệt kê toàn bộ tham số, phần đầu có nguồn, phần cuối là giả định.
 
 #### Tham số lớp tri thức của BN-Expert (sinh tự động bởi `python -m src.cli train`)
 
@@ -114,9 +127,30 @@ Tham số GIẢ ĐỊNH (configs/bn_expert_cpt.yaml):
 - default_link λ = 0.3
 
 
+Thứ ba là ràng buộc. Mô hình BN-Expert-Mono bắt hai quan hệ phải đơn điệu: DSTI tăng thì rủi ro vỡ nợ không được giảm, và điểm lịch sử tín dụng tăng thì rủi ro không được tăng. Hai ràng buộc này đến từ kinh nghiệm tín dụng, không phải từ dữ liệu.
+
+Cuối cùng là ngưỡng. Các biến liên tục được rời rạc hóa theo `configs/discretize.yaml`. Thu nhập và điểm lịch sử tín dụng chia theo ngũ phân vị, ước lượng chỉ trên tập train. DSTI và LTI dùng ngưỡng nghiệp vụ ở mục 2.1.
+
+Về ranh giới giữa nguồn và giả định: có nguồn gồm CPT lạm phát, thất nghiệp nền, CPT biến cố sức khỏe, hệ số đệm tài chính theo ngũ phân vị và ngưỡng DSTI/LTI. Phần giả định gồm ngưỡng suy thoái 5% GDP, hệ số thâm niên, hệ số thời hạn, các tham số của chi phí sinh hoạt và hụt dòng tiền (kể cả hệ số theo tài sản), và λ = 0,3 ở nối noisy-OR giữa nút Hụt dòng tiền với Vỡ nợ.
+
 ### 2.3. Kiểm tra tri thức bằng dữ liệu
 
+Để biết dữ liệu có ủng hộ tri thức hay không, chúng tôi tính Cramér's V cho từng cạnh giữa các nút dữ liệu (`reports/eda/bn_expert_edge_support.md`). V càng lớn thì liên hệ càng mạnh.
+
+Dữ liệu ủng hộ rõ các cạnh Ngành → Nhóm nghề, Ngành → Ổn định việc làm, Tuổi → Ổn định việc làm và Điểm lịch sử tín dụng → Vỡ nợ. Trong các biến dữ liệu, điểm lịch sử tín dụng liên hệ mạnh nhất với vỡ nợ, trong khi liên hệ giữa Thâm niên và Điểm lịch sử tín dụng yếu hơn nhiều.
+
+Một số tri thức lại không khớp. Liên hệ giữa gánh nặng trả nợ (DSTI) và vỡ nợ rất yếu và không đơn điệu. Có thể là do thiên lệch chọn mẫu: Home Credit chỉ chứa các khoản vay đã được cấp, nên người có DSTI cao có thể đã bị từ chối trước khi vào dữ liệu. Chúng tôi chưa kiểm chứng giả thuyết này. Liên hệ giữa Ngành và Thu nhập cũng yếu (V ≈ 0,12), trong khi tri thức cho rằng ngành quyết định thu nhập. Cả hai trường hợp được nêu nguyên trạng trong báo cáo kết quả, mô hình không được chỉnh để khớp hơn.
+
+Các cạnh của lớp chuyên gia không kiểm tra được bằng dữ liệu, vì Home Credit không có biến lạm phát, suy thoái hay biến cố sức khỏe. Chúng chỉ được đánh giá qua nguồn và qua phân tích độ nhạy.
+
 ### 2.4. Hạn chế của tri thức
+
+- Quốc gia và tiền tệ không rõ. Home Credit không công bố hai thông tin này, nên thu nhập được chia theo ngũ phân vị thay vì ngưỡng VND. Tri thức vĩ mô lấy của Việt Nam vì demo hướng tới người dùng Việt Nam. Do đó các nút vĩ mô chỉ dùng cho phân tích what-if và không tham gia so sánh định lượng với học máy.
+- Ngành bị ẩn danh. Dữ liệu chỉ ghi "Industry: type N" và "Business Entity Type N", nên ánh xạ chỉ đến được mức nhóm ISIC, và "Business Entity" được xếp vào nhóm không rõ ngành.
+- Đơn vị thu nhập lệch nhau. KSMS 2024 cho thu nhập bình quân đầu người trong hộ, còn Home Credit ghi thu nhập của người vay. Demo xấp xỉ bằng thu nhập hộ chia số nhân khẩu. Ranh giới ngũ phân vị của Việt Nam không được công bố, nên demo lấy trung điểm giữa trung bình hai nhóm kề nhau, và đây là một giả định.
+- Thu nhập theo ngành chưa vào mô hình. Biểu 3.4 của GSO cho thu nhập từ việc làm theo mã ngành A–U, đơn vị nghìn đồng một tháng, và chỉ áp dụng cho lao động làm công ăn lương. Việc gộp 21 mã này vào 10 nhóm của repo chưa làm, vì mục này thuộc phần COULD.
+- Ngưỡng lạm phát là quy ước, không phải mục tiêu chính sách. Văn bản chính thức của năm 2026 đặt CPI bình quân khoảng 4,5%, còn mô hình dùng ngưỡng 4% để chia chuỗi 2000–2024 thành ba mức. Nhóm giữ 4% và không gọi đó là "mục tiêu". Lý do: ngưỡng áp cho cả 25 năm chứ không cho riêng một năm, và trong chuỗi chỉ có năm 2014 (4,09%) nằm giữa 4% và 4,5%. Nếu đổi sang 4,5% thì chỉ năm này chuyển từ mức vừa sang mức thấp (`knowledge_base/macro_vn_worldbank.csv`).
+- Nhiều hệ số là giả định. Danh sách đầy đủ nằm ở cuối mục 2.2. Ảnh hưởng của λ được phân tích độ nhạy trong Chương 4.
 
 
 ## 3. Mô hình Mạng Bayes và thuật giải suy luận
@@ -451,8 +485,49 @@ _Mô hình được học trên dữ liệu ĐẦY ĐỦ; chỉ che lúc suy lu�
   với 0.614 của BN-Expert. Tri thức chuyên gia bù một phần cho dữ liệu thiếu.
   BN-Expert-Mono cũng giữ ECE thấp ở mọi cỡ mẫu (0.0072 ở 1%).
 - **Mô hình ít tham số học nhanh nhất.** Naive Bayes và LR gần như bão hòa từ 5–10% dữ liệu.
-- **Một bất thường.** XGBoost-disc ở 1% có AUC ≈ 0,5. Giả thuyết: early stopping dừng quá sớm vì tập validation
-  nội bộ chỉ có khoảng 20 ca vỡ nợ. *Chưa kiểm chứng sâu.*
+- **Một bất thường và nguyên nhân.** XGBoost-disc ở 1% có AUC ≈ 0,5 (0.503). Chúng tôi
+  chẩn đoán riêng (`python -m src.cli eval xgb_disc_diag`, bảng 5b) hai giả thuyết:
+  - *Early stopping dừng sớm* (tập validation nội bộ chỉ có 20 ca vỡ nợ): **bị bác bỏ**.
+    Mô hình vẫn chạy đến vòng 184 (trung vị). Tắt early stopping (500 cây) vẫn chỉ đạt
+    0.505.
+  - *`min_child_weight` đã tinh chỉnh quá lớn so với dữ liệu nhỏ*: **được xác nhận**. Optuna chọn
+    `min_child_weight` = 37.2 trên toàn bộ train fold 0 (~246 nghìn hồ sơ). Tham số này là ngưỡng
+    *tổng hessian* của mỗi lá, nên không co giãn theo cỡ mẫu. Ở tỷ lệ vỡ nợ ≈ 8%, mỗi hồ sơ đóng góp hessian
+    ≈ 0,074, nên mỗi lá cần khoảng 500 hồ sơ. Với 2,214 hồ sơ train nội bộ, chỉ
+    19/64 cột one-hot còn tách được. Cả 5 trạng thái
+    của điểm lịch sử tín dụng (mỗi ngũ phân vị ~440 hồ sơ) đều không tách được, mà đây là biến mạnh nhất. Cây chỉ tách
+    trên các biến yếu nên dự đoán gần như hằng số. Đặt `min_child_weight` = 1 thì AUC lên 0.702
+    (tham số chưa tinh chỉnh, `min_child_weight` = 10: 0.707). XGBoost liên tục không bị
+    ảnh hưởng (0.703) vì ngưỡng liên tục luôn chọn được điểm cắt đủ cân bằng.
+  - *Hệ quả.* Đây là lỗi chuyển tham số từ dữ liệu lớn sang dữ liệu nhỏ, không phải giới hạn của XGBoost. Bảng
+    learning curve chính thức giữ nguyên để minh bạch, nhưng khi so ở 1% nên dùng mốc đã sửa
+    (0.702). Mốc này vẫn cao hơn BN-Expert (0.614) và
+    BN-Expert-Mono (0.661), nên kết luận "BN-Expert cần nhiều dữ liệu" không đổi.
+
+<!-- sinh tự động bởi `python -m src.cli eval tables` – không sửa tay -->
+**Bảng 5b – Chẩn đoán XGBoost-disc khi ít dữ liệu (5 fold, seed 42)**
+
+|   fraction | input   | variant              |    auc |   best_iter |   split_nodes |   feasible_cols |   n_features |
+|-----------:|:--------|:---------------------|-------:|------------:|--------------:|----------------:|-------------:|
+|       0.01 | disc    | as_is (tuned, ES)    | 0.5032 |         184 |           267 |              19 |           64 |
+|       0.01 | disc    | H1: tuned, no ES     | 0.5046 |         499 |           463 |              19 |           64 |
+|       0.01 | disc    | H2: tuned, mcw=1, ES | 0.7017 |         106 |          3774 |              64 |           64 |
+|       0.01 | disc    | untuned (mcw=10), ES | 0.7065 |          74 |          1178 |              57 |           64 |
+|       0.01 | cont    | as_is (tuned, ES)    | 0.7026 |         163 |           264 |             nan |           30 |
+|       0.01 | cont    | H1: tuned, no ES     | 0.6992 |         499 |           500 |             nan |           30 |
+|       0.01 | cont    | H2: tuned, mcw=1, ES | 0.7086 |         113 |          3776 |             nan |           30 |
+|       0.01 | cont    | untuned (mcw=10), ES | 0.7125 |          39 |          1068 |             nan |           30 |
+|       0.05 | disc    | as_is (tuned, ES)    | 0.7206 |         175 |          1911 |              59 |           65 |
+|       0.05 | disc    | H1: tuned, no ES     | 0.7186 |         499 |          3408 |              59 |           65 |
+|       0.05 | disc    | H2: tuned, mcw=1, ES | 0.7164 |         110 |          5541 |              64 |           65 |
+|       0.05 | disc    | untuned (mcw=10), ES | 0.7143 |          40 |          2278 |              64 |           65 |
+|       0.05 | cont    | as_is (tuned, ES)    | 0.7264 |         190 |          2286 |             nan |           30 |
+|       0.05 | cont    | H1: tuned, no ES     | 0.7233 |         499 |          3864 |             nan |           30 |
+|       0.05 | cont    | H2: tuned, mcw=1, ES | 0.7231 |         143 |          6001 |             nan |           30 |
+|       0.05 | cont    | untuned (mcw=10), ES | 0.7234 |          48 |          2368 |             nan |           30 |
+
+_ES = early stopping (100 vòng, val nội bộ 10% train); no ES = 500 cây cố định; mcw = min_child_weight (ngưỡng TỔNG hessian mỗi lá). best_iter, split_nodes: trung vị qua 5 fold; feasible_cols: số cột one-hot mà cả hai nhánh đạt tổng hessian ≥ mcw tại tỷ lệ nền. Chỉ để chẩn đoán – bảng learning curve chính thức giữ nguyên._
+
 
 
 ### 4.6. Dịch chuyển theo ngành (thí nghiệm 6)
@@ -688,7 +763,8 @@ _number_precision: tỷ lệ con số trong lời khuyên có trong dữ kiện 
     tắc "mọi con số do BN tính" và không kiểm chứng được tự động. Có trường hợp mô hình gọi `chi_phi` của kế hoạch là
     "%", trong khi đây là đơn vị nỗ lực tương đối.
   - Hệ quả thiết kế: mô hình lớn hơn không đồng nghĩa trung thành hơn. Cần bộ kiểm tra tự động đứng sau LLM, và dự
-    phòng bằng template khi lời khuyên không đạt.
+    phòng bằng template khi lời khuyên không đạt. Từ kết quả này, demo dùng `qwen3.8-27b` làm model Groq mặc định
+    (`configs/llm.yaml`), còn `gpt-oss-120b` chỉ giữ để so sánh.
   - Hạn chế: bộ kiểm tra hướng là heuristic. Ngoài ra, sau khi đọc lỗi, nhóm sửa một lỗi bắt nhầm: số thứ tự
     "kế hoạch 2" không còn bị tính là số bịa. Sửa này áp dụng cho mọi nguồn lời khuyên; chấm tay của nhóm sẽ bổ sung
     đánh giá chất lượng.

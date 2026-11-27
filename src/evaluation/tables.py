@@ -275,6 +275,37 @@ def lambda_() -> str | None:
                   "điểm 300–850 trung bình của 2.000 hồ sơ đang đi làm khi bật biến cố (what-if), 5 fold._")
 
 
+def xgb_disc_diag() -> str | None:
+    """Chẩn đoán XGBoost-disc @1% (`diagnose_xgb_disc.py`): chỉ giải thích, không thay bảng learning curve."""
+    d = _r("xgb_disc_diagnosis")
+    if d is None:
+        return None
+    g = (d.groupby(["fraction", "input", "variant"], sort=False)
+           .agg(auc=("auc", "mean"), best_iter=("best_iteration", "median"), split_nodes=("n_split_nodes", "median"),
+                feasible_cols=("feasible_onehot_cols", "median"), n_features=("n_features", "median"))
+           .reset_index())
+    tags = {"as_is (tuned, ES)": "asis", "H1: tuned, no ES": "noes", "H2: tuned, mcw=1, ES": "mcw1",
+            "untuned (mcw=10), ES": "untuned"}
+    for _, r in g.iterrows():
+        k = f"{r['input']}_{r['fraction']:.0%}_{tags[r['variant']]}"
+        KEY[f"xgbd_auc.{k}"] = f"{r['auc']:.3f}"
+        KEY[f"xgbd_iter.{k}"] = f"{r['best_iter']:.0f}"
+        if r["input"] == "disc":
+            KEY[f"xgbd_feasible.{k}"] = f"{r['feasible_cols']:.0f}"
+            KEY[f"xgbd_nfeat.{k}"] = f"{r['n_features']:.0f}"
+    one = d[(d.fraction == 0.01) & (d.input == "disc")].iloc[0]
+    KEY["xgbd_mcw_tuned"] = f"{d.loc[d.variant.str.startswith('as_is'), 'min_child_weight'].iloc[0]:.1f}"
+    KEY["xgbd_n_train_1pct"] = f"{one['n_train_inner']:,}"
+    KEY["xgbd_val_pos_1pct"] = f"{int(d[d.fraction == 0.01]['n_val_pos'].median())}"
+    g["auc"] = g["auc"].round(4)
+    return _write("xgb_disc_diag", "Bảng 5b – Chẩn đoán XGBoost-disc khi ít dữ liệu (5 fold, seed 42)",
+                  g.to_markdown(index=False) +
+                  "\n\n_ES = early stopping (100 vòng, val nội bộ 10% train); no ES = 500 cây cố định; mcw = "
+                  "min_child_weight (ngưỡng TỔNG hessian mỗi lá). best_iter, split_nodes: trung vị qua 5 fold; "
+                  "feasible_cols: số cột one-hot mà cả hai nhánh đạt tổng hessian ≥ mcw tại tỷ lệ nền. Chỉ để chẩn "
+                  "đoán – bảng learning curve chính thức giữ nguyên._")
+
+
 def llm() -> str | None:
     d = _r("llm_faithfulness")
     if d is None:
@@ -298,8 +329,8 @@ def llm() -> str | None:
 
 
 def main() -> None:
-    parts = [f() for f in (main_cv, significance, missing, learning_curve, sector_shift, consistency, stability, cost,
-                           lambda_, llm)]
+    parts = [f() for f in (main_cv, significance, missing, learning_curve, xgb_disc_diag, sector_shift, consistency,
+                           stability, cost, lambda_, llm)]
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "key_numbers.json").write_text(json.dumps(KEY, ensure_ascii=False, indent=1), encoding="utf-8")
     figs = sorted(p.name for p in path("reports", "figures").glob("exp_*.png"))

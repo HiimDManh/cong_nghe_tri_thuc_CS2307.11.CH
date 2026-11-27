@@ -376,7 +376,7 @@ def lambda_sensitivity(feat: pd.DataFrame, sp: dict) -> pd.DataFrame:
 
 # ============================================================================ điều phối
 ALL = ["main_cv", "significance", "missing", "learning_curve", "sector_shift", "consistency", "stability",
-       "cost", "lambda", "german", "figures", "tables"]
+       "cost", "lambda", "german", "xgb_disc_diag", "figures", "tables"]
 
 
 def main(which: list[str] | None = None) -> None:
@@ -409,6 +409,10 @@ def main(which: list[str] | None = None) -> None:
             from src.evaluation.german import run as german
 
             german()
+        elif w == "xgb_disc_diag":
+            from src.evaluation.diagnose_xgb_disc import run as xgb_diag
+
+            xgb_diag()
         elif w == "figures":
             from src.evaluation.figures import main as figs
 

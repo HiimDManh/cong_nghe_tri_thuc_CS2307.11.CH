@@ -46,7 +46,7 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] KB vĩ mô (World Bank), sức khỏe (WHO), thu nhập/chi tiêu theo ngũ phân vị (GSO KSMS 2024), ngưỡng nợ — Mạnh
 - [x] FICO rule-based → `configs/fico.yaml` (nhóm xác nhận 22/11) — Mạnh
 - [x] DAG BN-Expert (nhóm duyệt 22/11) — Mạnh
-- [x] **Đối chiếu bản gốc các nguồn còn ghi "cần đối chiếu"** trong `knowledge_base/debt_threshold_sources.csv` (FCA FG14/8 LTI 4.5; HCSF Pháp DSTI 35%; Estonia DSTI 50%) + mục tiêu lạm phát ~4% của VN — **Nam** · xong 25/11 trên branch `Nam`, kết quả ở `docs/handoff/nam_source_verification.csv`. UK/Pháp/Estonia đúng; **mục tiêu lạm phát VN 2026 là ~4,5% (NQ 244/2025/QH15, Điều 2 khoản 4), không phải 4%** → Mạnh quyết định ngưỡng 4% trong `configs/bn_expert_cpt.yaml`.
+- [x] **Đối chiếu bản gốc các nguồn còn ghi "cần đối chiếu"** trong `knowledge_base/debt_threshold_sources.csv` (FCA FG14/8 LTI 4.5; HCSF Pháp DSTI 35%; Estonia DSTI 50%) + mục tiêu lạm phát ~4% của VN — **Nam** · xong 25/11 trên branch `Nam` (merge vào `main` 27/11), kết quả ở `docs/handoff/nam_source_verification.csv`; Mạnh đã cập nhật `debt_threshold_sources.csv` + `knowledge_base/README.md` theo bản gốc. UK/Pháp/Estonia đúng; **mục tiêu lạm phát VN 2026 là ~4,5% (NQ 244/2025/QH15, Điều 2 khoản 4), không phải 4%** → 27/11 Mạnh chốt: giữ 4% làm ngưỡng rời rạc hóa (không gọi là mục tiêu; đổi 4,5% chỉ chuyển năm 2014), ghi rõ ở Ch.2.4.
 - [x] (COULD) Thu nhập bình quân theo ngành kinh tế VN 2024 (GSO – Báo cáo lao động việc làm 2024, bảng thu nhập theo ngành) — **Nam** · đã trích Biểu 3.4/3.5 (25/11), nằm trong dòng 5 của `nam_source_verification.csv`; việc ánh xạ A–U → 10 nhóm ngành và nhập vào `knowledge_base` là của Mạnh.
 
 ## G3 – Mô hình
@@ -72,7 +72,7 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] (9) Chi phí: thời gian học/dự báo, số tham số, kích thước mô hình
 - [x] Độ nhạy λ (0–0.5) + what-if
 - [x] Bảng tổng hợp (`reports/results_summary.md`, Chương 4 phần kết quả) ⏸ **nhóm duyệt tối 29/11**
-- [ ] (Mạnh) Chẩn đoán XGBoost-disc @1% AUC≈0.5 (giả thuyết early stopping) – chỉ giải thích + ghi chú báo cáo, không chỉnh để BN "thắng" · trước 29/11.
+- [x] (Mạnh) Chẩn đoán XGBoost-disc @1% AUC≈0.5 – 27/11: early stopping bị bác bỏ; nguyên nhân là `min_child_weight`≈37 (tinh chỉnh trên dữ liệu đầy đủ) chặn mọi phép tách trên ext_score → `eval xgb_disc_diag`, bảng 5b, Ch.4.5. Bảng chính thức giữ nguyên.
 - [ ] **Đọc bảng sơ bộ, đặt câu hỏi phản biện** (như hội đồng sẽ hỏi) — **Khôi, Nam** · bảng sơ bộ · danh sách câu hỏi gửi Mạnh trước 30/11.
 
 ## G5 – LLM, demo, báo cáo
@@ -84,7 +84,7 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] **Tạo API key Gemini (free) / Groq (free)** để test; **tài khoản Streamlit Community Cloud hoặc HF Spaces** — **Phúc** · – · key chỉ gửi riêng cho Mạnh, KHÔNG dán vào repo/chat nhóm. _(24/11: Groq ✅ trong `.env`; Gemini chưa có – không bắt buộc.)_
 - [ ] **Chấm thủ công lời khuyên LLM** (rubric 1–5: đúng, dễ hiểu, hữu ích; mỗi người 15 hồ sơ riêng + 5 hồ sơ chung × 3 nguồn) — **Nam, Khôi, Phúc** · file sẵn 24/11: `experiments/llm_faithfulness/samples_for_rating.csv` (150 dòng: template, gpt-oss-120b, qwen3.8-27b) + `docs/handoff/llm_rating_rubric.md` · gửi Mạnh trước 30/11.
 - [ ] (Mạnh) Gửi file chấm cho nhóm (24/11); nhận lại → tính điểm TB mỗi nguồn + độ đồng thuận → bảng trong Chương 4 · 30/11.
-- [ ] (Mạnh) Chọn model LLM mặc định cho demo (đề xuất qwen3.8-27b: faithful 94% so với gpt-oss-120b 72%) — chờ Mạnh quyết.
+- [x] (Mạnh) Chọn model LLM mặc định cho demo: **qwen3.8-27b** (faithful 94% vs gpt-oss-120b 72%) – chốt 27/11 trong `configs/llm.yaml`; không chạy lại `cli llm` để giữ nguyên file chấm tay.
 - [ ] **Kiểm thử demo (QA)** theo checklist: nhập liệu biên, thông báo lỗi, tốc độ, hiển thị tiếng Việt — **Khôi** · demo · danh sách lỗi gửi Mạnh trước 30/11.
 - [ ] Deploy (Streamlit Cloud / HF Spaces) — Mạnh (+ Phúc hỗ trợ tài khoản) · repo đã push GitHub; cần tài khoản + đặt `GROQ_API_KEY` trong Secrets (`docs/DEPLOY.md`) · 28/11.
 - [~] Báo cáo `reports/report.md`: Mạnh soạn khung + mọi bảng/số/hình; chương văn bản: **Nam** (Thu thập & biểu diễn tri thức), **Khôi** (Thực nghiệm & thảo luận), **Phúc** (Hệ thống & demo), Mạnh (Giới thiệu, thuật giải, kết luận). Văn bản chỉ trích số từ `reports/`/`experiments/`, không tự tính lại. _(24/11: Ch.1, 3, 4-kết quả (kể cả 4.11 LLM thật), 6, 7 xong; Ch.2 (Nam), Ch.5 + ảnh demo `reports/figures/demo_*.png` (Phúc), thảo luận Ch.4 (Khôi) còn khung gợi ý; ghép tự động 0 placeholder thiếu.)_

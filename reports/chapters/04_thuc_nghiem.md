@@ -94,8 +94,26 @@ ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về
   với {{num:lc_auc_1pct.BN-Expert}} của BN-Expert. Tri thức chuyên gia bù một phần cho dữ liệu thiếu.
   BN-Expert-Mono cũng giữ ECE thấp ở mọi cỡ mẫu ({{num:lc_ece_1pct.BN-Expert-Mono}} ở 1%).
 - **Mô hình ít tham số học nhanh nhất.** Naive Bayes và LR gần như bão hòa từ 5–10% dữ liệu.
-- **Một bất thường.** XGBoost-disc ở 1% có AUC ≈ 0,5. Giả thuyết: early stopping dừng quá sớm vì tập validation
-  nội bộ chỉ có khoảng 20 ca vỡ nợ. *Chưa kiểm chứng sâu.*
+- **Một bất thường và nguyên nhân.** XGBoost-disc ở 1% có AUC ≈ 0,5 ({{num:xgbd_auc.disc_1%_asis}}). Chúng tôi
+  chẩn đoán riêng (`python -m src.cli eval xgb_disc_diag`, bảng 5b) hai giả thuyết:
+  - *Early stopping dừng sớm* (tập validation nội bộ chỉ có {{num:xgbd_val_pos_1pct}} ca vỡ nợ): **bị bác bỏ**.
+    Mô hình vẫn chạy đến vòng {{num:xgbd_iter.disc_1%_asis}} (trung vị). Tắt early stopping (500 cây) vẫn chỉ đạt
+    {{num:xgbd_auc.disc_1%_noes}}.
+  - *`min_child_weight` đã tinh chỉnh quá lớn so với dữ liệu nhỏ*: **được xác nhận**. Optuna chọn
+    `min_child_weight` = {{num:xgbd_mcw_tuned}} trên toàn bộ train fold 0 (~246 nghìn hồ sơ). Tham số này là ngưỡng
+    *tổng hessian* của mỗi lá, nên không co giãn theo cỡ mẫu. Ở tỷ lệ vỡ nợ ≈ 8%, mỗi hồ sơ đóng góp hessian
+    ≈ 0,074, nên mỗi lá cần khoảng 500 hồ sơ. Với {{num:xgbd_n_train_1pct}} hồ sơ train nội bộ, chỉ
+    {{num:xgbd_feasible.disc_1%_asis}}/{{num:xgbd_nfeat.disc_1%_asis}} cột one-hot còn tách được. Cả 5 trạng thái
+    của điểm lịch sử tín dụng (mỗi ngũ phân vị ~440 hồ sơ) đều không tách được, mà đây là biến mạnh nhất. Cây chỉ tách
+    trên các biến yếu nên dự đoán gần như hằng số. Đặt `min_child_weight` = 1 thì AUC lên {{num:xgbd_auc.disc_1%_mcw1}}
+    (tham số chưa tinh chỉnh, `min_child_weight` = 10: {{num:xgbd_auc.disc_1%_untuned}}). XGBoost liên tục không bị
+    ảnh hưởng ({{num:xgbd_auc.cont_1%_asis}}) vì ngưỡng liên tục luôn chọn được điểm cắt đủ cân bằng.
+  - *Hệ quả.* Đây là lỗi chuyển tham số từ dữ liệu lớn sang dữ liệu nhỏ, không phải giới hạn của XGBoost. Bảng
+    learning curve chính thức giữ nguyên để minh bạch, nhưng khi so ở 1% nên dùng mốc đã sửa
+    ({{num:xgbd_auc.disc_1%_mcw1}}). Mốc này vẫn cao hơn BN-Expert ({{num:lc_auc_1pct.BN-Expert}}) và
+    BN-Expert-Mono ({{num:lc_auc_1pct.BN-Expert-Mono}}), nên kết luận "BN-Expert cần nhiều dữ liệu" không đổi.
+
+{{table:xgb_disc_diag}}
 
 <!-- Khôi – thảo luận 4.5: đánh đổi số tham số – dữ liệu; gợi ý CPT tham số hóa (noisy-OR/logistic) cho nút nhiều cha. -->
 
@@ -195,7 +213,8 @@ hình boosting và RF lớn hơn 1–2 bậc độ lớn.
     tắc "mọi con số do BN tính" và không kiểm chứng được tự động. Có trường hợp mô hình gọi `chi_phi` của kế hoạch là
     "%", trong khi đây là đơn vị nỗ lực tương đối.
   - Hệ quả thiết kế: mô hình lớn hơn không đồng nghĩa trung thành hơn. Cần bộ kiểm tra tự động đứng sau LLM, và dự
-    phòng bằng template khi lời khuyên không đạt.
+    phòng bằng template khi lời khuyên không đạt. Từ kết quả này, demo dùng `qwen3.8-27b` làm model Groq mặc định
+    (`configs/llm.yaml`), còn `gpt-oss-120b` chỉ giữ để so sánh.
   - Hạn chế: bộ kiểm tra hướng là heuristic. Ngoài ra, sau khi đọc lỗi, nhóm sửa một lỗi bắt nhầm: số thứ tự
     "kế hoạch 2" không còn bị tính là số bịa. Sửa này áp dụng cho mọi nguồn lời khuyên; chấm tay của nhóm sẽ bổ sung
     đánh giá chất lượng.

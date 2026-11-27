@@ -25,7 +25,7 @@ Nhóm: Mạnh, Nam, Khôi, Phúc. **Hạn nộp + báo cáo: 02/12/2026.**
 ## Lệnh
 - Môi trường: `.venv` (Python 3.12). Gọi `.venv/Scripts/python` (Windows, không có `make`).
 - `python -m src.cli data|eda|knowledge|dag|train|tune|eval [thí nghiệm…]|llm|report|app` · `python -m pytest -q` · Makefile chỉ bọc các lệnh này.
-- Thực nghiệm: `src/evaluation/run.py` (main_cv trước – lưu OOF + mô hình seed 42 vào `data/interim/` – rồi các thí nghiệm khác; ~1 giờ tổng), `metrics.py` (DeLong, bootstrap, Nadeau–Bengio), `models.py` (mọi mô hình cùng giao diện `fit(Xf, Xd, y)`), `explain.py`, `tables.py` → `reports/results/*.md` + `key_numbers.json`, `figures.py`.
+- Thực nghiệm: `src/evaluation/run.py` (main_cv trước – lưu OOF + mô hình seed 42 vào `data/interim/` – rồi các thí nghiệm khác; ~1 giờ tổng), `metrics.py` (DeLong, bootstrap, Nadeau–Bengio), `models.py` (mọi mô hình cùng giao diện `fit(Xf, Xd, y)`), `explain.py`, `tables.py` → `reports/results/*.md` + `key_numbers.json`, `figures.py`. `diagnose_xgb_disc.py` (`eval xgb_disc_diag`, ~2 phút) – chẩn đoán XGBoost-disc khi ít dữ liệu.
 - Báo cáo: văn bản ở `reports/chapters/*.md` với placeholder `{{num:…}}`/`{{table:…}}`/`{{fig:…}}`; `python -m src.cli report` ghép → `reports/report.md` (không sửa tay file này).
 - Demo: `src/app/streamlit_app.py` (+ `convert.py` VND→trạng thái, `labels.py`); LLM: `src/llm/` (facts → prompt → client → faithfulness). Bàn giao nhóm: `docs/HANDOFF.md`, `docs/handoff/`.
 - Dữ liệu chính: Home Credit (`src/data/home_credit.py` → đặc trưng; `src/data/discretize.py` → trạng thái BN, fit ngưỡng quantile chỉ trên train). Tải `application_train.csv` mất ~10 s.
