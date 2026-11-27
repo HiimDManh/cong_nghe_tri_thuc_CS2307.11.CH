@@ -31,7 +31,7 @@ Vì vậy dự án tách hai việc:
 | Provider | Mô hình mặc định | Cần | Ghi chú |
 |---|---|---|---|
 | Gemini | `gemini-2.5-flash` | `GEMINI_API_KEY` (free tier) | Key gửi qua header `x-goog-api-key`, không đặt trong URL |
-| Groq | `openai/gpt-oss-120b` (`reasoning_effort: low`); so sánh thêm `qwen/qwen3.8-27b` | `GROQ_API_KEY` (free tier) | API kiểu OpenAI; `llama-3.3-70b-versatile` đã bị gỡ (11/2026); lỗi 429 tự chờ rồi gọi lại |
+| Groq | `qwen/qwen3.8-27b` (`reasoning_effort: none`, mặc định từ 27/11 – faithful 94%); so sánh thêm `openai/gpt-oss-120b` (`low`, 72%) | `GROQ_API_KEY` (free tier) | API kiểu OpenAI; `llama-3.3-70b-versatile` đã bị gỡ (11/2026); lỗi 429 tự chờ rồi gọi lại |
 | Ollama | `qwen2.5:7b` | `OLLAMA_HOST` (chạy local) | Không cần Internet |
 | template | – | không | Lời khuyên tất định từ dữ kiện; dùng làm dự phòng và làm mốc |
 

@@ -1,19 +1,20 @@
 # LLM diễn giải kết quả BN. Key đọc từ biến môi trường / .env (KHÔNG ghi key vào file này).
 # Thứ tự ưu tiên khi LLM_PROVIDER trống: gemini (nếu có GEMINI_API_KEY) -> groq (GROQ_API_KEY) -> ollama (OLLAMA_HOST) -> template.
 temperature: 0.2
-max_tokens: 1500           # gpt-oss tính cả token suy luận vào giới hạn này
+max_tokens: 1500           # model suy luận (gpt-oss) tính cả token suy luận vào giới hạn này
 timeout_s: 60
 max_retries: 6                # lỗi 429 (giới hạn tốc độ free tier): chờ theo retry-after rồi gọi lại
 cache_dir: .cache/llm          # đã nằm trong .gitignore
 providers:
   gemini: {model: gemini-2.5-flash, url: "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"}
-  # llama-3.3-70b-versatile đã bị Groq gỡ (404, kiểm 24/11/2026) -> gpt-oss-120b; extra: tham số gửi kèm request.
-  groq: {model: openai/gpt-oss-120b, url: "https://api.groq.com/openai/v1/chat/completions",
-         extra: {reasoning_effort: low}}
+  # llama-3.3-70b-versatile đã bị Groq gỡ (404, kiểm 24/11/2026). Mặc định qwen3.8-27b (chốt 27/11):
+  # faithfulness 94% vs gpt-oss-120b 72% (reports/results/llm.md). extra: tham số gửi kèm request.
+  groq: {model: qwen/qwen3.8-27b, url: "https://api.groq.com/openai/v1/chat/completions",
+         extra: {reasoning_effort: none}}
   ollama: {model: "qwen2.5:7b", url: "{host}/api/chat"}
 evaluation:
   n_profiles: 50
   seed: 42
   # Model bổ sung để so sánh trên cùng provider (chỉ dùng khi chạy `python -m src.cli llm`).
   compare_models:
-    groq: [{model: qwen/qwen3.8-27b, extra: {reasoning_effort: none}}]
+    groq: [{model: openai/gpt-oss-120b, extra: {reasoning_effort: low}}]

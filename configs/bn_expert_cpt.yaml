@@ -6,7 +6,9 @@ inflation:
   # Tần suất năm VN 2000–2024 rơi vào từng mức (World Bank FP.CPI.TOTL.ZG)
   indicator: FP.CPI.TOTL.ZG
   years: [2000, 2024]
-  edges: [4.0, 8.0]          # <4% low (mục tiêu lạm phát ~4% của Quốc hội/NHNN – cần nguồn), 4–8 moderate, >=8 high
+  # Ngưỡng rời rạc hóa trên chuỗi 2000–2024, KHÔNG phải mục tiêu của một năm cụ thể (chốt 27/11). Đối chiếu:
+  # NQ 244/2025/QH15 Điều 2 khoản 4 đặt CPI bình quân 2026 ~4,5%; đổi 4.5 chỉ chuyển năm 2014 (4,09%) sang low.
+  edges: [4.0, 8.0]          # <4% low, 4–8 moderate, >=8 high
   states: [low, moderate, high]
 
 econ_cycle:

@@ -93,7 +93,7 @@ thực tế được in ở `reports/bn/expert_params.md`.
 
 | Nút | Cách sinh | Có nguồn / giả định |
 |---|---|---|
-| Lạm phát (thấp < 4%, vừa 4–8%, cao ≥ 8%) | Tần suất năm Việt Nam 2000–2024 rơi vào từng mức | Nguồn WB; ngưỡng 4% ~ mục tiêu lạm phát (đang đối chiếu) |
+| Lạm phát (thấp < 4%, vừa 4–8%, cao ≥ 8%) | Tần suất năm Việt Nam 2000–2024 rơi vào từng mức | Nguồn WB; 4% là ngưỡng rời rạc hóa (mục tiêu CPI 2026 là ~4,5%, NQ 244/2025/QH15) |
 | Chu kỳ kinh tế (bình thường / suy giảm) | Tần suất năm có GDP tăng < 5% | Nguồn WB; **ngưỡng 5% là giả định** |
 | Mất việc | Tỷ lệ thất nghiệp nền (năm bình thường) × hệ số chu kỳ (tính từ WB) × hệ số ngành × hệ số thâm niên × kỳ hạn 2 năm | Nền và chu kỳ có nguồn. Hệ số ngành là *proxy* từ dữ liệu (tỷ lệ thâm niên < 1 năm của ngành). **Hệ số thâm niên và kỳ hạn là giả định**. Không đi làm → P = 0 |
 | Biến cố sức khỏe | P(chi y tế > 10%) theo nhóm tuổi < 60 / ≥ 60, WHO 2018 | Có nguồn |
