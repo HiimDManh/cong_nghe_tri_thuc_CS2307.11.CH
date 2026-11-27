@@ -46,8 +46,8 @@ Các thành viên dùng công cụ AI khác nhau (Claude, Gemini, Codex…) → 
 - [x] KB vĩ mô (World Bank), sức khỏe (WHO), thu nhập/chi tiêu theo ngũ phân vị (GSO KSMS 2024), ngưỡng nợ — Mạnh
 - [x] FICO rule-based → `configs/fico.yaml` (nhóm xác nhận 22/11) — Mạnh
 - [x] DAG BN-Expert (nhóm duyệt 22/11) — Mạnh
-- [ ] **Đối chiếu bản gốc các nguồn còn ghi "cần đối chiếu"** trong `knowledge_base/debt_threshold_sources.csv` (FCA FG14/8 LTI 4.5; HCSF Pháp DSTI 35%; Estonia DSTI 50%) + mục tiêu lạm phát ~4% của VN — **Nam** · – · ghi số văn bản, ngày, trang/điều khoản vào tin nhắn cho Mạnh cập nhật.
-- [ ] (COULD) Thu nhập bình quân theo ngành kinh tế VN 2024 (GSO – Báo cáo lao động việc làm 2024, bảng thu nhập theo ngành) — **Nam** · – · gửi bảng số + URL + số trang cho Mạnh.
+- [x] **Đối chiếu bản gốc các nguồn còn ghi "cần đối chiếu"** trong `knowledge_base/debt_threshold_sources.csv` (FCA FG14/8 LTI 4.5; HCSF Pháp DSTI 35%; Estonia DSTI 50%) + mục tiêu lạm phát ~4% của VN — **Nam** · xong 25/11 trên branch `Nam`, kết quả ở `docs/handoff/nam_source_verification.csv`. UK/Pháp/Estonia đúng; **mục tiêu lạm phát VN 2026 là ~4,5% (NQ 244/2025/QH15, Điều 2 khoản 4), không phải 4%** → Mạnh quyết định ngưỡng 4% trong `configs/bn_expert_cpt.yaml`.
+- [x] (COULD) Thu nhập bình quân theo ngành kinh tế VN 2024 (GSO – Báo cáo lao động việc làm 2024, bảng thu nhập theo ngành) — **Nam** · đã trích Biểu 3.4/3.5 (25/11), nằm trong dòng 5 của `nam_source_verification.csv`; việc ánh xạ A–U → 10 nhóm ngành và nhập vào `knowledge_base` là của Mạnh.
 
 ## G3 – Mô hình
 - [x] BN-Expert 2 lớp: CPT data (m-estimate, m=10), CPT expert sinh từ KB, calibrated noisy-OR — Mạnh · `src/bn/{core,expert_cpt,model}.py`
