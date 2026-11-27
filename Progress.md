@@ -3,14 +3,14 @@
 > File trạng thái cho mỗi phiên mới. Claude tự cập nhật trước mỗi commit (quy tắc trong CLAUDE.md). Chi tiết việc: `docs/TASKS.md`.
 > Bàn giao nhóm: `docs/HANDOFF.md`. Tài liệu hiểu dự án: `docs/guide/`. Kết quả: `reports/results_summary.md`.
 
-## Hiện tại (cập nhật 24/11/2026)
+## Hiện tại (cập nhật 27/11/2026)
 - **Giai đoạn:** G3 ✅, G4 ✅ (đủ 9 thí nghiệm + độ nhạy λ + German), G5: LLM/demo/khung báo cáo ✅, còn việc phụ thuộc nhóm.
-- **Chạy được:** `python -m src.cli data|eda|knowledge|dag|train|tune|eval|llm|report|app`; `pytest` **32 test pass** (kiểm lại 24/11).
-- **Repo:** `main` đã đồng bộ `origin/main` (GitHub `HiimDManh/src`), working tree sạch.
+- **Chạy được:** `python -m src.cli data|eda|knowledge|dag|train|tune|eval|llm|report|app`; `pytest` **32 test pass** (kiểm lại 27/11, ~2 phút).
+- **Repo (27/11):** `main` = `origin/main` (`8090424`, đã fetch, không có commit mới từ remote), working tree sạch. Không có commit code nào từ 24/11.
 - **Báo cáo:** `reports/report.md` ghép tự động (0 placeholder thiếu). Mạnh đã viết Chương 1, 3, 4 (phần kết quả), 6, 7; Chương 2 (Nam), 5 (Phúc), thảo luận Chương 4 (Khôi) có khung + gợi ý.
 - **LLM thật đã chạy (24/11):** Groq key trong `.env` (ignored). File chấm tay `experiments/llm_faithfulness/samples_for_rating.csv` (150 dòng) sẵn sàng gửi nhóm.
-- **Chưa nhận từ nhóm:** `docs/handoff/nam_source_verification.csv`, `khoi_qa_bugs.csv` còn trống; chưa có key Gemini.
-- **Chờ từ nhóm:** chấm tay LLM (cả nhóm, 30/11); đối chiếu nguồn (Nam, 25/11); ~45 hồ sơ mẫu (Phúc, 27/11) + lỗi QA (Khôi, 30/11); deploy (28/11).
+- **Chưa nhận từ nhóm (27/11):** `nam_source_verification.csv` cột xác minh còn trống (**trễ hạn 25/11**); `khoi_qa_bugs.csv` chỉ có header; `data/samples/profiles.csv` vẫn 6 mẫu (Phúc hạn **hôm nay 27/11**); chưa có ảnh `reports/figures/demo_*.png`; Ch.2/Ch.5 chưa sửa từ 22/11; chưa có key Gemini.
+- **Chờ từ nhóm:** chấm tay LLM (cả nhóm, 30/11); đối chiếu nguồn (Nam, trễ); ~45 hồ sơ mẫu (Phúc, 27/11) + lỗi QA (Khôi, 30/11); deploy (28/11 – cần tài khoản).
 
 ## Quyết định đã chốt
 | Ngày | Quyết định | Lý do |
@@ -61,3 +61,4 @@
 - 24/11 – Rà soát đầu ngày: test 32/32 pass, repo đã push, chưa có đầu vào từ nhóm; nhắc Phúc key hôm nay.
 - 24/11 – LLM thật Groq (gpt-oss-120b 72%, qwen3.8-27b 94% faithful), retry 429, sửa bắt nhầm "kế hoạch N", cập nhật Ch.4/6.
 - 24/11 – Rà soát TASKS.md: tick key Groq, báo cáo [~], thêm việc Mạnh (XGBoost-disc, gửi/tổng hợp chấm tay, chọn model demo).
+- 27/11 – Rà soát: fetch remote (không có gì mới), test 32/32 pass, không có đầu vào nào từ nhóm; Nam trễ đối chiếu nguồn; việc XGBoost-disc @1% vẫn chưa làm.
