@@ -41,6 +41,14 @@ reports/results/key_numbers.json). -->
 
 <!-- Khôi – thảo luận 4.2: vì sao boosting mạnh trên dữ liệu bảng; khoảng cách AUC này có ý nghĩa thực tế ra sao với
 ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về AUC nhưng không dùng được cho suy luận nhân quả. -->
+XGBoost và LightGBM vượt trội vì dữ liệu chủ yếu là dạng bảng, có nhiều quan hệ phi tuyến và tương tác mà cây quyết
+định mô hình hóa trực tiếp. Tuy nhiên, khoảng cách AUC vừa phải không có nghĩa AI luôn thay thế được BN: khi xếp hạng
+rủi ro, chênh lệch nhỏ vẫn có ý nghĩa ở quy mô lớn; khi dự đoán xác suất, cần xét thêm hiệu chỉnh và độ tin cậy. BN có
+AUC thấp hơn do rời rạc hóa và cấu trúc thưa, nhưng bù lại cung cấp cấu trúc nhân quả để giải thích và phân tích what-if.
+
+TAN đạt AUC cao hơn BN-Expert vì học quan hệ phụ thuộc giữa các biến quan sát thay vì bị ràng buộc bởi cấu trúc chuyên
+gia. Tuy vậy, các quan hệ này chủ yếu là tương quan nên TAN không trả lời được câu hỏi can thiệp như “điều gì xảy ra
+nếu người dùng đổi chi tiêu”. Do đó, TAN phù hợp cho phân loại, còn BN-Expert phù hợp cho tư vấn và suy luận ngược.
 
 ### 4.3. Ý nghĩa thống kê (thí nghiệm 3)
 {{table:significance}}
@@ -53,6 +61,14 @@ ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về
 - Với n lớn, khác biệt rất nhỏ vẫn có thể "có ý nghĩa thống kê". Vì vậy phải đọc kèm độ lớn hiệu ứng (cột Δ).
 
 <!-- Khôi – thảo luận 4.3: ý nghĩa thống kê vs ý nghĩa thực tế; vì sao cần hiệu chỉnh Holm và t-test hiệu chỉnh. -->
+Mẫu dữ liệu lớn giúp các sai khác theo fold được kiểm định đáng tin cậy, nhưng ý nghĩa thống kê không đồng nghĩa với
+ý nghĩa thực tế. Vì vậy, kết luận cần dựa trên cả Δ AUC, khoảng tin cậy và hiệu năng hiệu chỉnh, không chỉ p-value. Với
+dữ liệu đủ lớn, một chênh lệch rất nhỏ vẫn có thể "có ý nghĩa" mà chưa chắc mang lại lợi ích tài chính đáng kể.
+
+Hiệu chỉnh Holm cần thiết vì thí nghiệm so sánh nhiều mô hình cùng lúc; nếu kiểm định từng cặp ở mức thông thường, xác
+suất phát hiện sai sẽ tăng. T-test Nadeau–Bengio hiệu chỉnh sai số do các fold giao nhau, tránh coi các lần đánh giá phụ
+thuộc là độc lập. DeLong và Nadeau–Bengio bổ trợ nhau (phân biệt và tái sử dụng fold), nên chỉ kết luận khi cả hai
+phương pháp cùng ủng hộ.
 
 ### 4.4. Thiếu thông tin lúc suy luận (thí nghiệm 4)
 {{table:missing}}
@@ -80,6 +96,16 @@ ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về
   nợ qua vài đường gián tiếp. Đây là cái giá của một cấu trúc dễ giải thích.
 
 <!-- Khôi – thảo luận 4.4: ý nghĩa với demo (người dùng hay để trống), với khách hàng chưa có lịch sử tín dụng. -->
+Kết quả che ngẫu nhiên cho thấy mạng Bayes dễ điền biến thiếu qua phân bố biên hoặc marginal hơn các mô hình dùng nhánh
+NaN đặc biệt. Với demo, việc người dùng để trống các ô không nên bị hiểu là giá trị xấu; mô hình có thể vẫn trả về dự báo
+trung bình nhưng độ bất định cần được trình bày rõ. Điều này đặc biệt quan trọng với người trẻ, người mới làm việc hoặc
+hồ sơ mới chỉ có ít thông tin.
+
+Trái lại, thiếu có cấu trúc là kịch bản khó hơn che ngẫu nhiên. Khi mất điểm tín dụng ngoài hoặc lịch sử tín dụng, các
+mô hình học trực tiếp có thể nắm mối liên hệ với biến còn lại và duy trì phân biệt tốt. Mạng chuyên gia lại phụ thuộc vào
+đường truyền trong DAG; mất một biến quan trọng làm cấu trúc thưa của BN truyền rất ít thông tin xuống nút Vỡ nợ. Vì
+vậy, tính thiếu thông tin cần được kết hợp với người dùng khảo sát: không có dữ liệu không đồng nghĩa BN luôn tốt hơn,
+đặc biệt nếu biến còn lại không đủ để mô tả hồ sơ.
 
 ### 4.5. Dữ liệu ít (thí nghiệm 5)
 {{table:learning_curve}}
@@ -98,6 +124,14 @@ ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về
   nội bộ chỉ có khoảng 20 ca vỡ nợ. *Chưa kiểm chứng sâu.*
 
 <!-- Khôi – thảo luận 4.5: đánh đổi số tham số – dữ liệu; gợi ý CPT tham số hóa (noisy-OR/logistic) cho nút nhiều cha. -->
+BN-Expert phải học nhiều ô CPT nhưng dữ liệu không phân bố đều cho mọi tổ hợp cha. Khi dữ liệu ít, ước lượng cục bộ dễ
+dao động hoặc lùi về prior, trong khi LR và Naive Bayes có ít tham số hơn nên ổn định hơn. Ràng buộc đơn điệu giúp
+BN-Expert-Mono khôi phục một phần hiệu năng vì loại bỏ các cặp trạng thái trái tri thức, làm việc học bớt phụ thuộc vào
+dữ liệu của từng tổ hợp.
+
+Hướng khắc phục dài hạn là tham số hóa CPT cho nút nhiều cha bằng noisy-OR, logistic hoặc mô hình tuyến tính log-odds.
+Cách này chia sẻ thông tin giữa các tổ hợp cha, giảm số tham số cần học và giữ cấu trúc nhân quả, nhưng cần kiểm soát
+để không làm mất ràng buộc đơn điệu hay tạo tương tác trái tri thức.
 
 ### 4.6. Dịch chuyển theo ngành (thí nghiệm 6)
 {{table:sector_shift}}
@@ -119,6 +153,14 @@ ngân hàng (xếp hạng vs xác suất); vì sao TAN tốt hơn BN-Expert về
 
 <!-- Khôi – thảo luận 4.6: hạn chế của CPT dạng bảng khi ngoại suy; cách khắc phục (chia sẻ tham số, prior theo
 cấu trúc ngành); ý nghĩa với người dùng thuộc nhóm ít dữ liệu. -->
+CPT dạng bảng chỉ hoạt động tốt khi tổ hợp trạng thái cha đã xuất hiện trong dữ liệu. Với trạng thái mới, không có hàng CPT
+nào được quan sát để cập nhật, nên mô hình buộc phải dùng prior nền hoặc phân bố biên. Đây là hạn chế ngoại suy của cấu
+trúc bảng: khi gặp trạng thái lạ, mô hình có thể coi các biến cha khác gần như không cung cấp thông tin.
+
+Để cải thiện, có thể dùng CPT tham số hóa hoặc prior có cấu trúc để liên kết các nhóm ngành gần nhau, đồng thời giữ prior
+riêng cho nhóm chưa quan sát. Với người dùng thuộc ngành, nghề ít xuất hiện, demo nên hiển thị rõ mức bất định thay vì
+trình bày kết quả như chắc chắn. Việc kết hợp dữ liệu địa phương và tri thức Việt Nam cũng quan trọng, nhưng cần tránh
+suy ra quan hệ nhân quả từ dữ liệu quan sát thiếu đại diện.
 
 ### 4.7. Nhất quán với tri thức chuyên gia (thí nghiệm 7)
 {{table:consistency}}
@@ -144,6 +186,15 @@ cấu trúc ngành); ý nghĩa với người dùng thuộc nhóm ít dữ liệ
   nhất quán.
 
 <!-- Khôi – thảo luận 4.7: vì sao vi phạm tri thức nguy hiểm khi dùng mô hình để TƯ VẤN (khác với chỉ xếp hạng). -->
+Khi mô hình chỉ dùng để xếp hạng, một quan hệ ngược có thể chấp nhận được nếu nó đến từ tương tác giữa các biến
+hoặc thiên lệch chọn mẫu. Nhưng khi dùng để tư vấn, quan hệ ngược làm sai ý nghĩa hành động: người dùng có thể bị
+khuyên giảm thu nhập hoặc tăng nợ chỉ để cải thiện điểm. Điều này làm demo mất nhất quán với tri thức và có thể tạo
+tín hiệu tài chính nguy hại.
+
+Ràng buộc đơn điệu trong BN-Expert-Mono hạn chế các hành vi trái tri thức với những biến có hướng tác động đã xác
+định. Tuy vậy, nó không loại bỏ hoàn toàn mọi vi phạm, vì dữ liệu vẫn có thể mâu thuẫn ở các biến phẳng hoặc biến
+không được kiểm soát, và ràng buộc chỉ nên áp dụng cho các quan hệ điều khiển được. Vì vậy, mỗi khuyến nghị cần bám
+theo CPT nhưng vẫn được đối chiếu với giới hạn ngành nghề và điều kiện thực tế của người dùng.
 
 ### 4.8. Ổn định giải thích (thí nghiệm 8)
 {{table:stability}}
@@ -216,3 +267,15 @@ hình boosting và RF lớn hơn 1–2 bậc độ lớn.
 
 <!-- Khôi – thảo luận tổng hợp (≤ 1 trang): khi nào nên dùng BN, khi nào nên dùng ML; kết hợp (ví dụ ML để xếp
 hạng, BN để tư vấn/what-if). -->
+ML nhấn mạnh khả năng phân biệt, phù hợp khi mục tiêu chủ yếu là xếp hạng hồ sơ và dữ liệu đủ lớn để học các tương
+tác phi tuyến. XGBoost và LightGBM nên là mô hình tham chiếu cho độ phân biệt, còn BN-Expert-Mono phù hợp hơn khi cần
+giải thích, xử lý thiếu dữ liệu ngẫu nhiên, suy luận ngược và what-if.
+
+Hai hướng này không loại trừ nhau. ML có thể lọc danh sách rủi ro có độ phân biệt cao, sau đó BN-Expert-Mono diễn giải
+nguyên nhân, mô phỏng biến cố và đề xuất điều kiện cần đạt mục tiêu. Mô hình hợp nhất cần quy tắc ưu tiên rõ ràng: ưu
+tiên AUC cho xếp hạng, ưu tiên hiệu chỉnh và nhất quán tri thức cho tư vấn, đồng thời cảnh báo các trường hợp thiếu
+dữ liệu hoặc ngoài phân phối.
+
+Lời khuyên cho người dùng nên dựa trên kết quả của BN thay vì để LLM tự tính xác suất hoặc điểm. Template hoặc kết quả
+đã kiểm chứng là đường dự phòng; LLM chỉ diễn giải dữ kiện, đề xuất hành động cụ thể và nêu giới hạn. Cách này giữ
+phần tính toán thống kê trong mô hình, đồng thời cho phép ngôn ngữ tự nhiên được kiểm soát và dễ hiểu hơn.

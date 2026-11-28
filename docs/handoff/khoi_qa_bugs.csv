@@ -1,1 +1,8 @@
 id,ngay,tab,ho_so_hoac_buoc_tai_hien,ket_qua_mong_doi,ket_qua_thuc_te,muc_do(cao/vua/thap),anh_chup
+1,28/11/2026,"Nh?p li?u (tab ??u, form)",?? Không rõ tr??ng S? ng??i trong h?,S? tr??ng không rõ t?ng,S? tr??ng không rõ không thay ??i,tb,
+2,28/11/2026,"Nh?p li?u (tab ??u, form)",?? Không rõ tr??ng Thu nh?p cá nhân,S? tr??ng không rõ t?ng,S? tr??ng không rõ không thay ??i,tb,
+3,28/11/2026,"Nh?p li?u (tab ??u, form)",?? Không rõ tr??ng S? h?u xe ô tô,S? tr??ng không rõ t?ng,S? tr??ng không rõ không thay ??i,tb,
+4,28/11/2026,"Nh?p li?u (tab ??u, form)",S? tr??ng không rõ là 13 trong khi có t?ng c?ng 16 tr??ng có th? ch?n không rõ,,,thap,
+5,28/11/2026,"Nh?p li?u (tab ??u, form)",Sau khi check/uncheck checkbox không rõ -> Ph?i b?m tính ?i?m m?i textbox m?i disable/able,,,thap,
+6,28/11/2026,"Nh?p li?u (tab ??u, form)","Check ô Không ?i làm -> ngành t? thành ""Không ?i làm"", ô ""M?t vi?c"" ? tab What-if b? khóa","Ngành t? thành ""Không ?i làm"", ô ""M?t vi?c"" ? tab What-if b? khóa","Ngành không thay ??i, ô ""M?t vi?c"" không b? khóa",tb,
+7,28/11/2026,"Nh?p li?u (tab ??u, form)",Hi?n th? l?i,,,tb,
