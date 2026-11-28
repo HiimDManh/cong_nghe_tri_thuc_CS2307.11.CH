@@ -5,3 +5,51 @@ Công nhân xây dựng (Bình Dương),industry_construction,manual_elementary,
 Chủ tiệm tạp hóa (Cần Thơ),self_employed,service_sales,secondary_or_lower,40,yes,8,25,5,12,3,yes,no,4,200,good,1,3,Mẫu Mạnh tạo
 Người về hưu (Hà Nội),,,secondary_or_lower,63,no,,12,2,6,0,yes,no,1,20,good,0,1,Mẫu Mạnh tạo
 Kỹ sư phần mềm – thiếu thông tin,finance_professional,manager_professional,higher,29,yes,3,,,35,0,,,,,,,1,Nhiều trường để trống = không rõ
+Đầu bếp nhà hàng 31 tuổi (Đà Nẵng),trade_hospitality,service_sales,incomplete_higher,31,yes,4,22,3,13,1,no,no,2,45,good,1,1,Thu nhập khá ổn định ngành dịch vụ lưu trú ăn uống
+Quản lý khách sạn 44 tuổi (Khánh Hòa),trade_hospitality,manager_professional,higher,44,yes,12,52,4,30,2,yes,yes,8,450,very_good,0,2,Có nhà và ô tô vay mua nhà vừa sức
+Phục vụ quán ăn 20 tuổi (TP.HCM),trade_hospitality,service_sales,secondary_or_lower,20,yes,0.5,11,2,6.5,0,no,no,3,25,poor,>=4,1,Trẻ tuổi mới đi làm trả góp nặng 46% thu nhập
+Thu ngân siêu thị – thiếu thông tin (Hải Phòng),trade_hospitality,technician_clerical,secondary_or_lower,27,yes,2,15,3,8,1,,,1.5,,fair,,2,Thiếu thông tin tài sản dư nợ và tra cứu (4 ô trống)
+Chủ sạp chợ truyền thống 54 tuổi (Đồng Tháp),trade_hospitality,service_sales,secondary_or_lower,54,yes,20,19,4,11,1,yes,no,0,0,good,0,3,Buôn bán lâu năm không dư nợ
+Điều dưỡng 35 tuổi (Đà Nẵng),education_health,technician_clerical,higher,35,yes,9,26,4,13,2,yes,no,0,0,very_good,0,1,Viên chức y tế không có dư nợ
+Bác sĩ chuyên khoa 52 tuổi (Hà Nội),education_health,manager_professional,higher,52,yes,24,78,4,48,2,yes,yes,10,600,very_good,0,1,Thu nhập hộ cao nhóm Q5 sở hữu nhà và xe
+Giáo viên mầm non hợp đồng 24 tuổi (Nghệ An),education_health,manager_professional,higher,24,yes,1,12,3,6.5,0,no,no,3,50,fair,2-3,3,Trả góp nặng 46% thu nhập cá nhân ở vùng 3
+Dược sĩ nhà thuốc – thiếu thông tin (Đồng Nai),education_health,technician_clerical,higher,30,yes,,,,12,0,no,no,,,good,1,2,Thiếu thâm niên hộ gia đình và khoản vay (5 ô trống)
+Chuyên viên hành chính xã 29 tuổi (Thanh Hóa),public_admin_security,technician_clerical,higher,29,yes,5,17,3,8.5,1,yes,no,1.5,80,good,0,3,Công chức cấp xã ổn định vùng nông thôn
+Trưởng phòng sở ngành 48 tuổi (Hà Nội),public_admin_security,manager_professional,higher,48,yes,22,46,4,22,2,yes,yes,0,0,very_good,0,1,Thâm niên dài không vay nợ
+Nhân viên bảo vệ cơ quan 56 tuổi (Nam Định),public_admin_security,service_sales,secondary_or_lower,56,yes,11,13,3,7,0,yes,no,1,20,good,1,2,Lớn tuổi thu nhập trung bình thấp trả nợ tốt
+Cán bộ văn thư trẻ 25 tuổi (Bắc Ninh),public_admin_security,technician_clerical,higher,25,yes,1.5,18,3,8,0,no,no,3.5,120,fair,2-3,2,Trả góp nặng 44% thu nhập cá nhân
+Công chức thuế – thiếu thông tin (Quảng Ninh),public_admin_security,manager_professional,higher,38,yes,12,,,16,2,yes,,,,very_good,0,2,Thiếu thu nhập hộ xe và khoản vay (5 ô trống)
+Chuyên viên tín dụng ngân hàng 32 tuổi (TP.HCM),finance_professional,manager_professional,higher,32,yes,7,48,3,28,1,yes,no,6,420,very_good,1,1,Thu nhập cao vay mua căn hộ trả góp trong ngưỡng
+Kế toán viên mới ra trường 23 tuổi (Đà Nẵng),finance_professional,technician_clerical,higher,23,yes,0.8,16,3,8.5,0,no,no,0,0,good,0,1,Mới đi làm chưa phát sinh dư nợ
+Giám đốc tư vấn tài chính 46 tuổi (TP.HCM),finance_professional,manager_professional,higher,46,yes,18,80,4,55,2,yes,yes,12,800,very_good,0,1,Thu nhập hộ 80 triệu có nhà và xe lịch sử rất tốt
+Chuyên viên truyền thông vay tiêu dùng 27 tuổi (Hà Nội),finance_professional,manager_professional,higher,27,yes,2.5,20,2,14,0,no,no,6.5,180,very_poor,>=4,1,Trả góp nặng 46% lịch sử tín dụng rất kém
+Kiểm toán viên – thiếu thông tin (Hà Nội),finance_professional,manager_professional,higher,31,yes,6,36,3,22,1,yes,no,,,good,,1,Thiếu thông tin trả góp dư nợ và tra cứu (3 ô trống)
+Kỹ sư cơ khí nhà máy 37 tuổi (Hải Phòng),industry_construction,manager_professional,higher,37,yes,10,34,4,20,2,yes,no,4,240,good,1,1,Kỹ sư sản xuất công nghiệp ổn định
+Công nhân may 28 tuổi (Long An),industry_construction,manual_elementary,secondary_or_lower,28,yes,4,15,3,8.5,1,no,no,0,0,fair,0,2,Công nhân khu công nghiệp không vay nợ
+Đội trưởng thi công 42 tuổi (Đồng Nai),industry_construction,technician_clerical,incomplete_higher,42,yes,6,28,4,16,2,yes,no,7,260,poor,2-3,2,Trả góp nặng 44% thu nhập cá nhân
+Thợ hàn khu công nghiệp – thiếu thông tin (Thái Nguyên),industry_construction,manual_elementary,secondary_or_lower,34,yes,5,18,4,10,,no,no,,,,1,2,Thiếu số con khoản vay và lịch sử tín dụng (4 ô trống)
+Tài xế xe công nghệ 29 tuổi (TP.HCM),transport_postal,manual_elementary,secondary_or_lower,29,yes,2,19,3,12,1,no,yes,5.5,220,poor,2-3,1,Vay mua ô tô chạy dịch vụ trả góp nặng 46%
+Nhân viên bưu cục 36 tuổi (Lâm Đồng),transport_postal,technician_clerical,incomplete_higher,36,yes,9,21,4,10,2,yes,no,1.5,45,good,0,2,Nhân viên bưu chính ổn định nợ thấp
+Tài xế xe tải đường dài 47 tuổi (Bình Định),transport_postal,manual_elementary,secondary_or_lower,47,yes,15,27,4,18,2,yes,no,3,90,fair,1,2,Thâm niên lái xe lâu năm
+Điều phối kho vận 31 tuổi (Bắc Giang),transport_postal,technician_clerical,higher,31,yes,5,26,3,15,1,no,no,0,0,very_good,0,2,Ngành kho vận không có dư nợ
+Nhân viên giao hàng – thiếu thông tin (Hà Nội),transport_postal,manual_elementary,secondary_or_lower,22,yes,0.5,,,9,0,no,no,2,30,,,1,Khách hàng trẻ thiếu thông tin hộ và lịch sử (4 ô trống)
+Chủ xưởng mộc nhỏ 51 tuổi (Bắc Ninh),self_employed,manager_professional,secondary_or_lower,51,yes,16,45,5,25,3,yes,yes,11,500,fair,2-3,2,Vay vốn quay vòng xưởng trả góp nặng 44%
+Thiết kế đồ họa tự do 26 tuổi (TP.HCM),self_employed,manager_professional,higher,26,yes,3,24,2,16,0,no,no,0,0,good,1,1,Lao động tự do trẻ không vay nợ
+Hộ kinh doanh ăn uống 39 tuổi (Bà Rịa – Vũng Tàu),self_employed,service_sales,incomplete_higher,39,yes,7,36,4,20,2,yes,no,4,180,good,1,2,Kinh doanh hộ gia đình ổn định
+Bán hàng trực tuyến tự do – thiếu thông tin (TP.HCM),self_employed,service_sales,,28,yes,2,,,14,0,no,no,3,,,2-3,1,Thiếu học vấn hộ gia đình dư nợ và lịch sử (5 ô trống)
+Nông dân trồng lúa 58 tuổi (An Giang),other_services_agri,manual_elementary,secondary_or_lower,58,yes,30,8,4,4.5,2,yes,no,1,30,fair,1,3,Thu nhập nông thôn nhóm Q1-Q2 vùng 3
+Chủ trang trại cây ăn trái 49 tuổi (Tiền Giang),other_services_agri,manager_professional,secondary_or_lower,49,yes,20,38,5,22,3,yes,yes,5,250,good,0,3,Kinh tế trang trại khá giả có nhà và xe tải nhỏ
+Thợ làm tóc 24 tuổi (Đồng Nai),other_services_agri,service_sales,secondary_or_lower,24,yes,2.5,14,3,8,0,no,no,3.5,55,poor,>=4,2,Vay tiêu dùng trả góp nặng 44% thu nhập
+Kỹ thuật viên thủy sản 33 tuổi (Cà Mau),other_services_agri,technician_clerical,higher,33,yes,6,20,4,12,1,yes,no,0,0,good,0,3,Kỹ thuật nông nghiệp không có dư nợ
+Lao động thời vụ cà phê – thiếu thông tin (Đắk Lắk),other_services_agri,manual_elementary,secondary_or_lower,43,yes,10,6.5,4,3.5,2,,,,,,0,3,Thiếu tài sản khoản vay và lịch sử tín dụng (5 ô trống)
+Nhân viên văn phòng doanh nghiệp 30 tuổi (Hà Nội),business_unspecified,technician_clerical,higher,30,yes,4,28,3,14,1,no,no,2.5,90,good,1,1,Nhân viên hành chính khối tư nhân
+Trưởng phòng kinh doanh 41 tuổi (TP.HCM),business_unspecified,manager_professional,higher,41,yes,11,64,4,38,2,yes,yes,8,550,very_good,0,1,Thu nhập hộ cao sở hữu cả nhà và xe
+Nhân viên lễ tân 21 tuổi (Đà Nẵng),business_unspecified,service_sales,incomplete_higher,21,yes,0.5,13,3,7,0,no,no,0,0,fair,0,1,Mới đi làm chưa vay nợ
+Chuyên viên mua hàng 35 tuổi (Bình Dương),business_unspecified,unknown,higher,35,yes,6,24,4,13,2,no,no,6,240,very_poor,>=4,2,Nợ quá tải trả góp 46% lịch sử rất kém
+Cộng tác viên doanh nghiệp – thiếu thông tin (Cần Thơ),business_unspecified,unknown,incomplete_higher,26,yes,1.5,,,9.5,,no,no,1.5,35,,1,2,Thiếu thông tin hộ số con và lịch sử tín dụng (4 ô trống)
+Cán bộ hưu trí 70 tuổi (TP.HCM),,,higher,70,no,,18,2,9,0,yes,no,0,0,very_good,0,1,Hưu trí tuổi 70 lương hưu ổn định không nợ
+Lao động mới thất nghiệp 32 tuổi (Bình Dương),,manual_elementary,secondary_or_lower,32,no,,8,3,2.5,1,no,no,2,45,poor,2-3,2,Đang thất nghiệp gánh trả góp nặng 80% trợ cấp
+Người cao tuổi ở nông thôn 67 tuổi (Nam Định),,,secondary_or_lower,67,no,,5,2,2.5,0,yes,no,0,0,good,0,3,Hộ thu nhập thấp 5 triệu vùng nông thôn không nợ
+Người nội trợ tìm việc – thiếu thông tin (Đà Nẵng),,service_sales,incomplete_higher,38,no,,16,4,,2,yes,no,,,fair,,1,Không đi làm thiếu thu nhập cá nhân nợ và tra cứu (6 ô trống)
+Bác hưu trí 65 tuổi – thiếu thông tin (Hải Phòng),,technician_clerical,higher,65,no,,14,2,7.5,0,yes,no,,,good,0,2,Không đi làm thiếu thông tin khoản vay (4 ô trống)
+Sinh viên mới tốt nghiệp – hồ sơ mỏng (TP.HCM),,technician_clerical,higher,22,yes,0.3,15,3,8,0,,,0,0,,,1,Khách hàng mới chưa có lịch sử tín dụng (5 ô trống)
